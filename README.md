@@ -1,4 +1,3 @@
 # MyCashflow Default Theme
 
-## TODO
-...
+We're working on the README.
