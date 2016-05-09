@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Theme>
+	<ImageSizes>
+		<Mini width="80" height="80" />
+		<List width="180" height="180" />
+		<Normal width="600" height="600" />
+		<Big width="1200" height="1200" />
+	</ImageSizes>
+	<Features>
+		<Checkout>
+			<SinglePage supported="true" default="default" />
+			<MultiPage supported="false" />
+		</Checkout>
+	</Features>
+	<Settings>
+		<Doctype standard="HTML5" />
+	</Settings>
+</Theme>

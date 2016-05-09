@@ -1,0 +1,49 @@
+//------------------------------------------------------------------------------
+// Share Buttons
+//------------------------------------------------------------------------------
+
+.ExtShareButtons {
+	padding: 0 !important;
+}
+
+.ExtShareButton {
+	@include box-shadow(inset 0 1px 0 $white-25);
+}
+
+.ExtShareButton:hover {
+	color: #ffffff !important;
+}
+
+.ExtShareButton.Facebook > .ExtShareButtonText {
+	@include icon-before($fa-var-facebook);
+}
+
+.ExtShareButton.GooglePlus > .ExtShareButtonText {
+	@include icon-before($fa-var-google-plus);
+}
+
+.ExtShareButton.LinkedIn > .ExtShareButtonText {
+	@include icon-before($fa-var-linkedin);
+}
+
+.ExtShareButton.Twitter > .ExtShareButtonText {
+	@include icon-before($fa-var-twitter);
+}
+
+.ExtShareButton.Twitter > .ExtShareButtonCount {
+	display: none;
+}
+
+//------------------------------------------------------------------------------
+// Admin Tools
+//------------------------------------------------------------------------------
+
+#AdminTools {
+	overflow: hidden;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	#AdminTools {
+		display: none;
+	}
+}

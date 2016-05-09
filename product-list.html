@@ -1,0 +1,41 @@
+{Helper(file: 'helpers/header')}
+{Helper(file: 'helpers/category-header')}
+{Helper(file: 'helpers/path')}
+<div class="SiteContent">
+	<div class="Container">
+		<div class="Grid">
+			<div class="Col-3-12 Col-Tablet-12-12">
+				{Helper(file: 'helpers/sidebar')}
+			</div>
+			<div class="Col-9-12 Col-Tablet-12-12">
+				<div class="Flex Flex-Collapse">
+					<div class="FlexItem">
+						<h2 class="ContentTitle">{PageTitle}</h2>
+					</div>
+					{Helper(
+						file: 'helpers/pagination-form',
+						before: '
+							<div class="FlexSpacer"></div>
+							<div class="FlexItem">',
+						after: '</div>'
+					)}
+				</div>
+				{Products(
+					pagination: 'true',
+					before: '
+						<div class="ContentSection">
+							<div class="List ProductList">
+								<div class="GridList">',
+					after: '
+								</div>
+							</div>
+							{Helper(file: 'helpers/pagination')}
+						</div>',
+					helper: 'helpers/list-product',
+					or: '<div class="Notification">0 {%Products}</div>'
+				)}
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}

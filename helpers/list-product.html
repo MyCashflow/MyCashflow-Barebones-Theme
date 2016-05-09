@@ -1,0 +1,41 @@
+<div class="ListItem">
+	<div class="{ProductClass} ListProduct">
+		{ProductImage(
+			imagesize: 'list',
+			link: 'false',
+			before: '<a class="ProductImage" href="{ProductURL}">',
+			after: '</a>'
+		)}
+		{ProductName(
+			before: '
+				<h3 class="H5 ProductName">
+					<a href="{ProductURL}">',
+			after: '
+					</a>
+				</h3>'
+		)}
+		{ProductDiscountPercent(
+			before: '<span class="Badge ProductDiscountPercent">-',
+			after: '&#37;</span>'
+		)}
+		<div class="ProductPrices">
+			{ProductComparePrice(
+				currencysymbol: 'true',
+				before: '
+					{ProductPrice(
+						currencysymbol: 'true',
+						before: '<span class="ProductDiscountPrice">',
+						after: '</span>'
+					)}
+					<span class="ProductComparePrice">',
+				after: '</span>',
+				or: '
+					{ProductPrice(
+						currencysymbol: 'true',
+						before: '<span class="ProductCurrentPrice">',
+						after: '</span>'
+					)}'
+			)}
+		</div>
+	</div>
+</div>

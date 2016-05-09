@@ -1,0 +1,13 @@
+linters:
+  IdSelector:
+    enabled: false
+  Indentation:
+    enabled: false
+  LeadingZero:
+    enabled: false
+  MergeableSelector:
+    force_nesting: false
+  SelectorFormat:
+    enabled: false
+  SingleLinePerSelector:
+    enabled: false

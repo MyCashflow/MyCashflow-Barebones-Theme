@@ -1,0 +1,34 @@
+{Helper(file: 'helpers/header')}
+<div class="Banners Banners-Wide" data-slider="banners-wide">
+	<div class="Banner" {NewsImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
+		<div class="Container">
+			<div class="BannerContentWrap">
+				<div class="BannerContent">
+					<h1>{PageTitle}</h1>
+					{NewsOverview(
+						before: '<p>',
+						after: '</p>'
+					)}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/path')}
+<div class="SiteContent">
+	<div class="Container">
+		<div class="Grid">
+			<div class="Col-3-12 Col-Tablet-12-12">
+				<h3>{%News}</h3>
+				{News(
+					before: '<div class="SideNavigation">',
+					after: '</div>'
+				)}
+			</div>
+			<div class="Col-9-12 Col-Tablet-12-12">
+				{Content}
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}

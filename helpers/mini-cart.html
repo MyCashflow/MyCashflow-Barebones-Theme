@@ -1,0 +1,80 @@
+{CartProducts(
+	before: '
+		<div class="MiniCartHeader">
+			<h3 class="MiniCartTitle">{%ShoppingCart}</h3>
+		</div>
+		<div class="MiniCartProducts">',
+	after: '
+		</div>
+		{CartSubTotal(
+			before: '<div class="MiniCartTotal">{%CheckoutProductsTotal}&nbsp;',
+			after: '</div>'
+		)}
+		{CartShippingCosts(
+			before: '<div class="MiniCartTotal">{%CheckoutShipping}: {CartShippingMethod}&nbsp;',
+			after: '</div>'
+		)}
+		{CartPaymentCosts(
+			before: '<div class="MiniCartTotal">{%PaymentMethod}: {CartPaymentMethod}&nbsp;',
+			after: '</div>'
+		)}
+		{CartDiscount(
+			before: '<div class="MiniCartTotal">{%CampaignCode}: &nbsp;',
+			after: '</div>'
+		)}
+		{CartTotal(
+			before: '<div class="MiniCartTotal">{%Total}: &nbsp;',
+			after: '</div>'
+		)}
+		<div class="MiniCartActions">
+			<div class="Buttons Buttons-Block">
+				<a class="Button" href="/cart/">{%ShoppingCartEdit}</a>
+				<a class="Button Button-Primary OrderProducts" href="/checkout/">{%OrderProducts}</a>
+			</div>
+		</div>',
+	or: '
+		<div class="DrawerSection">
+			<div class="Notification">
+				{%ShoppingCartIsEmpty}
+			</div>
+		</div>',
+	helper: '{{
+		<div class="Product MiniCartProduct {ProductClass}">
+			{ProductImage(
+				imagesize: 'mini',
+				link: 'false',
+				before: '<a class="ProductImage" href="{ProductURL}">',
+				after: '
+						{CartProductQuantity(
+							mode: 'preview',
+							before: '<div class="Badge ProductQuantity">',
+							after: '</div>'
+						)}
+					</a>'
+			)}
+			{CartProductName(
+				before: '<a class="ProductName" href="{ProductURL}">',
+				after: '</a>'
+			)}
+			<div class="ProductPrices">
+				{CartProductComparePrice(
+					currencysymbol: 'true',
+					before: '
+						{CartProductPrice(
+							currencysymbol: 'true',
+							before: '<span class="ProductDiscountPrice">',
+							after: '</span>'
+						)}
+						<span class="ProductComparePrice">',
+					after: '</span>',
+					or: '
+						{CartProductPrice(
+							currencysymbol: 'true',
+							before: '<span class="ProductCurrentPrice">',
+							after: '</span>'
+						)}'
+				)}
+			</div>
+		</div>
+	}}'
+)}

@@ -1,0 +1,102 @@
+{Helper(file: 'helpers/header')}
+<div class="SiteContent">
+	<div class="Container">
+		<div class="Grid">
+			<div class="Col-4-12 Col-Tablet-Push-8-12 Hide-Tablet">
+				{Helper(
+					file: 'helpers/mini-cart',
+					before: '<div class="MiniCart MiniCart-Checkout" id="StickyCart">',
+					after: '</div>'
+				)}
+			</div>
+			<div class="Col-7-12 Col-Tablet-Pull-4-12 Col-Tablet-12-12">
+				{Notifications(
+					group: 'account',
+					before: '<div class="Notifications">',
+					after: '</div>'
+				)}
+				<form id="CheckoutForm" action="/checkout/" method="post">
+					<div class="ContentSection">
+						<div class="Flex Flex-Collapse">
+							<div class="FlexItem">
+								<h2>{%CheckoutCustomerInformation}</h2>
+							</div>
+							<div class="FlexItem FlexSpacer"></div>
+							<div class="FlexItem">
+								{Helper(
+									case: 'CustomerNotLogged',
+									file: '{{<a  class="Button" href="/account/login/" data-modal data-modal-helper="helpers/modals/login">{%Login}</a>}}',
+									or: '<a  class="Button" href="/account/logout/">{%Logout}</a>'
+								)}
+							</div>
+						</div>
+						<p>{%CheckoutBillingAddressIntro}</p>
+						<fieldset id="CheckoutBillingAddress" data-checkout-part="BillingAddress">
+							{CheckoutBillingAddress(
+								mode: 'form',
+								ajax: 'true'
+							)}
+						</fieldset>
+					</div>
+					<div class="ContentSection">
+						<h2>{%CheckoutShippingAddress}</h2>
+						{Notifications(name: 'CustomerShippingAddressError')}
+						<div class="FormItem CheckWrap">
+							<div class="Checks">
+								<label>
+									<input type="checkbox" data-checkout-toggle="#CheckoutShippingAddress" />
+									{%CheckoutShippingAddressToggle}
+								</label>
+							</div>
+						</div>
+						<div id="CheckoutShippingAddressWrap">
+							<p id="RemoveShippingAddress">
+								<a href="#" data-checkout-clear="#CheckoutShippingAddress">
+									<span class="fa fa-trash"></span> {%RemoveShippingAddress}
+								</a>
+							</p>
+							<fieldset id="CheckoutShippingAddress" data-checkout-part="ShippingAddress">
+								{CheckoutShippingAddress(
+									mode: 'form',
+									ajax: 'true'
+								)}
+							</fieldset>
+						</div>
+					</div>
+					<div class="ContentSection">
+						<h2>{%CheckoutChooseShippingMethod}</h2>
+						<p>{%CheckoutChooseShippingMethodIntro}</p>
+						<div id="CheckoutShippingMethods" data-checkout-part="ShippingMethods">
+							{CheckoutShippingMethods(
+								mode: 'form',
+								ajax: 'true'
+							)}
+						</div>
+					</div>
+					<div class="ContentSection">
+						<h2>{%CheckoutChoosePaymentMethod}</h2>
+						<p>{%CheckoutChoosePaymentMethodIntro}</p>
+						<fieldset id="CheckoutPaymentMethods" data-checkout-part="PaymentMethods">
+							{CheckoutPaymentMethods(
+								mode: 'form',
+								ajax: 'true'
+							)}
+						</fieldset>
+					</div>
+					<div class="ContentSection">
+						<h2>{%CheckoutSendOrder}</h2>
+						<p>{%CheckoutAcceptTermsIntro}</p>
+						{Helper(
+							file: 'helpers/mini-cart',
+							before: '<div class="MiniCart MiniCart-Checkout Hide-Desktop">',
+							after: '</div>'
+						)}
+						{CurrencyNotification}
+						{CheckoutAcceptTerms}
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}

@@ -1,0 +1,32 @@
+//------------------------------------------------------------------------------
+// Loader
+//------------------------------------------------------------------------------
+
+.Loader {
+	@include cover;
+	background-color: $color-loader-bg;
+	display: none;
+	z-index: 10;
+}
+
+.Loader > .Notification {
+	left: 10px;
+	position: absolute;
+	top: 10px;
+}
+
+.LoaderSpinner {
+	left: 50%;
+	margin: -12px 0 0 -12px;
+	position: absolute;
+	top: 50%;
+}
+
+.LoaderSpinner:before {
+	@include icon($fa-var-circle-o-notch);
+	animation: fa-spin 1s linear infinite;
+	font-size: 24px;
+	opacity: 0.5;
+	-webkit-transform-origin: calc(50% - 0.5px) calc(50% - 1px);
+	transform-origin: calc(50% - 0.5px) calc(50% - 1px);
+}

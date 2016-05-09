@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Raleway">
+{MinifyCSS(
+	mode: 'production',
+	files: '
+		vendor/normalize-css/normalize.css|
+		vendor/magiczoomplus/magiczoomplus.css|
+		vendor/magnific-popup/dist/magnific-popup.css|
+		vendor/slick-carousel/slick/slick.css|
+		styles/theme.css'
+)}
+<!--[if lte IE 9]>
+	<link rel="stylesheet" href="{ThemeURL}/styles/ie9.css">
+<![endif]-->
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="{ThemeURL}/styles/ie8.css">
+<![endif]-->

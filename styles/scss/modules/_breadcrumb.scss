@@ -1,0 +1,38 @@
+//------------------------------------------------------------------------------
+// Breadcrumb
+//------------------------------------------------------------------------------
+
+.Breadcrumb {
+	@extend %default-margin;
+	@include truncate;
+}
+
+.Breadcrumb ul,
+.Breadcrumb li {
+	display: inline;
+}
+
+.Breadcrumb ul li:before {
+	@include icon($fa-var-angle-right);
+	margin: 0 10px;
+}
+
+.BreadcrumbStart {
+	display: none;
+}
+
+.BreadcrumbSeparator {
+	display: none;
+}
+
+//------------------------------------------------------------------------------
+// Path
+//------------------------------------------------------------------------------
+
+.Path {
+	padding-top: 20px;
+}
+
+.Path .Breadcrumb {
+	margin-bottom: 0;
+}

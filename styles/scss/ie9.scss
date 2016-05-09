@@ -1,0 +1,46 @@
+@import 'common/mixins';
+
+//------------------------------------------------------------------------------
+// Form Elements
+//------------------------------------------------------------------------------
+
+select {
+	background-image: none;
+	padding-right: 12px;
+}
+
+//------------------------------------------------------------------------------
+// Flex
+//------------------------------------------------------------------------------
+
+.Flex {
+	display: table;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.FlexItem {
+	display: table-cell;
+	padding: 0;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.FlexSpacer {
+	padding: 0 !important;
+	width: 99%;
+}
+
+.FlexItem + .FlexItem {
+	padding-left: 30px;
+}
+
+.FlexSpacer + .FlexItem {
+	padding-left: 0;
+}
+
+.FlexItem-Grow {
+	padding: 0 15px !important;
+	width: 99%;
+}

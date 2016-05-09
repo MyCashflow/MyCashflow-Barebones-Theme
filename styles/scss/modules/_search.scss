@@ -1,0 +1,90 @@
+//------------------------------------------------------------------------------
+// Search Filters
+//------------------------------------------------------------------------------
+
+.SearchFilter {
+	@extend %default-margin;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+}
+
+.SearchFilter a {
+	float: right;
+}
+
+.SearchFilter li,
+.SearchFilterTitle {
+	@include truncate;
+	background-color: $color-boxed-bg;
+	border: 1px solid $color-body-border;
+	border-width: 1px 0 0;
+	display: block;
+	margin: 0;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.SearchFilterTitle {
+	@extend h5;
+	border-width: 0;
+}
+
+.SearchFilter ul {
+	list-style: none;
+	margin-bottom: 0;
+}
+
+.SearchFilter .ApplyFilter {
+	float: left;
+	margin-right: 5px;
+}
+
+//------------------------------------------------------------------------------
+// Full Search Suggestions
+//------------------------------------------------------------------------------
+
+.FullSearchSuggestions {
+	display: inline-block;
+	list-style: none;
+	vertical-align: middle;
+	margin: -3px;
+}
+
+.FullSearchSuggestions li {
+	display: inline-block;
+	margin: 3px;
+	vertical-align: middle;
+}
+
+.FullSearchSuggestions a {
+	background-color: $color-accent-2;
+	border-radius: $border-radius;
+	color: text-contrast($color-accent-2);
+	display: block;
+	padding: 0 10px;
+}
+
+.FullSearchSuggestions a:hover,
+.FullSearchSuggestions .Active a {
+	$bg: lighten($color-accent-2, 10%);
+	background-color: $bg;
+	color: text-contrast($bg);
+}
+
+.FullSearchSuggestionsTitle {
+	display: inline-block;
+	margin: 0 15px 0 0;
+	vertical-align: middle;
+}
+
+//------------------------------------------------------------------------------
+// Mobile Search Form
+//------------------------------------------------------------------------------
+
+#MobileSearchForm {
+	margin-bottom: 0;
+}
+
+#MobileSearchForm label {
+	display: none;
+}

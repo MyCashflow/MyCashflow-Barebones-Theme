@@ -1,0 +1,40 @@
+//------------------------------------------------------------------------------
+// Slick Slider
+//------------------------------------------------------------------------------
+
+.slick-arrow {
+	line-height: 20px;
+	padding: 4px;
+	position: absolute;
+	width: 40px;
+	z-index: 1;
+}
+
+.slick-arrow > .fa {
+	margin: 0;
+}
+
+.slick-prev,
+.slick-next {
+	bottom: 15px;
+}
+
+.slick-prev {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	right: 55px;
+}
+
+.slick-next {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	right: 15px;
+}
+
+.slick-slide:focus {
+	outline: 0;
+}
+
+.slick-slide img {
+	display: inline-block;
+}

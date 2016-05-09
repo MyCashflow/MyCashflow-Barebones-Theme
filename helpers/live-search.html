@@ -1,0 +1,27 @@
+{SearchSuggestions(limit: '5')}
+{SearchProducts(
+	limit: '5',
+	before: '
+		<div class="LiveSearchSeparator"></div>
+		<h3 class="LiveSearchTitle">{%SearchProductsTitle} &ldquo;{SearchKeyword}&rdquo;</h3>
+		<ul class="SearchResults">',
+	after: '</ul>',
+	helper: '{{
+		<li>
+			<a href="{ProductUrl}">{ProductName}</a>
+		</li>
+	}}'
+)}
+{SearchPopularTerms(
+	limit: '5',
+	before: '
+		<div class="LiveSearchSeparator"></div>
+		<h3 class="LiveSearchTitle">{%SearchPopularTerms}</h3>
+		<ul class="SearchPopularTerms">',
+	after: '</ul>',
+	helper: '{{
+		<li>
+			<a href="{SearchUrl}">{SearchKeyword}</a>
+		</li>
+	}}'
+)}

@@ -1,0 +1,101 @@
+//------------------------------------------------------------------------------
+// Document
+//------------------------------------------------------------------------------
+
+body {
+	color: text-contrast($color-body-bg);
+	font: #{$font-size}/#{$line-height} $font-body;
+}
+
+button, input, select, textarea {
+	color: inherit;
+	font: inherit;
+}
+
+blockquote {
+	border-left: 5px solid $color-accent-2;
+	font-size: $font-size-large;
+	margin-left: 0;
+	padding-left: 15px;
+}
+
+//------------------------------------------------------------------------------
+// Headings
+//------------------------------------------------------------------------------
+
+%headings {
+	font-family: $font-headings;
+	font-weight: bold;
+	margin: 40px 0 20px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h1, .H1 {
+	@extend %headings;
+	font-size: 26px;
+	line-height: 35px;
+}
+
+h2, .H2 {
+	@extend %headings;
+	font-size: 21px;
+	line-height: 25px;
+}
+
+h3, .H3 {
+	@extend %headings;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+h4, .H4 {
+	@extend %headings;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+h5, .H5,
+h6, .H6 {
+	@extend %headings;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+//------------------------------------------------------------------------------
+// Text Align Helpers
+//------------------------------------------------------------------------------
+
+.Text-Left {
+	text-align: left;
+}
+
+.Text-Center {
+	text-align: center;
+}
+
+.Text-Right {
+	text-align: right;
+}
+
+//------------------------------------------------------------------------------
+// Text Size Helpers
+//------------------------------------------------------------------------------
+
+.Text-Small {
+	font-size: $font-size-small;
+}
+
+.Text-Large {
+	font-size: $font-size-large;
+}
+
+//------------------------------------------------------------------------------
+// Text Color Helpers
+//------------------------------------------------------------------------------
+
+.Text-Accent {
+	color: $color-accent-2;
+}

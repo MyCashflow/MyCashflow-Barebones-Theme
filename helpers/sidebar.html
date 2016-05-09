@@ -1,0 +1,32 @@
+<div class="Hide-Tablet">
+	{Categories(
+		start: '1',
+		before: '
+			<h3 class="ContentTitle">{%BrowseCategories}</h3>
+			<div class="SideNavigation">',
+		after: '</div>'
+	)}
+	{Brands(
+		category: 'current',
+		before: '
+			<h3 class="ContentTitle">{%Brands}</h3>
+			<div class="SideNavigation">',
+		after: '</div>'
+	)}
+	{Banners(
+		name: 'sidebar-left',
+		before: '<div class="Banners Banners-Side">',
+		after: '</div>',
+		helper: '{{
+			<a class="Banner Banner-Side" href="{BannerURL}">
+				<div class="BannerImage">
+					<img src="{BannerImageURL}" alt="">
+				</div>
+				{BannerText(
+					before: '<div class="BannerContent">',
+					after: '</div>'
+				)}
+			</a>
+		}}'
+	)}
+</div>

@@ -1,0 +1,31 @@
+<script type="text/javascript">
+	window.MCF = window.MCF || {};
+	window.MCF.locale = '{CurrentLanguageCode}';
+</script>
+{MinifyJS(
+	mode: 'production',
+	support_scripts: 'false',
+	files: '
+		vendor/jquery/jquery.js|
+		vendor/jquery.finger/dist/jquery.finger.js|
+		vendor/hc-sticky/jquery.hc-sticky.js|
+		vendor/magiczoomplus/magiczoomplus.js|
+		vendor/magnific-popup/dist/jquery.magnific-popup.js|
+		vendor/slick-carousel/slick/slick.js|
+		scripts/locales.js|
+		scripts/theme.js|
+		scripts/plugins/cart.js|
+		scripts/plugins/checkout.js|
+		scripts/plugins/drawers.js|
+		scripts/plugins/images.js|
+		scripts/plugins/klarna-checkout.js|
+		scripts/plugins/loaders.js|
+		scripts/plugins/modals.js|
+		scripts/plugins/navigations.js|
+		scripts/plugins/notifications.js|
+		scripts/plugins/search.js|
+		scripts/plugins/sliders.js|
+		scripts/plugins/spinners.js|
+		scripts/plugins/tabs.js|
+		scripts/custom.js'
+)}

@@ -1,0 +1,47 @@
+{Helper(file: 'helpers/header')}
+<div class="SiteContent">
+	<div class="Container">
+		<div class="Grid">
+			<div class="Col-6-12 Col-Tablet-12-12">
+				<div class="ContentSection">
+					<h1>{%Hi} {OrderFirstName},</h1>
+					<p class="Text-Large">
+						{%KlarnaCheckoutThanks}
+					</p>
+					<p>
+						<a class="Button" href="/checkout/thanks/{TransactionHash}">
+							<strong>{%KlarnaCheckoutGoToSummary}</strong>
+						</a>
+					</p>
+				</div>
+				{CheckoutRegistrationForm(
+					before: '
+						<div class="ContentSection">
+							<p>
+								{%CheckoutThanksRegistration} {%CheckoutThanksRegistrationSubscriptions}
+							</p>
+							<p>
+								<a class="Button" href="#CheckoutThanksRegistrationForm" data-toggle>{%CheckoutCreateAccount}</a>
+							</p>
+							<form class="JS-Hide" id="CheckoutThanksRegistrationForm" action="/account/register/" method="post">
+								<p>{%CheckoutCreateAccountInfo}</p>',
+					after: '
+								<div class="FormItem FormSubmit">
+									<button type="submit" class="SubmitButton">{%CheckoutCreateAccount}</button>
+								</div>
+							</form>
+						</div>'
+				)}
+				<div class="ContentSection" id="CheckoutMarketingPermissions">
+					{MarketingPermissions}
+				</div>
+			</div>
+			<div class="Col-5-12 Col-Push-1-12 Col-Tablet-12-12">
+				<div id="KlarnaCheckoutThanks">
+					{KlarnaCheckout}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}

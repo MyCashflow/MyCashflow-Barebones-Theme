@@ -1,0 +1,88 @@
+//------------------------------------------------------------------------------
+// Banner
+//------------------------------------------------------------------------------
+
+.BannerContent > * {
+	margin: 10px 0 !important;
+}
+
+//------------------------------------------------------------------------------
+// Side Banners
+//------------------------------------------------------------------------------
+
+.Banner-Side {
+	@extend %default-margin;
+	background-color: $color-boxed-bg;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+	display: block;
+}
+
+.Banner-Side .BannerImage {
+	background-color: #ffffff;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+}
+
+.Banner-Side .BannerContent {
+	border-top: 1px solid $color-body-border;
+	padding: 10px;
+	text-align: center;
+}
+
+//------------------------------------------------------------------------------
+// Wide Banners
+//------------------------------------------------------------------------------
+
+.Banners-Wide {
+	border: 1px solid $color-body-border;
+	border-radius: 0;
+	border-width: 0 0 1px;
+	font-size: $font-size-large;
+}
+
+.Banner-Wide {
+	background-size: cover;
+	position: relative;
+}
+
+.Banner-Wide:hover {
+	color: text-contrast($color-banner-bg);
+}
+
+.Banner-Wide:before {
+	@include cover;
+	content: '';
+	display: block;
+}
+
+.Banner-Wide .Container {
+	height: 100%;
+	position: relative;
+}
+
+.Banner-Wide .BannerContentWrap {
+	display: table;
+	height: 25vw;
+	max-width: $breakpoint-mobile;
+	min-height: 240px;
+	width: 100%;
+}
+
+.Banner-Wide .BannerContent {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.Banner-Wide .BannerContentWrap {
+		height: auto;
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.Banner-Wide .Banner {
+		background-image: none;
+	}
+}

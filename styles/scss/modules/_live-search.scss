@@ -1,0 +1,68 @@
+//------------------------------------------------------------------------------
+// Live Search
+//------------------------------------------------------------------------------
+
+.LiveSearch {
+	position: relative;
+}
+
+.LiveSearch.Active .LiveSearchResults {
+	@include transform(translateY(0));
+	opacity: 1;
+	padding: 10px 0;
+	visibility: visible;
+}
+
+.LiveSearchTitle {
+	@extend h5;
+	margin: 0 0 5px;
+	padding: 0 15px;
+}
+
+.LiveSearchSeparator {
+	border-top: 1px solid $color-body-border;
+	margin: 15px 0;
+}
+
+//------------------------------------------------------------------------------
+// Live Search Results
+//------------------------------------------------------------------------------
+
+.LiveSearchResults {
+	@include box-shadow(0 2px 1px $black-10);
+	@include transition($transition-fast);
+	@include transform(translateY(20px));
+	background-color: $color-body-bg;
+	border-radius: $border-radius;
+	margin-top: 5px;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	visibility: hidden;
+	width: 100%;
+	z-index: 1000;
+}
+
+.LiveSearchResults ul {
+	list-style: none;
+	margin: 0;
+}
+
+.LiveSearchResults a {
+	display: block;
+	padding: 5px 15px;
+}
+
+.LiveSearchResults a:hover,
+.LiveSearchResults .Active > a {
+	background-color: mix(#fff, $color-accent-2, 95%);
+	display: block;
+	padding: 5px 15px;
+}
+
+@media screen and (max-width: $breakpoint-mobile-wide) {
+	.LiveSearchResults .SearchFilter {
+		display: block;
+		margin: 0;
+	}
+}

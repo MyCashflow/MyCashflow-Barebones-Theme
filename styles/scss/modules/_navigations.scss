@@ -1,0 +1,375 @@
+//------------------------------------------------------------------------------
+// Navigation Bar
+//------------------------------------------------------------------------------
+
+.NavigationBar {
+	@include box-shadow(0 1px 3px $black-10);
+	background-color: $color-navbar-bg;
+	border: 1px solid $color-navbar-border;
+	border-width: 1px 0;
+	font-size: $font-size-large;
+	position: relative;
+	z-index: 100;
+}
+
+.NavigationBarToggle {
+	display: inline-block;
+	font-size: 24px;
+	padding: 15px 10px;
+}
+
+.NavigationBarToggle-Left {
+	margin-left: -15px;
+}
+
+.NavigationBarToggle-Right {
+	margin-right: -15px;
+}
+
+//------------------------------------------------------------------------------
+// Navigation Expander
+//------------------------------------------------------------------------------
+
+.NavigationExpander {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.NavigationExpander:before {
+	@include icon($fa-var-angle-right);
+}
+
+.NavigationExpander.Open:before {
+	@include icon($fa-var-angle-down);
+}
+
+//------------------------------------------------------------------------------
+// Main Navigation
+//------------------------------------------------------------------------------
+
+.MainNavigation a {
+	@include truncate;
+	display: block;
+	padding: 15px;
+	transition-duration: $transition-fast;
+}
+
+.MainNavigation ul {
+	list-style: none;
+	margin: 0 -15px;
+	padding: 0;
+}
+
+.MainNavigation li {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+
+.MainNavigation li ul {
+	border: 1px solid $color-body-border;
+	box-shadow: 0 1px 2px $black-10;
+	margin: 0;
+	max-width: 300px;
+	min-width: 200px;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	transition-duration: $transition-fast;
+	visibility: hidden;
+	z-index: 1000;
+}
+
+.MainNavigation li li {
+	display: block;
+}
+
+.MainNavigation li li ul {
+	left: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.MainNavigation li li a {
+	background-color: $color-navbar-bg;
+	border: 1px solid $color-body-border;
+	border-width: 1px 0 0;
+	display: block;
+}
+
+.MainNavigation li li:first-child a {
+	border-width: 0;
+}
+
+.MainNavigation li:hover > ul {
+	opacity: 1;
+	visibility: visible;
+}
+
+.MainNavigation .Current > a {
+	color: $color-accent-2;
+}
+
+.MainNavigation .HasSubCategories > a {
+	@include icon-after($fa-var-angle-down);
+}
+
+.MainNavigation li .HasSubCategories > a {
+	@include icon-after($fa-var-angle-right);
+}
+
+.MainNavigation-Right ul ul {
+	left: auto;
+	right: 0;
+}
+
+//------------------------------------------------------------------------------
+// Side Navigation
+//------------------------------------------------------------------------------
+
+.SideNavigation {
+	@extend %default-margin;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+}
+
+.SideNavigation a {
+	@include icon-before($fa-var-angle-right);
+	@include truncate;
+	background-color: $color-boxed-bg;
+	border-top: 1px solid $color-body-border;
+	border-width: 0;
+	display: block;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.SideNavigation ul {
+	list-style: none;
+	margin-bottom: 0;
+}
+
+.SideNavigation ul ul a {
+	padding-left: 30px;
+}
+
+.SideNavigation ul ul ul a {
+	padding-left: 45px;
+}
+
+.SideNavigation li + li a {
+	border-width: 1px 0 0;
+}
+
+.SideNavigation .Current > a {
+	color: $color-accent-2;
+}
+
+//------------------------------------------------------------------------------
+// Inline Navigation
+//------------------------------------------------------------------------------
+
+.InlineNavigation a {
+	display: inline;
+}
+
+.InlineNavigation ul {
+	list-style: none;
+	margin-bottom: 0;
+}
+
+.InlineNavigation li {
+	display: inline;
+	margin: 0 10px;
+}
+
+.InlineNavigation li:first-child {
+	margin-left: 0;
+}
+
+.InlineNavigation li:last-child {
+	margin-right: 0;
+}
+
+.InlineNavigation li.Current > a {
+	color: $color-accent-2;
+}
+
+.InlineNavigation a[href='/account/'] {
+	@include icon-before($fa-var-lock);
+}
+
+.InlineNavigation a[href='/account/logout/'] {
+	@include icon-before($fa-var-sign-out);
+}
+
+.InlineNavigation a[href='/orderstatus/'] {
+	@include icon-before($fa-var-truck);
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.InlineNavigation li {
+		display: block;
+	}
+
+	.InlineNavigation li + li {
+		margin-top: 10px;
+	}
+
+	.InlineNavigation li + li:before {
+		display: none;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Simple Navigation
+//------------------------------------------------------------------------------
+
+.SimpleNavigation {
+	@extend %default-margin;
+}
+
+.SimpleNavigation a {
+	@include truncate;
+	@include icon-before($fa-var-angle-right);
+	display: block;
+}
+
+.SimpleNavigation ul {
+	list-style: none;
+}
+
+.SimpleNavigation ul ul a {
+	padding-left: 20px;
+}
+
+.SimpleNavigation ul ul ul a {
+	padding-left: 40px;
+}
+
+.SimpleNavigation ul,
+.SimpleNavigation li {
+	margin-top: 5px;
+}
+
+.SimpleNavigation ul:first-child,
+.SimpleNavigation li:first-child {
+	margin-top: 0;
+}
+
+.SimpleNavigation .Current > a {
+	color: $color-accent-2;
+}
+
+//------------------------------------------------------------------------------
+// Tabs Navigation
+//------------------------------------------------------------------------------
+
+.TabsNavigation a {
+	@include truncate;
+	background-color: $color-button-bg;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius $border-radius 0 0;
+	color: text-contrast($color-button-bg);
+	display: block;
+	font-weight: bold;
+	margin-bottom: -1px;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.TabsNavigation ul {
+	@include clearfix;
+	list-style: none;
+	margin-bottom: 0;
+	position: relative;
+	z-index: 10;
+}
+
+.TabsNavigation li {
+	float: left;
+	margin-left: 5px;
+}
+
+.TabsNavigation li:first-child {
+	margin-left: 0;
+}
+
+.TabsNavigation .Current > a {
+	background-color: $color-body-bg;
+	border-bottom-color: $color-body-bg;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.TabsNavigation li {
+		margin-left: 0;
+		width: 50%;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Drawer Navigation
+//------------------------------------------------------------------------------
+
+.DrawerNavigation {
+	margin-top: -1px;
+}
+
+.DrawerNavigation:first-child {
+	margin-top: 0;
+}
+
+.DrawerNavigation a {
+	@include truncate;
+	border: 1px solid $color-drawer-border;
+	border-width: 1px 0;
+	display: block;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.DrawerNavigation ul {
+	list-style: none;
+	margin-bottom: 0;
+}
+
+.DrawerNavigation ul ul,
+.DrawerNavigation li + li {
+	margin-top: -1px;
+}
+
+.DrawerNavigation ul ul a {
+	padding-left: 30px;
+}
+
+.DrawerNavigation ul ul ul a {
+	padding-left: 45px;
+}
+
+.DrawerNavigation .NavigationExpander {
+	border-left: 1px solid $color-drawer-border;
+	cursor: pointer;
+	line-height: 45px;
+	margin-left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 45px;
+}
+
+.DrawerNavigation .Current > a {
+	color: $color-accent-2;
+}
+
+.DrawerNavigation .HasSubCategories > ul {
+	display: none;
+}
+
+.DrawerNavigation .HasSubCategories > a {
+	padding-right: 60px;
+}
+
+.DrawerNavigation .Open > ul {
+	display: block;
+}

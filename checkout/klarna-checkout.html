@@ -1,0 +1,99 @@
+{Helper(file: 'helpers/header')}
+<div class="SiteContent">
+	<div class="Container">
+		<div class="Grid">
+			<div class="Col-7-12 Col-Desktop-8-12 Col-Tablet-12-12">
+				<div id="Checkout">
+					<div class="ContentSection">
+						<fieldset id="CheckoutShippingInformation">
+							{KlarnaCheckoutShippingInformation(
+								before: '
+									<h2>{%CheckoutChooseShippingMethod}</h2>
+									<p>{%KlarnaCheckoutShippingHelp}</p>'
+							)}
+						</fieldset>
+						<div class="FormItem CheckWrap">
+							<div class="Checks">
+								<label>
+									<input type="checkbox" data-toggle="#CheckoutSubmitOrderComment">
+									<span>{%KlarnaCheckoutAddComments}</span>
+								</label>
+							</div>
+						</div>
+						<div class="FormItem" id="CheckoutSubmitOrderComment">
+							<label for="OrderComments">{%AddComment}</label>
+							<textarea name="details" id="OrderComments" rows="5" cols="72">{CartComment}</textarea>
+						</div>
+					</div>
+					<div class="ContentSection">
+						<h2>{%KlarnaCheckoutFinishAndPay}</h2>
+						<div class="FormItem CheckWrap">
+							<div class="Checks">
+								<label>
+									<input type="checkbox" data-toggle="#CheckoutSubmitCampaignCode">
+									<span>{%CampaignCodeInquiry}</span>
+								</label>
+							</div>
+						</div>
+						<div id="CheckoutSubmitCampaignCode">
+							{CampaignCode(
+								mode: 'auto',
+								ajax: 'true',
+								action: 'checkout',
+								notifications: 'true'
+							)}
+						</div>
+						{CheckoutPaymentMethods(
+							exclude: 'current',
+							before: '
+								<div class="TabsNavigation">
+									<ul>
+										<li class="Current">
+											<a href="#PaymentTabKlarna">{CartPaymentMethod}</a>
+										</li>
+										<li>
+											<a href="#PaymentTabOther">{%KlarnaCheckoutChooseOtherPaymentMethod}</a>
+										</li>
+									</ul>
+								</div>
+								<div class="Tabs">
+									<div class="Tab Current" id="PaymentTabKlarna">
+										{CheckoutPaymentMethodDescription(
+											before: '<p>',
+											after: '</p>'
+										)}
+										{KlarnaCheckout}
+									</div>
+									<div class="Tab" id="PaymentTabOther">
+										<p>{%KlarnaCheckoutOtherPaymentMethodIntro}</p>
+										<form action="/checkout/" method="post">
+											<fieldset id="CheckoutPaymentMethods">',
+							after: '
+											</fieldset>
+											<div class="FormItem FormSubmit">
+												<button type="submit" class="SubmitButton">{%KlarnaCheckoutChangePaymentMethod}</button>
+											</div>
+										</form>
+									</div>
+								</div>',
+							or: '
+								{CheckoutPaymentMethodDescription(
+									before: '<p>',
+									after: '</p>'
+								)}
+								{KlarnaCheckout}'
+						)}
+					</div>
+				</div>
+			</div>
+			<div class="Col-4-12 Col-Push-1-12 Hide-Tablet">
+				{Helper(
+					file: 'helpers/mini-cart',
+					before: '<div class="MiniCart MiniCart-Checkout" data-sticky data-sticky-offset="100">',
+					after: '</div>'
+				)}
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}

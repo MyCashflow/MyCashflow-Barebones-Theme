@@ -1,0 +1,185 @@
+//------------------------------------------------------------------------------
+// Placeholders
+//------------------------------------------------------------------------------
+
+%default-margin {
+	margin: 0 0 20px;
+}
+
+%clearfix {
+	@include clearfix;
+}
+
+//------------------------------------------------------------------------------
+// Box Model
+//------------------------------------------------------------------------------
+
+html {
+	@include box-sizing(border-box);
+}
+
+*, *:before, *:after {
+	@include box-sizing(inherit);
+}
+
+input[type='search'] {
+	@include box-sizing(inherit);
+}
+
+//------------------------------------------------------------------------------
+// Margins
+//------------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6, p, form, table,
+hr, dl, ol, ul, fieldset {
+	@extend %default-margin;
+}
+
+//------------------------------------------------------------------------------
+// Borders & Paddings
+//------------------------------------------------------------------------------
+
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
+fieldset > :last-child {
+	margin-bottom: 0;
+}
+
+//------------------------------------------------------------------------------
+// Miscellaneous
+//------------------------------------------------------------------------------
+
+a, button {
+	cursor: pointer;
+}
+
+[disabled] {
+	opacity: 0.5;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+
+//------------------------------------------------------------------------------
+// Document
+//------------------------------------------------------------------------------
+
+body {
+	background-color: $color-footer-bg;
+}
+
+//------------------------------------------------------------------------------
+// Media Elements
+//------------------------------------------------------------------------------
+
+audio, canvas, img, progress, video {
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+//------------------------------------------------------------------------------
+// Links
+//------------------------------------------------------------------------------
+
+@include link-colors($color-body-bg);
+
+a {
+	text-decoration: none;
+	transition-duration: $transition-fast;
+}
+
+//------------------------------------------------------------------------------
+// Lists
+//------------------------------------------------------------------------------
+
+ul, ol {
+	list-style-position: inside;
+	padding: 0;
+}
+
+dl dt {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+dl dt:first-child {
+	margin-top: 0;
+}
+
+dl dd {
+	margin-left: 0;
+}
+
+.CompactDl dt {
+	display: inline;
+	font-weight: bold;
+	margin: 0 5px 0 0;
+}
+
+.CompactDl dt:first-child {
+	margin-top: 0;
+}
+
+.CompactDl dd {
+	display: inline;
+	margin: 0;
+}
+
+.CompactDl dd + dt:before {
+	content: '';
+	display: block;
+	height: 5px;
+}
+
+//------------------------------------------------------------------------------
+// Tables
+//------------------------------------------------------------------------------
+
+table {
+	border: 1px solid $color-body-border;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: left;
+}
+
+table caption {
+	@extend h3;
+	text-align: left;
+}
+
+table th,
+table td {
+	background-color: $color-boxed-bg;
+	border-bottom: 1px solid $color-body-border;
+	padding: 10px 15px;
+	vertical-align: top;
+}
+
+table th > :last-child,
+table td > :last-child {
+	margin-bottom: 0;
+}
+
+table tbody th,
+table tbody td {
+	background-color: $color-body-bg;
+}
+
+//------------------------------------------------------------------------------
+// Horizontal Rules
+//------------------------------------------------------------------------------
+
+hr {
+	background-color: $color-body-border;
+	border: 0;
+	display: block;
+	height: 1px;
+	margin: 40px 0;
+}

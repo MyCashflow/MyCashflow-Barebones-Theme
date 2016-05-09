@@ -1,0 +1,23 @@
+//------------------------------------------------------------------------------
+// Site
+//------------------------------------------------------------------------------
+
+.SiteHeader {
+	@include link-colors($color-header-bg);
+	background-color: $color-header-bg;
+	color: text-contrast($color-header-bg);
+}
+
+.SiteBody {
+	background-color: $color-body-bg;
+	color: text-contrast($color-body-bg);
+}
+
+.SiteContent {
+	padding: 40px 0 60px;
+}
+
+.SiteFooter {
+	border-top: 1px solid $color-footer-border;
+	color: text-contrast($color-footer-bg);
+}

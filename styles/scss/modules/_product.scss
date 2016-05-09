@@ -1,0 +1,104 @@
+//------------------------------------------------------------------------------
+// Product Base
+//------------------------------------------------------------------------------
+
+.ProductImage {
+	background-color: $color-image-bg;
+	border: 1px solid $color-image-border;
+	border-radius: $border-radius;
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: center;
+	transition-duration: $transition-fast;
+}
+
+.ProductImage:hover {
+	border-color: $color-accent-2;
+	box-shadow: 0 1px 6px $color-accent-2;
+}
+
+.ProductDiscountPrice {
+	color: $color-discount;
+}
+
+//------------------------------------------------------------------------------
+// List Product
+//------------------------------------------------------------------------------
+
+.ListProduct {
+	position: relative;
+}
+
+.ListProduct .ProductImage {
+	height: 160px;
+	line-height: 138px;
+	vertical-align: middle;
+}
+
+.ListProduct .ProductName {
+	@include truncate;
+	display: block;
+	margin: 0;
+}
+
+.ListProduct .ProductPrices {
+	@include truncate;
+}
+
+//------------------------------------------------------------------------------
+// Product Images
+//------------------------------------------------------------------------------
+
+#CurrentProductImage {
+	@extend %default-margin;
+	border-radius: $border-radius;
+	display: block;
+	height: auto;
+	padding: 10px;
+	text-align: center;
+}
+
+#ProductImageCaption {
+	text-align: center;
+}
+
+#ProductThumbnails {
+	@include clearfix;
+	list-style: none;
+	margin: -5px;
+}
+
+#ProductThumbnails li {
+	float: left;
+	padding: 5px;
+	vertical-align: middle;
+	width: 25%;
+}
+
+#ProductThumbnails .ProductThumbnail {
+	@extend .ProductImage;
+	line-height: 60px;
+	padding: 5px;
+}
+
+#ProductThumbnails .mz-thumb {
+	display: block;
+}
+
+#ProductThumbnails .mz-thumb img {
+	@include filter(none);
+	box-shadow: none;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	#ProductThumbnails li {
+		width: 12.5%;
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile-wide) {
+	#ProductThumbnails li {
+		width: 25%;
+	}
+}

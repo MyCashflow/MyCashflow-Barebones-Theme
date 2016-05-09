@@ -1,0 +1,55 @@
+				</div>
+				<div class="SiteFooter">
+					<div class="FooterSection">
+						<div class="Container">
+							<div class="Grid">
+								<div class="Col Col-3-12 Col-Tablet-12-12">
+									<h2>{%News}</h2>
+									{News(
+										limit: '5',
+										before: '<div class="SimpleNavigation">',
+										after: '</div>'
+									)}
+								</div>
+								<div class="Col Col-3-12 Col-Tablet-12-12">
+									<h2>{%AboutUs}</h2>
+									{InfoNavigation(
+										levels: '1',
+										before: '<div class="SimpleNavigation">',
+										after: '</div>'
+									)}
+								</div>
+								<div class="Col Col-3-12 Col-Tablet-12-12">
+									<h2>{%ContactUs}</h2>
+									{ContactInformation}
+								</div>
+								<div class="Col Col-3-12 Col-Tablet-12-12">
+									<div class="CompactForm">
+										{NewsletterSubscribeForm}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="FooterCopy">
+						<div class="Container">
+							<div class="Copyright">
+								<div class="Flex Flex-Collapse">
+									<div class="FlexItem">
+										Copyright &copy; {ShopName}
+									</div>
+									<div class="FlexItem FlexSpacer"></div>
+									<div class="FlexItem">
+										{MyCashflowTextAd}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{Helper(file: 'helpers/drawers')}
+		{Helper(file: 'helpers/scripts')}
+	</body>
+</html>

@@ -1,0 +1,54 @@
+//------------------------------------------------------------------------------
+// Numeric Spinners
+//------------------------------------------------------------------------------
+
+.Spinner {
+	display: table;
+	width: 130px;
+}
+
+.SpinnerInput {
+	display: table-cell;
+	width: 60%;
+}
+
+.SpinnerInput > input {
+	border-radius: 0;
+	border-width: 1px 0;
+	display: block;
+	margin: 0;
+	min-width: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.SpinnerControl {
+	display: table-cell;
+}
+
+.SpinnerButton {
+	display: block;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+	width: 35px;
+}
+
+.SpinnerButtonDec {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.SpinnerButtonDec:before {
+	@include icon($fa-var-angle-left);
+}
+
+.SpinnerButtonInc {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.SpinnerButtonInc:before {
+	@include icon($fa-var-angle-right);
+}

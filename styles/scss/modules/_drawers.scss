@@ -1,0 +1,111 @@
+//------------------------------------------------------------------------------
+// Drawer
+//------------------------------------------------------------------------------
+
+.Drawer {
+	background-color: $color-drawer-bg;
+	color: text-contrast($color-drawer-bg);
+	position: fixed;
+	transition-duration: $transition-slow;
+}
+
+.Drawer[data-drawer-side='top'],
+.Drawer[data-drawer-side='bottom'] {
+	height: 300px;
+	left: 0;
+	overflow-x: auto;
+	width: 100%;
+}
+
+.Drawer[data-drawer-side='left'],
+.Drawer[data-drawer-side='right'] {
+	bottom: 0;
+	overflow-y: auto;
+	top: 0;
+	width: 300px;
+}
+
+.Drawer[data-drawer-side='top'] {
+	@include transform(translateY(-100%));
+	border-bottom: 1px solid $color-drawer-border;
+	top: 0;
+}
+
+.Drawer[data-drawer-side='bottom'] {
+	@include transform(translateY(100%));
+	border-top: 1px solid $color-drawer-border;
+	bottom: 0;
+}
+
+.Drawer[data-drawer-side='left'] {
+	@include transform(translateX(-100%));
+	border-right: 1px solid $color-drawer-border;
+	left: 0;
+}
+
+.Drawer[data-drawer-side='right'] {
+	@include transform(translateX(100%));
+	border-left: 1px solid $color-drawer-border;
+	right: 0;
+}
+
+.Drawer[data-drawer-side='top'].Open {
+	@include box-shadow(0 1px 3px $black-25);
+	@include transform(translateY(0));
+}
+
+.Drawer[data-drawer-side='bottom'].Open {
+	@include box-shadow(0 -1px 3px $black-25);
+	@include transform(translateY(0));
+}
+
+.Drawer[data-drawer-side='left'].Open {
+	@include box-shadow(1px 0 3px $black-25);
+	@include transform(translateX(0));
+}
+
+.Drawer[data-drawer-side='right'].Open {
+	@include box-shadow(-1px 0 3px $black-25);
+	@include transform(translateX(0));
+}
+
+//------------------------------------------------------------------------------
+// Drawer Section
+//------------------------------------------------------------------------------
+
+.DrawerSection {
+	padding: 15px;
+}
+
+.DrawerSection > :last-child {
+	margin-bottom: 0;
+}
+
+//------------------------------------------------------------------------------
+// Drawer Container
+//------------------------------------------------------------------------------
+
+.DrawerContainer {
+	position: relative;
+	transition-duration: $transition-slow;
+}
+
+.Drawers {
+	position: relative;
+	z-index: 10000;
+}
+
+.DrawerOverlay {
+	@include cover(fixed);
+	background-color: #000;
+	cursor: pointer;
+	opacity: 0;
+	transition-duration: $transition-slow;
+	visibility: hidden;
+	z-index: 1000;
+}
+
+.DrawerOverlay.Visible {
+	opacity: 0.25;
+	visibility: visible;
+}

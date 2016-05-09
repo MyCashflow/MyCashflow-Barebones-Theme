@@ -1,0 +1,113 @@
+//------------------------------------------------------------------------------
+// Order Status
+//------------------------------------------------------------------------------
+
+#OrderStatus {
+	@extend .CompactDl;
+	@extend .Notification;
+}
+
+#OrderStatus #BackToAccountPage {
+	font-weight: bold;
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+//------------------------------------------------------------------------------
+// Order Info
+//------------------------------------------------------------------------------
+
+.OrderInfo {
+	background-color: $color-boxed-bg;
+}
+
+//------------------------------------------------------------------------------
+// Order Products Table
+//------------------------------------------------------------------------------
+
+#OrderProductsTable {
+	clear: both;
+	max-width: $breakpoint-mobile-wide;
+}
+
+#OrderProductsTable th,
+#OrderProductsTable td {
+	vertical-align: middle;
+}
+
+#OrderProductsTable img {
+	max-width: none;
+}
+
+#OrderProductsTable .CartProduct {
+	width: 99%;
+}
+
+#OrderProductsTable .ProductName {
+	@extend h5;
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: $breakpoint-mobile-wide) {
+	#OrderProductsTable {
+		max-width: 480px;
+		table-layout: fixed;
+		width: 100%;
+	}
+
+	#OrderProductsTable .CartTotal {
+		@include truncate;
+		width: 120px;
+	}
+
+	#OrderProductsTable .CartPic {
+		padding: 0;
+		width: 1px;
+	}
+
+	#OrderProductsTable .CartPic > a {
+		display: none;
+	}
+
+	#OrderProductsTable .CartPrice,
+	#OrderProductsTable .CartQuantity {
+		overflow: hidden;
+		padding: 0;
+		white-space: nowrap;
+		width: 0;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Order Documents
+//------------------------------------------------------------------------------
+
+#OrderDocuments {
+	list-style: none;
+}
+
+#OrderDocuments a {
+	@extend .Button;
+	@extend .Button-Primary;
+}
+
+#OrderDocuments li {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+#OrderDocuments li:first-child {
+	margin-left: 0;
+}
+
+#OrderDocuments .PDF-invoice {
+	@include icon-before($fa-var-file-pdf-o);
+}
+
+//------------------------------------------------------------------------------
+// Order Cancel
+//------------------------------------------------------------------------------
+
+#OrderCancel {
+	margin-top: 40px;
+}

@@ -1,0 +1,34 @@
+//------------------------------------------------------------------------------
+// Tab
+//------------------------------------------------------------------------------
+
+.Tab {
+	display: none;
+}
+
+.Tab > :last-child {
+	margin-bottom: 0;
+}
+
+.Tab.Current {
+	display: block;
+}
+
+//------------------------------------------------------------------------------
+// Tabs
+//------------------------------------------------------------------------------
+
+.Tabs {
+	background-color: $color-body-bg;
+	border: 1px solid $color-body-border;
+	border-radius: 0 $border-radius $border-radius $border-radius;
+	padding: 20px;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.Tabs {
+		border-width: 1px 0 0;
+		margin: 0 -15px;
+		padding: 20px 15px 0;
+	}
+}

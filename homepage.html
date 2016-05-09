@@ -1,0 +1,74 @@
+{Helper(file: 'helpers/header')}
+<div class="Banners Banners-Wide" data-slider="banners-wide">
+	<div class="Banner Banner-Wide" {CategoryImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
+		<div class="Container">
+			<div class="BannerContentWrap">
+				<div class="BannerContent">
+					{CategoryDescription}
+				</div>
+			</div>
+		</div>
+	</div>
+	{Banners(
+		name: 'frontpage',
+		helper: '{{
+			<a class="Banner Banner-Wide" href="{BannerURL}" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
+				<div class="Container">
+					<div class="BannerContentWrap">
+						<div class="BannerContent">
+							{BannerText}
+						</div>
+					</div>
+				</div>
+			</a>
+		}}'
+	)}
+</div>
+<div class="SiteContent">
+	<div class="Container">
+		{Notifications(group: 'account')}
+		{LastViewedProducts(
+			limit: '18',
+			type: 'normal',
+			before: '
+				<div class="ContentSection">
+					<h2 class="ContentTitle">{%ProductsConsidered}</h2>
+					<div class="List ProductList">
+						<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
+			after: '
+						</div>
+					</div>
+				</div>',
+			helper: 'helpers/list-product'
+		)}
+		{NewProducts(
+			limit: '18',
+			type: 'normal',
+			before: '
+				<div class="ContentSection">
+					<h2 class="ContentTitle">{%NewProducts}</h2>
+					<div class="List ProductList">
+						<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
+			after: '
+						</div>
+					</div>
+				</div>',
+			helper: 'helpers/list-product'
+		)}
+		{TopSellers(
+			limit: '18',
+			type: 'normal',
+			before: '
+				<div class="ContentSection">
+					<h2 class="ContentTitle">{%BestsellingProducts}</h2>
+					<div class="List ProductList">
+						<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
+			after: '
+						</div>
+					</div>
+				</div>',
+			helper: 'helpers/list-product'
+		)}
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}

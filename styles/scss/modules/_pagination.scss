@@ -1,0 +1,59 @@
+//------------------------------------------------------------------------------
+// Pagination
+//------------------------------------------------------------------------------
+
+.Pagination {
+	@include clearfix;
+	margin-top: 40px;
+}
+
+.Pagination a {
+	display: block;
+	padding: 6px 12px;
+}
+
+.Pagination ul {
+	display: inline-block;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+.Pagination li {
+	background-color: $color-button-bg;
+	border: 1px solid $color-body-border;
+	float: left;
+	margin-left: -1px;
+	text-align: center;
+	width: 40px;
+}
+
+.Pagination li:first-child {
+	border-bottom-left-radius: $border-radius;
+	border-top-left-radius: $border-radius;
+	margin-left: 0;
+}
+
+.Pagination li:last-child {
+	border-bottom-right-radius: $border-radius;
+	border-top-right-radius: $border-radius;
+}
+
+.Pagination .CurrentPage,
+.Pagination .DisabledPageLink,
+.Pagination .PagesBetween {
+	padding: 6px 12px;
+}
+
+.Pagination .CurrentPage {
+	color: $color-accent-2;
+}
+
+.Pagination .PreviousPageLink > a,
+.Pagination .PreviousPageLink.DisabledPageLink {
+	@include icon-replace($fa-var-angle-left);
+}
+
+.Pagination .NextPageLink > a,
+.Pagination .NextPageLink.DisabledPageLink {
+	@include icon-replace($fa-var-angle-right);
+}

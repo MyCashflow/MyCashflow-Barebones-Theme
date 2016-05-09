@@ -1,0 +1,60 @@
+{
+  "name": "barebones",
+  "authors": [
+    "Pulse247 <mail@pulse247.info>"
+  ],
+  "description": "MyCashflow default theme",
+  "main": "theme.xml",
+  "moduleType": [],
+  "keywords": [
+    "mycashflow",
+    "default",
+    "theme"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.mycashflow.fi",
+  "private": true,
+  "preen": {
+    "font-awesome": [
+      "scss/*",
+      "fonts/fontawesome-*"
+    ],
+    "hc-sticky": [
+      "jquery.hc-sticky.js"
+    ],
+    "jquery": [
+      "jquery.js"
+    ],
+    "jquery.finger": [
+      "dist/jquery.finger.js"
+    ],
+    "magnific-popup": [
+      "dist/jquery.magnific-popup.js",
+      "dist/magnific-popup.css"
+    ],
+    "normalize-css": [
+      "normalize.css"
+    ],
+    "slick-carousel": [
+      "slick/fonts/*",
+      "slick/*.{gif,css}",
+      "slick/slick.js"
+    ]
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.5.0",
+    "hc-sticky": "~1.2.43",
+    "jquery": "1.9.1",
+    "jquery.finger": "~0.1.4",
+    "magnific-popup": "~1.0.1",
+    "normalize-css": "normalize.css#~3.0.3",
+    "slick-carousel": "~1.5.9"
+  }
+}

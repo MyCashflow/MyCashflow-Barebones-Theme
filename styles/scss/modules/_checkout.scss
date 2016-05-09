@@ -1,0 +1,83 @@
+//------------------------------------------------------------------------------
+// Checkout Transfer to Payment
+//------------------------------------------------------------------------------
+
+.CheckoutTransferToPaymentForm {
+	display: inline-block;
+	margin: 0 5px 10px 0;
+	vertical-align: middle;
+	width: 240px;
+}
+
+.CheckoutTransferToPaymentLogo {
+	display: block;
+	line-height: 60px;
+	margin-bottom: 10px;
+}
+
+.CheckoutTransferToPayment [type='submit'] {
+	background-color: $color-image-bg;
+	border-color: $color-body-border;
+	color: text-contrast($color-image-bg) !important;
+	display: block;
+	height: 140px;
+	width: 100%;
+}
+
+.CheckoutTransferToPayment [type='submit']:hover {
+	background-color: $color-image-bg;
+	border-color: $color-accent-2;
+	color: text-contrast($color-image-bg) !important;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.CheckoutTransferToPaymentForm {
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Checkout Marketing Permissions
+//------------------------------------------------------------------------------
+
+#CheckoutMarketingPermissions .Checks label {
+	background-color: $color-button-bg;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+	display: inline-block;
+	padding: 10px 15px;
+	vertical-align: middle;
+}
+
+#CheckoutMarketingPermissions .Checks input {
+	margin-right: 10px;
+}
+
+@media screen and (max-width: $breakpoint-mobile-wide) {
+	#CheckoutMarketingPermissions .Checks > label {
+		display: block;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Klarna Checkout
+//------------------------------------------------------------------------------
+
+#KlarnaCheckout {
+	max-width: 640px;
+}
+
+#KlarnaCheckout > :last-child {
+	margin-bottom: 0;
+}
+
+#klarna-checkout-container {
+	margin: -12px;
+}
+
+#KlarnaCheckoutThanks {
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+	padding: 20px;
+}

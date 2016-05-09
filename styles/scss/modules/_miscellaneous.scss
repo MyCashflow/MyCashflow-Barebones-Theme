@@ -1,0 +1,63 @@
+
+//------------------------------------------------------------------------------
+// Font Awesome
+//------------------------------------------------------------------------------
+
+.fa:first-child {
+	margin-right: 0.25em;
+}
+
+.fa:last-child {
+	margin-left: 0.25em;
+}
+
+.fa:first-child:last-child {
+	margin-left: 0;
+}
+
+//------------------------------------------------------------------------------
+// Badge
+//------------------------------------------------------------------------------
+
+.Badge {
+	background-color: $color-accent-2;
+	border-radius: $border-radius;
+	color: text-contrast($color-accent-2);
+	display: block;
+	font-size: $font-size-small;
+	padding: 0 0.5em;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+//------------------------------------------------------------------------------
+// Logo Link
+//------------------------------------------------------------------------------
+
+.LogoLink {
+	@extend h2;
+	display: inline-block;
+	margin: 0 !important;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.LogoLink > img {
+	display: block;
+	max-height: 40px;
+}
+
+//------------------------------------------------------------------------------
+// Content
+//------------------------------------------------------------------------------
+
+.ContentTitle {
+	line-height: 40px;
+}
+
+.ContentSection + .ContentSection {
+	border-top: 1px solid $color-body-border;
+	margin-top: 40px;
+	padding-top: 40px;
+}

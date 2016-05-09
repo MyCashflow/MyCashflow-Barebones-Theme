@@ -1,0 +1,55 @@
+//------------------------------------------------------------------------------
+// Display Helpers
+//------------------------------------------------------------------------------
+
+.Hide-Desktop {
+	display: none;
+}
+
+//------------------------------------------------------------------------------
+// Brand Header
+//------------------------------------------------------------------------------
+
+.BrandHeader #SearchForm .FormItem {
+	margin-bottom: 0;
+}
+
+.Banners-Wide .Container {
+	height: 360px;
+}
+
+//------------------------------------------------------------------------------
+// Drawers
+//------------------------------------------------------------------------------
+
+.Drawer[data-drawer-side='top'] {
+	top: -300px;
+}
+
+.Drawer[data-drawer-side='bottom'] {
+	bottom: -300px;
+}
+
+.Drawer[data-drawer-side='left'] {
+	left: -300px;
+}
+
+.Drawer[data-drawer-side='right'] {
+	right: -300px;
+}
+
+.Drawer[data-drawer-side='top'].Open {
+	top: 0;
+}
+
+.Drawer[data-drawer-side='bottom'].Open {
+	bottom: 0;
+}
+
+.Drawer[data-drawer-side='left'].Open {
+	left: 0;
+}
+
+.Drawer[data-drawer-side='right'].Open {
+	right: 0;
+}

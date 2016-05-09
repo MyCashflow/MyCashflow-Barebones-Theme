@@ -1,0 +1,17 @@
+{
+  "browser": true,
+  "camelcase": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "indent": 2,
+  "jquery": true,
+  "latedef": true,
+  "maxlen": 120,
+  "newcap": true,
+  "predef": ["MCF"],
+  "quotmark": "single",
+  "strict": true,
+  "sub": true,
+  "undef": true,
+  "unused": true
+}

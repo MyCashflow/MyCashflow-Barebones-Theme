@@ -1,0 +1,266 @@
+//------------------------------------------------------------------------------
+// Align Items
+//------------------------------------------------------------------------------
+
+@mixin align-items($value) {
+	-moz-flex-align: $value;
+	-ms-flex-align: $value;
+	-webkit-flex-align: $value;
+	-webkit-align-items: $value;
+	align-items: $value;
+}
+
+//------------------------------------------------------------------------------
+// Appearance
+//------------------------------------------------------------------------------
+
+@mixin appearance($value) {
+	-moz-appearance: $value;
+	-webkit-appearance: $value;
+}
+
+//------------------------------------------------------------------------------
+// Box Shadow
+//------------------------------------------------------------------------------
+
+@mixin box-shadow($value...) {
+	-moz-box-shadow: $value;
+	-ms-box-shadow: $value;
+	-webkit-box-shadow: $value;
+	box-shadow: $value;
+}
+
+//------------------------------------------------------------------------------
+// Box Sizing
+//------------------------------------------------------------------------------
+
+@mixin box-sizing($value) {
+	-moz-box-sizing: $value;
+	-ms-box-sizing: $value;
+	-webkit-box-sizing: $value;
+	box-sizing: $value;
+}
+
+//------------------------------------------------------------------------------
+// Clearfix
+//------------------------------------------------------------------------------
+
+@mixin clearfix {
+	&:before, &:after {
+		content: ' ';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Cols
+//------------------------------------------------------------------------------
+
+@mixin cols($num) {
+	@for $i from 1 through $num {
+		.Col-#{$i}-#{$num} {
+			width: percentage(1 / $num * $i);
+		}
+
+		@media screen and (min-width: $breakpoint-desktop) {
+			.Col-Push-#{$i}-#{$num} {
+				left: percentage(1 / $num * $i);
+			}
+
+			.Col-Pull-#{$i}-#{$num} {
+				left: percentage(-1 / $num * $i);
+			}
+		}
+
+		@media screen and (max-width: $breakpoint-desktop) {
+			.Col-Desktop-#{$i}-#{$num} {
+				width: percentage(1 / $num * $i);
+			}
+		}
+
+		@media screen and (max-width: $breakpoint-tablet) {
+			.Col-Tablet-#{$i}-#{$num} {
+				width: percentage(1 / $num * $i);
+			}
+		}
+
+		@media screen and (min-width: $breakpoint-tablet) {
+			.Col-Tablet-Push-#{$i}-#{$num} {
+				left: percentage(1 / $num * $i);
+			}
+
+			.Col-Tablet-Pull-#{$i}-#{$num} {
+				left: percentage(-1 / $num * $i);
+			}
+		}
+
+		@media screen and (max-width: $breakpoint-mobile) {
+			.Col-Mobile-#{$i}-#{$num} {
+				width: percentage(1 / $num * $i);
+			}
+		}
+
+		@media screen and (min-width: $breakpoint-mobile) {
+			.Col-Mobile-Push-#{$i}-#{$num} {
+				left: percentage(1 / $num * $i);
+			}
+
+			.Col-Mobile-Pull-#{$i}-#{$num} {
+				left: percentage(-1 / $num * $i);
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+// Colspan
+//------------------------------------------------------------------------------
+
+@mixin colspan($value) {
+	-moz-column-span: $value;
+	-ms-column-span: $value;
+	-webkit-column-span: $value;
+	column-span: $value;
+}
+
+//------------------------------------------------------------------------------
+// Cover
+//------------------------------------------------------------------------------
+
+@mixin cover($position: absolute) {
+	bottom: 0;
+	left: 0;
+	position: $position;
+	right: 0;
+	top: 0;
+}
+
+//------------------------------------------------------------------------------
+// Filter
+//------------------------------------------------------------------------------
+
+@mixin filter($value) {
+	-ms-filter: $value;
+	-moz-filter: $value;
+	-webkit-filter: $value;
+	filter: $value;
+}
+
+//------------------------------------------------------------------------------
+// Flexbox
+//------------------------------------------------------------------------------
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+//------------------------------------------------------------------------------
+// Flex
+//------------------------------------------------------------------------------
+
+@mixin flex($value) {
+  -webkit-box-flex: $value;
+  -moz-box-flex: $value;
+  -ms-flex: $value;
+	-webkit-flex: $value;
+  flex: $value;
+}
+
+//------------------------------------------------------------------------------
+// Icon
+//------------------------------------------------------------------------------
+
+@mixin icon($icon) {
+	@include fa-icon;
+	content: $icon;
+}
+
+//------------------------------------------------------------------------------
+// Icon Before
+//------------------------------------------------------------------------------
+
+@mixin icon-before($icon) {
+	&:before {
+		@include icon($icon);
+		margin-right: 0.5em;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Icon After
+//------------------------------------------------------------------------------
+
+@mixin icon-after($icon) {
+	&:after {
+		@include icon($icon);
+		margin-left: 0.5em;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Icon Replace
+//------------------------------------------------------------------------------
+
+@mixin icon-replace($icon) {
+	font-size: 0;
+
+	&:before {
+		@include icon($icon);
+		font-size: $font-size;
+		vertical-align: middle;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Link Colors
+//------------------------------------------------------------------------------
+
+@mixin link-colors($bg) {
+	a {
+		color: best-contrast($bg, ($color-link-light, $color-link-dark));
+	}
+
+	a:hover {
+		color: $color-accent-2;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Transform
+//------------------------------------------------------------------------------
+
+@mixin transform($value) {
+	-moz-transform: $value;
+	-ms-transform: $value;
+	-webkit-transform: $value;
+	transform: $value;
+}
+
+//------------------------------------------------------------------------------
+// Transition
+//------------------------------------------------------------------------------
+
+@mixin transition($value) {
+	-moz-transition: $value;
+	-ms-transition: $value;
+	-webkit-transition: $value;
+	transition: $value;
+}
+
+//------------------------------------------------------------------------------
+// Truncate
+//------------------------------------------------------------------------------
+
+@mixin truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
