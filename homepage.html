@@ -1,14 +1,5 @@
 {Helper(file: 'helpers/header')}
 <div class="Banners Banners-Wide" data-slider="banners-wide">
-	<div class="Banner Banner-Wide" {CategoryImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-		<div class="Container">
-			<div class="BannerContentWrap">
-				<div class="BannerContent">
-					{CategoryDescription}
-				</div>
-			</div>
-		</div>
-	</div>
 	{Banners(
 		name: 'frontpage',
 		helper: '{{
