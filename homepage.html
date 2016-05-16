@@ -1,20 +1,20 @@
 {Helper(file: 'helpers/header')}
-<div class="Banners Banners-Wide" data-slider="banners-wide">
-	{Banners(
-		name: 'frontpage',
-		helper: '{{
-			<a class="Banner Banner-Wide" href="{BannerURL}" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-				<div class="Container">
-					<div class="BannerContentWrap">
-						<div class="BannerContent">
-							{BannerText}
-						</div>
+{Banners(
+	name: 'frontpage',
+	before: '<div class="Banners Banners-Wide" data-slider="banners-wide">',
+	after: '</div>',
+	helper: '{{
+		<a class="Banner Banner-Wide" href="{BannerURL}" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
+			<div class="Container">
+				<div class="BannerContentWrap">
+					<div class="BannerContent">
+						{BannerText}
 					</div>
 				</div>
-			</a>
-		}}'
-	)}
-</div>
+			</div>
+		</a>
+	}}'
+)}
 <div class="SiteContent">
 	<div class="Container">
 		{Notifications(group: 'account')}

@@ -40,6 +40,8 @@
 	border-radius: 0;
 	border-width: 0 0 1px;
 	font-size: $font-size-large;
+	height: 640px;
+	overflow: hidden;
 }
 
 .Banner-Wide {
@@ -64,9 +66,8 @@
 
 .Banner-Wide .BannerContentWrap {
 	display: table;
-	height: 25vw;
+	height: 640px;
 	max-width: $breakpoint-mobile;
-	min-height: 240px;
 	width: 100%;
 }
 

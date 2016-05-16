@@ -1,25 +1,16 @@
-<div class="Banners Banners-Wide" data-slider="banners-wide">
-	<div class="Banner Banner-Wide" {CategoryImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-		<div class="Container">
-			<div class="BannerContentWrap">
-				<div class="BannerContent">
-					{CategoryDescription}
-				</div>
-			</div>
-		</div>
-	</div>
-	{Banners(
-		name: 'category-{CategoryID}',
-		helper: '{{
-			<a class="Banner Banner-Wide" href="{BannerURL}" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-				<div class="Container">
-					<div class="BannerContentWrap">
-						<div class="BannerContent">
-							{BannerText}
-						</div>
+{Banners(
+	name: 'category-{CategoryID}',
+	before: '<div class="Banners Banners-Wide" data-slider="banners-wide">',
+	after: '</div>',
+	helper: '{{
+		<a class="Banner Banner-Wide" href="{BannerURL}" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
+			<div class="Container">
+				<div class="BannerContentWrap">
+					<div class="BannerContent">
+						{BannerText}
 					</div>
 				</div>
-			</a>
-		}}'
-	)}
-</div>
+			</div>
+		</a>
+	}}'
+)}
