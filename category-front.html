@@ -9,7 +9,13 @@
 					type: 'normal',
 					before: '
 						<div class="ContentSection">
-							<h2 class="ContentTitle">{PageTitle}</h2>
+							<h1 class="ContentTitle">{PageTitle}</h1>
+							{CategoryImage(
+								width: '1024',
+								before: '<div class="Banner Banner-Body">',
+								after: '</div>'
+							)}
+							{CategoryDescription}
 							<div class="List ProductList">
 								<div class="GridList">',
 					after: '
