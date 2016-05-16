@@ -5,26 +5,29 @@
 	<div class="Container">
 		<div class="Grid">
 			<div class="Col-9-12 Col-Tablet-12-12">
-				<div class="Flex Flex-Collapse">
-					<div class="FlexItem">
-						<h1 class="ContentTitle">{PageTitle}</h1>
+				<div class="ContentSection">
+					<div class="Flex Flex-Collapse">
+						<div class="FlexItem">
+							<h1 class="ContentTitle">{PageTitle}</h1>
+						</div>
+						{Helper(
+							file: 'helpers/pagination-form',
+							before: '
+								<div class="FlexSpacer"></div>
+								<div class="FlexItem">',
+							after: '</div>'
+						)}
 					</div>
-					{Helper(
-						file: 'helpers/pagination-form',
-						before: '
-							<div class="FlexSpacer"></div>
-							<div class="FlexItem">',
+					{CategoryImage(
+						width: '1024',
+						before: '<div class="Banner Banner-Body">',
 						after: '</div>'
 					)}
+					{CategoryDescription}
 				</div>
-				{CategoryImage(
-					width: '1024',
-					before: '<div class="Banner Banner-Body">',
-					after: '</div>'
-				)}
-				{CategoryDescription}
 				{Products(
 					pagination: 'true',
+					type: 'normal',
 					before: '
 						<div class="ContentSection">
 							<div class="List ProductList">

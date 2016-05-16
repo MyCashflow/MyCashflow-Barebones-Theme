@@ -1,5 +1,4 @@
 {Helper(file: 'helpers/header')}
-{Helper(file: 'helpers/category-header')}
 {Helper(file: 'helpers/path')}
 <div class="SiteContent">
 	<div class="Container">
@@ -18,13 +17,14 @@
 							after: '</div>'
 						)}
 					</div>
-					{CategoryImage(
+					{CampaignImage(
 						width: '1024',
 						before: '<div class="Banner Banner-Body">',
 						after: '</div>'
 					)}
 					{CategoryDescription}
-					{CategoryProducts(
+					{CampaignProducts(
+						pagination: 'true',
 						type: 'normal',
 						before: '
 							<div class="List ProductList">
@@ -37,34 +37,6 @@
 						or: '<div class="Notification">0 {%Products}</div>'
 					)}
 				</div>
-				{CategoryNewProducts(
-					limit: '15',
-					type: 'normal',
-					before: '
-						<div class="ContentSection">
-							<h2 class="ContentTitle">{%NewProducts}</h2>
-							<div class="List ProductList">
-								<div class="GridList" data-slider="grid-list">',
-					after: '
-								</div>
-							</div>
-						</div>',
-					helper: 'helpers/list-product'
-				)}
-				{CategoryHotPicks(
-					limit: '15',
-					type: 'normal',
-					before: '
-						<div class="ContentSection">
-							<h2 class="ContentTitle">{%BestsellingProducts}</h2>
-							<div class="List ProductList">
-								<div class="GridList" data-slider="grid-list">',
-					after: '
-								</div>
-							</div>
-						</div>',
-					helper: 'helpers/list-product'
-				)}
 			</div>
 			<div class="Col-3-12 Col-Tablet-12-12">
 				{Helper(file: 'helpers/sidebar')}
