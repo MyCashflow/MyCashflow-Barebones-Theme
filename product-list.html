@@ -24,22 +24,20 @@
 						after: '</div>'
 					)}
 					{CategoryDescription}
-				</div>
-				{Products(
-					pagination: 'true',
-					type: 'normal',
-					before: '
-						<div class="ContentSection">
+					{Products(
+						pagination: 'true',
+						type: 'normal',
+						before: '
 							<div class="List ProductList">
 								<div class="GridList">',
-					after: '
+						after: '
 								</div>
 							</div>
-							{Helper(file: 'helpers/pagination')}
-						</div>',
-					helper: 'helpers/list-product',
-					or: '<div class="Notification">0 {%Products}</div>'
-				)}
+							{Helper(file: 'helpers/pagination')}',
+						helper: 'helpers/list-product',
+						or: '<div class="Notification">0 {%Products}</div>'
+					)}
+				</div>
 			</div>
 			<div class="Col-3-12 Col-Tablet-12-12">
 				{Helper(file: 'helpers/sidebar')}
