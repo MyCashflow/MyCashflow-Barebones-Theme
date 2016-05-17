@@ -3434,6 +3434,7 @@ form .Active[type='submit'],
   overflow: hidden; }
 
 .Banner-Wide {
+  background-position: 50%;
   background-size: cover;
   position: relative; }
 
@@ -3464,12 +3465,14 @@ form .Active[type='submit'],
   vertical-align: middle; }
 
 @media screen and (max-width: 1024px) {
+  .Banners-Wide,
   .Banner-Wide .BannerContentWrap {
-    height: auto; } }
+    height: 360px; } }
 
 @media screen and (max-width: 600px) {
-  .Banner-Wide .Banner {
-    background-image: none; } }
+  .Banners-Wide,
+  .Banner-Wide .BannerContentWrap {
+    height: 240px; } }
 
 .Breadcrumb {
   overflow: hidden;
