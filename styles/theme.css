@@ -3457,7 +3457,6 @@ form .Active[type='submit'],
 .Banner-Wide .BannerContentWrap {
   display: table;
   height: 640px;
-  max-width: 600px;
   width: 100%; }
 
 .Banner-Wide .BannerContent {
