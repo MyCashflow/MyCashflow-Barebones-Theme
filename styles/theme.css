@@ -3384,7 +3384,7 @@ form .Active[type='submit'],
   #AdminTools {
     display: none; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Hide-Desktop {
     display: none; } }
 
