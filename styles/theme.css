@@ -3396,7 +3396,18 @@ form .Active[type='submit'],
   .Hide-Mobile {
     display: none; } }
 
-.BannerContent > * {
+.Banner {
+  position: relative; }
+
+.BannerLink {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+
+.BannerText > * {
   margin: 10px 0 !important; }
 
 .Banner-Body {
@@ -3408,11 +3419,15 @@ form .Active[type='submit'],
 .Banner-Body img {
   width: 100%; }
 
+.Banners-Side {
+  text-align: center; }
+
 .Banner-Side {
   background-color: #fafafa;
   border: 1px solid #dadada;
   border-radius: 2px;
-  display: block; }
+  display: inline-block;
+  position: relative; }
 
 .Banner-Side .BannerImage {
   background-color: #ffffff;
@@ -3430,16 +3445,13 @@ form .Active[type='submit'],
   border-radius: 0;
   border-width: 0 0 1px;
   font-size: 16px;
-  height: 600px;
+  height: 480px;
   overflow: hidden; }
 
 .Banner-Wide {
   background-position: 50%;
   background-size: cover;
   position: relative; }
-
-.Banner-Wide:hover {
-  color: #5a5a5a; }
 
 .Banner-Wide:before {
   bottom: 0;
@@ -3456,7 +3468,7 @@ form .Active[type='submit'],
 
 .Banner-Wide .BannerContentWrap {
   display: table;
-  height: 600px;
+  height: 480px;
   width: 100%; }
 
 .Banner-Wide .BannerContent {
@@ -3466,7 +3478,7 @@ form .Active[type='submit'],
 @media screen and (max-width: 1024px) {
   .Banners-Wide,
   .Banner-Wide .BannerContentWrap {
-    height: 360px; } }
+    height: 340px; } }
 
 @media screen and (max-width: 600px) {
   .Banners-Wide,
