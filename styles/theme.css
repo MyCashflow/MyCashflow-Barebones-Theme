@@ -20,7 +20,7 @@
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2206,7 +2206,7 @@ hr {
 
 body {
   color: #5a5a5a;
-  font: 14px / 24px "Raleway", sans-serif; }
+  font: 14px/24px "Raleway", sans-serif; }
 
 button, input, select, textarea {
   color: inherit;
@@ -2538,7 +2538,7 @@ form .Active[type='submit'],
 
 .BuyForm [type='submit']:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2560,7 +2560,7 @@ form .Active[type='submit'],
   width: 50px; }
   #SearchForm #SearchButton:before {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -3336,7 +3336,7 @@ form .Active[type='submit'],
 
 .ExtShareButton.Facebook > .ExtShareButtonText:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3346,7 +3346,7 @@ form .Active[type='submit'],
 
 .ExtShareButton.GooglePlus > .ExtShareButtonText:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3356,7 +3356,7 @@ form .Active[type='submit'],
 
 .ExtShareButton.LinkedIn > .ExtShareButtonText:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3366,7 +3366,7 @@ form .Active[type='submit'],
 
 .ExtShareButton.Twitter > .ExtShareButtonText:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3384,7 +3384,7 @@ form .Active[type='submit'],
   #AdminTools {
     display: none; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Hide-Desktop {
     display: none; } }
 
@@ -3472,7 +3472,7 @@ form .Active[type='submit'],
 
 .Breadcrumb ul li:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3556,7 +3556,7 @@ form .Active[type='submit'],
 
 .FullCartProduct .ProductRemove:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3926,7 +3926,7 @@ form .Active[type='submit'],
 
 .LoaderSpinner:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4021,7 +4021,7 @@ form .Active[type='submit'],
 
 .NavigationExpander:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4030,7 +4030,7 @@ form .Active[type='submit'],
 
 .NavigationExpander.Open:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4094,7 +4094,7 @@ form .Active[type='submit'],
 
 .MainNavigation .HasSubCategories > a:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4104,7 +4104,7 @@ form .Active[type='submit'],
 
 .MainNavigation li .HasSubCategories > a:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4132,7 +4132,7 @@ form .Active[type='submit'],
   position: relative; }
   .SideNavigation a:before {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -4178,7 +4178,7 @@ form .Active[type='submit'],
 
 .InlineNavigation a[href='/account/']:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4188,7 +4188,7 @@ form .Active[type='submit'],
 
 .InlineNavigation a[href='/account/logout/']:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4198,7 +4198,7 @@ form .Active[type='submit'],
 
 .InlineNavigation a[href='/orderstatus/']:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4221,7 +4221,7 @@ form .Active[type='submit'],
   display: block; }
   .SimpleNavigation a:before {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -4402,7 +4402,7 @@ form .Active[type='submit'],
 
 #OrderDocuments .PDF-invoice:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4461,7 +4461,7 @@ form .Active[type='submit'],
   .Pagination .PreviousPageLink > a:before,
   .Pagination .PreviousPageLink.DisabledPageLink:before {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -4476,7 +4476,7 @@ form .Active[type='submit'],
   .Pagination .NextPageLink > a:before,
   .Pagination .NextPageLink.DisabledPageLink:before {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -4698,7 +4698,7 @@ form .Active[type='submit'],
 
 .SpinnerButtonDec:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4711,7 +4711,7 @@ form .Active[type='submit'],
 
 .SpinnerButtonInc:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
