@@ -1,5 +1,4 @@
 {Helper(file: 'helpers/header')}
-{Helper(file: 'helpers/category-header')}
 {Helper(file: 'helpers/path')}
 <div class="SiteContent">
 	<div class="Container">
@@ -18,13 +17,13 @@
 							after: '</div>'
 						)}
 					</div>
-					{CategoryImage(
+					{CampaignImage(
 						width: '1024',
 						before: '<div class="Banner Banner-Body">',
 						after: '</div>'
 					)}
 					{CategoryDescription}
-					{Products(
+					{CampaignProducts(
 						pagination: 'true',
 						type: 'normal',
 						before: '

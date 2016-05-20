@@ -2,20 +2,54 @@
 // Banner
 //------------------------------------------------------------------------------
 
-.BannerContent > * {
+.Banner {
+	position: relative;
+}
+
+.BannerLink {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.BannerText > * {
 	margin: 10px 0 !important;
+}
+
+//------------------------------------------------------------------------------
+// Body Banners
+//------------------------------------------------------------------------------
+
+.Banner-Body {
+	@extend %default-margin;
+	background-color: $color-boxed-bg;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+	display: block;
+}
+
+.Banner-Body img {
+	width: 100%;
 }
 
 //------------------------------------------------------------------------------
 // Side Banners
 //------------------------------------------------------------------------------
 
+.Banners-Side {
+	text-align: center;
+}
+
 .Banner-Side {
 	@extend %default-margin;
 	background-color: $color-boxed-bg;
 	border: 1px solid $color-body-border;
 	border-radius: $border-radius;
-	display: block;
+	display: inline-block;
+	position: relative;
 }
 
 .Banner-Side .BannerImage {
@@ -40,15 +74,14 @@
 	border-radius: 0;
 	border-width: 0 0 1px;
 	font-size: $font-size-large;
+	height: 480px;
+	overflow: hidden;
 }
 
 .Banner-Wide {
+	background-position: 50%;
 	background-size: cover;
 	position: relative;
-}
-
-.Banner-Wide:hover {
-	color: text-contrast($color-banner-bg);
 }
 
 .Banner-Wide:before {
@@ -64,9 +97,7 @@
 
 .Banner-Wide .BannerContentWrap {
 	display: table;
-	height: 25vw;
-	max-width: $breakpoint-mobile;
-	min-height: 240px;
+	height: 480px;
 	width: 100%;
 }
 
@@ -76,13 +107,15 @@
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
+	.Banners-Wide,
 	.Banner-Wide .BannerContentWrap {
-		height: auto;
+		height: 340px;
 	}
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
-	.Banner-Wide .Banner {
-		background-image: none;
+	.Banners-Wide,
+	.Banner-Wide .BannerContentWrap {
+		height: 240px;
 	}
 }

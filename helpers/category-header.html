@@ -1,26 +1,25 @@
-<div class="Banners Banners-Wide" data-slider="banners-wide">
-	<div class="Banner Banner-Wide" {CategoryImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-		<div class="Container">
-			<div class="BannerContentWrap">
-				<div class="BannerContent">
-					<h1>{PageTitle}</h1>
-					{CategoryDescription}
-				</div>
-			</div>
-		</div>
-	</div>
-	{Banners(
-		name: 'category-{CategoryID}',
-		helper: '{{
-			<a class="Banner Banner-Wide" href="{BannerURL}" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-				<div class="Container">
-					<div class="BannerContentWrap">
-						<div class="BannerContent">
-							{BannerText}
+{Banners(
+	name: 'category-{CategoryID}',
+	before: '<div class="Banners Banners-Wide" data-slider="banners-wide">',
+	after: '</div>',
+	helper: '{{
+		<div class="Banner Banner-Wide" href="{BannerURL}" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
+			{BannerUrl(
+				before: '<a class="BannerLink" href="',
+				after: '"></a>'
+			)}
+			{BannerText(
+				before: '
+					<div class="Container">
+						<div class="BannerContentWrap">
+							<div class="BannerContent">
+								<div class="BannerText">',
+				after: '
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			</a>
-		}}'
-	)}
-</div>
+					</div>'
+			)}
+		</div>
+	}}'
+)}

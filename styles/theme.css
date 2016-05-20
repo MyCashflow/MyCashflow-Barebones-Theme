@@ -2086,7 +2086,7 @@
 
 h1, h2, .LogoLink, h3, table caption, h4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
 hr, dl, ol, ul, fieldset, .GroupLabel, .FormItem, .Notification, .GroupErrorMessage,
-.FormNotification, #OrderStatus, .Banner-Side, .Breadcrumb, .MiniCart-Checkout, .SideNavigation, .SimpleNavigation, #CurrentProductImage, .SearchFilter {
+.FormNotification, #OrderStatus, .Banner-Body, .Banner-Side, .Breadcrumb, .MiniCart-Checkout, .SideNavigation, .SimpleNavigation, #CurrentProductImage, .SearchFilter {
   margin: 0 0 20px; }
 
 html {
@@ -2228,7 +2228,7 @@ h6, .H6 {
     margin-top: 0; }
 
 h1, .H1 {
-  font-size: 26px;
+  font-size: 24px;
   line-height: 35px; }
 
 h2, .LogoLink, .H2 {
@@ -3396,14 +3396,38 @@ form .Active[type='submit'],
   .Hide-Mobile {
     display: none; } }
 
-.BannerContent > * {
+.Banner {
+  position: relative; }
+
+.BannerLink {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+
+.BannerText > * {
   margin: 10px 0 !important; }
+
+.Banner-Body {
+  background-color: #fafafa;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  display: block; }
+
+.Banner-Body img {
+  width: 100%; }
+
+.Banners-Side {
+  text-align: center; }
 
 .Banner-Side {
   background-color: #fafafa;
   border: 1px solid #dadada;
   border-radius: 2px;
-  display: block; }
+  display: inline-block;
+  position: relative; }
 
 .Banner-Side .BannerImage {
   background-color: #ffffff;
@@ -3420,14 +3444,14 @@ form .Active[type='submit'],
   border: 1px solid #dadada;
   border-radius: 0;
   border-width: 0 0 1px;
-  font-size: 16px; }
+  font-size: 16px;
+  height: 480px;
+  overflow: hidden; }
 
 .Banner-Wide {
+  background-position: 50%;
   background-size: cover;
   position: relative; }
-
-.Banner-Wide:hover {
-  color: #5a5a5a; }
 
 .Banner-Wide:before {
   bottom: 0;
@@ -3444,9 +3468,7 @@ form .Active[type='submit'],
 
 .Banner-Wide .BannerContentWrap {
   display: table;
-  height: 25vw;
-  max-width: 600px;
-  min-height: 240px;
+  height: 480px;
   width: 100%; }
 
 .Banner-Wide .BannerContent {
@@ -3454,12 +3476,14 @@ form .Active[type='submit'],
   vertical-align: middle; }
 
 @media screen and (max-width: 1024px) {
+  .Banners-Wide,
   .Banner-Wide .BannerContentWrap {
-    height: auto; } }
+    height: 340px; } }
 
 @media screen and (max-width: 600px) {
-  .Banner-Wide .Banner {
-    background-image: none; } }
+  .Banners-Wide,
+  .Banner-Wide .BannerContentWrap {
+    height: 240px; } }
 
 .Breadcrumb {
   overflow: hidden;
@@ -3550,6 +3574,7 @@ form .Active[type='submit'],
   border-radius: 2px;
   display: block;
   height: 160px;
+  line-height: 138px;
   margin-bottom: 0;
   padding: 10px;
   width: 160px; }
@@ -4548,7 +4573,7 @@ form .Active[type='submit'],
   width: 25%; }
 
 #ProductThumbnails .ProductThumbnail {
-  line-height: 60px;
+  line-height: 68px;
   padding: 5px; }
 
 #ProductThumbnails .mz-thumb {

@@ -59,4 +59,32 @@
 			</li>
 		}}'
 	)}
+	{TopSellers(
+		limit: '18',
+		type: 'normal',
+		before: '
+			<div class="ContentSection">
+				<h2 class="ContentTitle">{%BestsellingProducts}</h2>
+				<div class="List ProductList">
+					<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
+		after: '
+					</div>
+				</div>
+			</div>',
+		helper: 'helpers/list-product'
+	)}
+	{LastViewedProducts(
+		limit: '18',
+		type: 'normal',
+		before: '
+			<div class="ContentSection">
+				<h2 class="ContentTitle">{%ProductsConsidered}</h2>
+				<div class="List ProductList">
+					<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
+		after: '
+					</div>
+				</div>
+			</div>',
+		helper: 'helpers/list-product'
+	)}
 </div>

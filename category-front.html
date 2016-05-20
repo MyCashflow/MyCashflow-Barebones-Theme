@@ -4,23 +4,39 @@
 <div class="SiteContent">
 	<div class="Container">
 		<div class="Grid">
-			<div class="Col-3-12 Col-Tablet-12-12">
-				{Helper(file: 'helpers/sidebar')}
-			</div>
 			<div class="Col-9-12 Col-Tablet-12-12">
-				{CategoryProducts(
-					type: 'normal',
-					before: '
-						<div class="ContentSection">
-							<h2 class="ContentTitle">{PageTitle}</h2>
+				<div class="ContentSection">
+					<div class="Flex Flex-Collapse">
+						<div class="FlexItem">
+							<h1 class="ContentTitle">{PageTitle}</h1>
+						</div>
+						{Helper(
+							file: 'helpers/pagination-form',
+							before: '
+								<div class="FlexSpacer"></div>
+								<div class="FlexItem">',
+							after: '</div>'
+						)}
+					</div>
+					{CategoryImage(
+						width: '1024',
+						before: '<div class="Banner Banner-Body">',
+						after: '</div>'
+					)}
+					{CategoryDescription}
+					{CategoryProducts(
+						type: 'normal',
+						before: '
 							<div class="List ProductList">
 								<div class="GridList">',
-					after: '
+						after: '
 								</div>
 							</div>
-						</div>',
-					helper: 'helpers/list-product'
-				)}
+							{Helper(file: 'helpers/pagination')}',
+						helper: 'helpers/list-product',
+						or: '<div class="Notification">0 {%Products}</div>'
+					)}
+				</div>
 				{CategoryNewProducts(
 					limit: '15',
 					type: 'normal',
@@ -49,6 +65,9 @@
 						</div>',
 					helper: 'helpers/list-product'
 				)}
+			</div>
+			<div class="Col-3-12 Col-Tablet-12-12">
+				{Helper(file: 'helpers/sidebar')}
 			</div>
 		</div>
 	</div>

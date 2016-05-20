@@ -7,7 +7,7 @@
 	'use strict';
 
 	var Locales = {
-    en: {
+		en: {
 			close: 'Close',
 			expandImage: 'Expand image',
 			loading: 'Loading...',
@@ -15,9 +15,9 @@
 			updating: 'Updating...',
 			updatingCart: 'Updating cart...',
 			updatingCheckout: 'Updating checkout...',
-      next: 'Next',
+			next: 'Next',
 			previous: 'Previous'
-    },
+		},
 
 		fi: {
 			close: 'Sulje',
@@ -27,14 +27,14 @@
 			updating: 'Päivitetään...',
 			updatingCart: 'Ostoskoria päivitetään...',
 			updatingCheckout: 'Kassaa päivitetään...',
-      next: 'Seuraava',
-      previous: 'Edellinen'
-    },
+			next: 'Seuraava',
+			previous: 'Edellinen'
+		},
 
 		get: function (key) {
 			return this[window.MCF.locale.toLowerCase()][key];
 		}
-  };
+	};
 
 	$.extend(true, window, { MCF: { Locales: Locales }});
 })();

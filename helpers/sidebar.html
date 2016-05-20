@@ -1,6 +1,6 @@
-<div class="Hide-Tablet">
+<div class="Sidebar">
 	{Categories(
-		start: '1',
+		show: 'active',
 		before: '
 			<h3 class="ContentTitle">{%BrowseCategories}</h3>
 			<div class="SideNavigation">',
@@ -18,15 +18,25 @@
 		before: '<div class="Banners Banners-Side">',
 		after: '</div>',
 		helper: '{{
-			<a class="Banner Banner-Side" href="{BannerURL}">
-				<div class="BannerImage">
-					<img src="{BannerImageURL}" alt="">
-				</div>
-				{BannerText(
-					before: '<div class="BannerContent">',
-					after: '</div>'
+			<div class="Banner Banner-Side">
+				{BannerUrl(
+					before: '<a class="BannerLink" href="',
+					after: '"></a>'
 				)}
-			</a>
+				{BannerImageURL(
+					width: '480',
+					before: '<div class="BannerImage"><img src="',
+					after: '" alt=""></div>'
+				)}
+				{BannerText(
+					before: '
+						<div class="BannerContent">
+							<div class="BannerText">',
+					after: '
+							</div>
+						</div>'
+				)}
+			</div>
 		}}'
 	)}
 </div>
