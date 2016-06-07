@@ -2576,6 +2576,12 @@ form .Active[type='submit'],
 #NewsletterSubscribeForm label {
   display: none; }
 
+#NewsletterSubscribeForm input {
+  width: 65%; }
+
+#NewsletterSubscribeForm button {
+  width: 35%; }
+
 .JS .JS-Hide {
   display: none !important; }
 
@@ -3451,6 +3457,7 @@ form .Active[type='submit'],
 .Banner-Wide {
   background-position: 50%;
   background-size: cover;
+  height: 480px;
   position: relative; }
 
 .Banner-Wide:before {
@@ -3463,7 +3470,6 @@ form .Active[type='submit'],
   display: block; }
 
 .Banner-Wide .Container {
-  height: 100%;
   position: relative; }
 
 .Banner-Wide .BannerContentWrap {
@@ -3477,11 +3483,13 @@ form .Active[type='submit'],
 
 @media screen and (max-width: 1024px) {
   .Banners-Wide,
+  .Banner-Wide,
   .Banner-Wide .BannerContentWrap {
     height: 340px; } }
 
 @media screen and (max-width: 600px) {
   .Banners-Wide,
+  .Banner-Wide,
   .Banner-Wide .BannerContentWrap {
     height: 240px; } }
 

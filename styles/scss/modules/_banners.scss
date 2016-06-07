@@ -81,6 +81,7 @@
 .Banner-Wide {
 	background-position: 50%;
 	background-size: cover;
+	height: 480px;
 	position: relative;
 }
 
@@ -91,7 +92,6 @@
 }
 
 .Banner-Wide .Container {
-	height: 100%;
 	position: relative;
 }
 
@@ -108,6 +108,7 @@
 
 @media screen and (max-width: $breakpoint-tablet) {
 	.Banners-Wide,
+	.Banner-Wide,
 	.Banner-Wide .BannerContentWrap {
 		height: 340px;
 	}
@@ -115,6 +116,7 @@
 
 @media screen and (max-width: $breakpoint-mobile) {
 	.Banners-Wide,
+	.Banner-Wide,
 	.Banner-Wide .BannerContentWrap {
 		height: 240px;
 	}
