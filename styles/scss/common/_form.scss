@@ -409,3 +409,11 @@ form [type='submit'] {
 #NewsletterSubscribeForm label {
 	display: none;
 }
+
+#NewsletterSubscribeForm input {
+	width: 65%;
+}
+
+#NewsletterSubscribeForm button {
+	width: 35%;
+}
