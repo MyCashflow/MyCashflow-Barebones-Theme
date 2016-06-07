@@ -21,8 +21,13 @@
 		},
 
 		onAddProduct: function (evt) {
+			var $buyForm = $(evt.currentTarget);
+			var $fileInputs = $buyForm.find('input[type="file"]');
+			if ($fileInputs.length) {
+				return true;
+			}
 			evt.preventDefault();
-			this.addProduct($(evt.currentTarget));
+			this.addProduct($buyForm);
 		},
 
 		onUpdate: function (evt) {
