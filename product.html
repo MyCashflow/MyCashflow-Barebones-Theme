@@ -36,6 +36,14 @@
 					{ProductAvailability}
 					{ProductBuy(variations: 'radio')}
 				</div>
+				{AvailabilityNotificationForm(
+					before:'
+						<div class="ContentSection">
+							<h3>{%AvailabilityNotificationIntroTitle}</h3>
+							<p>{%AvailabilityNotificationIntroText}</p>',
+					after: '
+						</div>'
+				)}
 				<div class="ContentSection">
 					{ProductFullDesc}
 					{ShareButtons}
