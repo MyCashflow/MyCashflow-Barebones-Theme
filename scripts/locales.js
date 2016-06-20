@@ -32,7 +32,8 @@
 		},
 
 		get: function (key) {
-			return this[window.MCF.locale.toLowerCase()][key];
+			var locale = window.MCF.locale.toLowerCase();
+			return !!this[locale] ? this[locale][key] : this.en[key];
 		}
 	};
 
