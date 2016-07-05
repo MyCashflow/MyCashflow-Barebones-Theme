@@ -3863,10 +3863,11 @@ form .Active[type='submit'],
   padding: 20px 0; }
 
 .BrandHeader {
-  padding: 40px 0; }
+  padding: 30px 0; }
 
-.BrandHeader .LogoLink {
-  min-width: 240px; }
+.BrandHeader .LogoLink > img {
+  max-height: 160px;
+  max-width: 320px; }
 
 .BrandHeader #LiveSearch {
   display: inline-block;
@@ -4003,10 +4004,6 @@ form .Active[type='submit'],
   text-decoration: none;
   vertical-align: middle; }
 
-.LogoLink > img {
-  display: block;
-  max-height: 40px; }
-
 .ContentTitle {
   line-height: 40px; }
 
@@ -4036,6 +4033,9 @@ form .Active[type='submit'],
   font-size: 16px;
   position: relative;
   z-index: 100; }
+
+.NavigationBar .LogoLink > img {
+  max-height: 40px; }
 
 .NavigationBarToggle {
   display: inline-block;
