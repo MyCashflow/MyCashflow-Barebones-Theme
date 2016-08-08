@@ -68,6 +68,10 @@
 	margin-bottom: 0;
 }
 
+.FullCartProduct .ProductName + * {
+	margin-top: 10px;
+}
+
 .FullCartProduct .ProductImage {
 	background-color: $color-image-bg;
 	border: 1px solid $color-body-border;

@@ -133,6 +133,7 @@ dl dd {
 }
 
 .CompactDl dd + dt:before {
+	clear: both;
 	content: '';
 	display: block;
 	height: 5px;
