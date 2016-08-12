@@ -29,7 +29,7 @@
 		},
 
 		bindEvents: function () {
-			this.$checkout.on('change', '[data-toggle]', $.proxy(this.onToggle, this));
+			this.$checkout.on('click change', '[data-toggle]', $.proxy(this.onToggle, this));
 			this.$shippingInformation.on('change', $.proxy(this.onChangeShippingInformation, this));
 			this.$orderComment.on('change', $.proxy(this.onChangeOrderComments, this));
 			this.$campaignCode.on('submit', $.proxy(this.onSubmitCampaignCode, this));
@@ -80,9 +80,11 @@
 
 			$('a[data-toggle]').each(function (index, elem) {
 				var $elem = $(elem);
+				var $target = $($elem.attr('data-toggle'));
 				if ($elem.is('.Active')) {
-					var $target = $($elem.attr('data-toggle'));
 					$target.show();
+				} else {
+					$target.hide();
 				}
 			});
 		},
