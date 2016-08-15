@@ -2577,15 +2577,6 @@ form .Active[type='submit'],
   display: inline-block;
   margin-right: 5px; }
 
-#NewsletterSubscribeForm label {
-  display: none; }
-
-#NewsletterSubscribeForm input {
-  width: 65%; }
-
-#NewsletterSubscribeForm button {
-  width: 35%; }
-
 .JS .JS-Hide {
   display: none !important; }
 
@@ -2637,7 +2628,7 @@ form .Active[type='submit'],
   .Col-Tablet-1-5 {
     width: 20%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-1-5 {
     left: 20%; }
   .Col-Tablet-Pull-1-5 {
@@ -2670,7 +2661,7 @@ form .Active[type='submit'],
   .Col-Tablet-2-5 {
     width: 40%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-2-5 {
     left: 40%; }
   .Col-Tablet-Pull-2-5 {
@@ -2703,7 +2694,7 @@ form .Active[type='submit'],
   .Col-Tablet-3-5 {
     width: 60%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-3-5 {
     left: 60%; }
   .Col-Tablet-Pull-3-5 {
@@ -2736,7 +2727,7 @@ form .Active[type='submit'],
   .Col-Tablet-4-5 {
     width: 80%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-4-5 {
     left: 80%; }
   .Col-Tablet-Pull-4-5 {
@@ -2769,7 +2760,7 @@ form .Active[type='submit'],
   .Col-Tablet-5-5 {
     width: 100%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-5-5 {
     left: 100%; }
   .Col-Tablet-Pull-5-5 {
@@ -2802,7 +2793,7 @@ form .Active[type='submit'],
   .Col-Tablet-1-12 {
     width: 8.33333%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-1-12 {
     left: 8.33333%; }
   .Col-Tablet-Pull-1-12 {
@@ -2835,7 +2826,7 @@ form .Active[type='submit'],
   .Col-Tablet-2-12 {
     width: 16.66667%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-2-12 {
     left: 16.66667%; }
   .Col-Tablet-Pull-2-12 {
@@ -2868,7 +2859,7 @@ form .Active[type='submit'],
   .Col-Tablet-3-12 {
     width: 25%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-3-12 {
     left: 25%; }
   .Col-Tablet-Pull-3-12 {
@@ -2901,7 +2892,7 @@ form .Active[type='submit'],
   .Col-Tablet-4-12 {
     width: 33.33333%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-4-12 {
     left: 33.33333%; }
   .Col-Tablet-Pull-4-12 {
@@ -2934,7 +2925,7 @@ form .Active[type='submit'],
   .Col-Tablet-5-12 {
     width: 41.66667%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-5-12 {
     left: 41.66667%; }
   .Col-Tablet-Pull-5-12 {
@@ -2967,7 +2958,7 @@ form .Active[type='submit'],
   .Col-Tablet-6-12 {
     width: 50%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-6-12 {
     left: 50%; }
   .Col-Tablet-Pull-6-12 {
@@ -3000,7 +2991,7 @@ form .Active[type='submit'],
   .Col-Tablet-7-12 {
     width: 58.33333%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-7-12 {
     left: 58.33333%; }
   .Col-Tablet-Pull-7-12 {
@@ -3033,7 +3024,7 @@ form .Active[type='submit'],
   .Col-Tablet-8-12 {
     width: 66.66667%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-8-12 {
     left: 66.66667%; }
   .Col-Tablet-Pull-8-12 {
@@ -3066,7 +3057,7 @@ form .Active[type='submit'],
   .Col-Tablet-9-12 {
     width: 75%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-9-12 {
     left: 75%; }
   .Col-Tablet-Pull-9-12 {
@@ -3099,7 +3090,7 @@ form .Active[type='submit'],
   .Col-Tablet-10-12 {
     width: 83.33333%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-10-12 {
     left: 83.33333%; }
   .Col-Tablet-Pull-10-12 {
@@ -3132,7 +3123,7 @@ form .Active[type='submit'],
   .Col-Tablet-11-12 {
     width: 91.66667%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-11-12 {
     left: 91.66667%; }
   .Col-Tablet-Pull-11-12 {
@@ -3165,7 +3156,7 @@ form .Active[type='submit'],
   .Col-Tablet-12-12 {
     width: 100%; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .Col-Tablet-Push-12-12 {
     left: 100%; }
   .Col-Tablet-Pull-12-12 {
@@ -3868,6 +3859,15 @@ form .Active[type='submit'],
 .FooterCopy .Copyright {
   border-top: 1px solid #dadada;
   padding: 20px 0; }
+
+.Footer #NewsletterSubscribeForm label {
+  display: none; }
+
+.Footer #NewsletterSubscribeForm input {
+  width: 65%; }
+
+.Footer #NewsletterSubscribeForm button {
+  width: 35%; }
 
 .BrandHeader {
   padding: 30px 0; }

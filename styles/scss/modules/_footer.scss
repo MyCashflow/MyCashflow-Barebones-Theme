@@ -10,3 +10,19 @@
 	border-top: 1px solid $color-footer-border;
 	padding: 20px 0;
 }
+
+//------------------------------------------------------------------------------
+// Newsletter Subscribe Form
+//------------------------------------------------------------------------------
+
+.Footer #NewsletterSubscribeForm label {
+	display: none;
+}
+
+.Footer #NewsletterSubscribeForm input {
+	width: 65%;
+}
+
+.Footer #NewsletterSubscribeForm button {
+	width: 35%;
+}

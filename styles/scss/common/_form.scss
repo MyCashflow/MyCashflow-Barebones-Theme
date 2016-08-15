@@ -401,19 +401,3 @@ form [type='submit'] {
 	display: inline-block;
 	margin-right: 5px;
 }
-
-//------------------------------------------------------------------------------
-// Newsletter Subscribe Form
-//------------------------------------------------------------------------------
-
-#NewsletterSubscribeForm label {
-	display: none;
-}
-
-#NewsletterSubscribeForm input {
-	width: 65%;
-}
-
-#NewsletterSubscribeForm button {
-	width: 35%;
-}
