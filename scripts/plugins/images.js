@@ -59,12 +59,30 @@
 
 			if (this.imageToVariation && $(this.variationsSelect).length) {
 				var $select = $(this.variationsSelect).find('select').first();
-				var $option = $select.find('option:contains(' + title + ')');
-				$select.val($option.attr('value'));
+				var $option;
+
+				$select.find('option').each(function (index, option) {
+					if ($(option).text().trim() === title) {
+						$option = $(option);
+					}
+				});
+
+				if ($option) {
+					$select.val($option.attr('value'));
+				}
 			} else if (this.imageToVariation && $(this.variationsRadio).length) {
-				var $label = $(this.variationsRadio).find('label:contains(' + title + ')');
-				var $radio = $label.find('input');
-				$radio.prop('checked', true);
+				var $labels = $(this.variationsRadio).find('label');
+				var $radio;
+
+				$labels.each(function (index, label) {
+					if ($(label).text().trim() === title) {
+						$radio = $(label).find('input');
+					}
+				});
+
+				if ($radio) {
+					$radio.prop('checked', true);
+				}
 			}
 		},
 
@@ -83,7 +101,7 @@
 		},
 
 		setCurrentImageByText: function (text) {
-			var $thumb = $(this.thumbnails).has('img[alt*="' + text + '"]').first();
+			var $thumb = $(this.thumbnails).has('img[alt="' + text + '"]').first();
 			var index = $thumb.closest('li').index();
 			this.setCaption($thumb.attr('title'));
 			window.MagicZoom.switchTo(this.currentImage.substr(1), index);
