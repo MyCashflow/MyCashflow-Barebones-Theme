@@ -61,6 +61,11 @@
 // Sharing
 //------------------------------------------------------------------------------
 
+.fb-like {
+	max-width: 100%;
+	overflow: hidden;
+}
+
 .ExtShareButtons + .fb-like {
 	margin-top: 24px;
 }

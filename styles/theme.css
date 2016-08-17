@@ -4019,6 +4019,10 @@ form .Active[type='submit'],
   margin-top: 40px;
   padding-top: 40px; }
 
+.fb-like {
+  max-width: 100%;
+  overflow: hidden; }
+
 .ExtShareButtons + .fb-like {
   margin-top: 24px; }
 
