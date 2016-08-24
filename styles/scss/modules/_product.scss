@@ -46,6 +46,10 @@
 	margin: 0;
 }
 
+.ListProduct .ProductName a {
+	text-decoration: none;
+}
+
 .ListProduct .ProductPrices {
 	@include truncate;
 }
