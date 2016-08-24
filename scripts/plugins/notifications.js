@@ -6,8 +6,6 @@
 ;(function ($) {
 	'use strict';
 
-	var NOTIFICATION_TTL = 5000;
-
 	function Notification(type, html) {
 		this.$elem = $('<div class="Notification"/>')
 			.data('notification', this)
@@ -16,21 +14,20 @@
 			.hide()
 			.addClass(type)
 			.slideDown('fast');
-
-		this.hideTimeout = setTimeout($.proxy(function () {
-			this.hide();
-		}, this), NOTIFICATION_TTL);
 	}
 
 	Notification.prototype.hide = function () {
-		clearTimeout(this.hideTimeout);
 		this.$elem.slideUp('fast', $.proxy(function () {
 			this.$elem.remove();
 		}, this));
 	};
 
 	var Notifications = {
-		init: function () {
+		timeToLive: 5000,
+		hideTimeouts: [],
+
+		init: function (config) {
+			$.extend(true, this, config);
 			var $notificationCenters = $('.NotificationCenter');
 			if (!$notificationCenters.length) {
 				$('<div class="NotificationCenter"/>').appendTo(document.body);
@@ -61,7 +58,12 @@
 		},
 
 		create: function (type, html) {
-			return new Notification(type, html);
+			var notification = new Notification(type, html);
+			var hideTimeout = setTimeout($.proxy(function () {
+				clearTimeout(this.hideTimeouts.shift());
+				notification.hide();
+			}, this), this.timeToLive);
+			this.hideTimeouts.push(hideTimeout);
 		},
 
 		success: function (html) {
