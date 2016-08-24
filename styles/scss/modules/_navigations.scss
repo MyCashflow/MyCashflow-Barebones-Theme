@@ -55,6 +55,7 @@
 	@include truncate;
 	display: block;
 	padding: 15px;
+	text-decoration: none;
 	transition-duration: $transition-fast;
 }
 
@@ -146,6 +147,7 @@
 	display: block;
 	padding: 10px 15px;
 	position: relative;
+	text-decoration: none;
 }
 
 .SideNavigation ul {
@@ -237,6 +239,7 @@
 	@include truncate;
 	@include icon-before($fa-var-angle-right);
 	display: block;
+	text-decoration: none;
 }
 
 .SimpleNavigation ul {

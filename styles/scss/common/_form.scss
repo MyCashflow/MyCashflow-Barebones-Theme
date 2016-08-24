@@ -63,11 +63,13 @@ select::-ms-expand {
 label {
 	cursor: pointer;
 	display: block;
+	font-weight: bold;
 	margin-bottom: 5px;
 }
 
 .label {
 	font-size: $font-size-large;
+	font-weight: bold;
 	margin-bottom: 10px;
 }
 
@@ -94,6 +96,7 @@ label {
 	display: inline-block;
 	padding: 6px 12px;
 	text-align: center;
+	text-decoration: none;
 	transition-duration: $transition-fast;
 	vertical-align: middle;
 }
@@ -255,6 +258,7 @@ form [type='submit'] {
 
 .FormItem .InlineCheck {
 	display: inline-block;
+	font-weight: normal;
 	margin: 0 0 0 10px;
 }
 
@@ -298,6 +302,10 @@ form [type='submit'] {
 
 .Checks {
 	margin-bottom: 20px;
+}
+
+.Checks label {
+	font-weight: normal;
 }
 
 .Checks > label {

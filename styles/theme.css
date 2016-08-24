@@ -2139,7 +2139,6 @@ a:hover {
   color: #ee5500; }
 
 a {
-  text-decoration: none;
   transition-duration: 0.15s; }
 
 ul, ol {
@@ -2330,10 +2329,12 @@ select::-ms-expand {
 label {
   cursor: pointer;
   display: block;
+  font-weight: bold;
   margin-bottom: 5px; }
 
 .label {
   font-size: 16px;
+  font-weight: bold;
   margin-bottom: 10px; }
 
 .GroupLabel {
@@ -2356,6 +2357,7 @@ label {
   display: inline-block;
   padding: 6px 12px;
   text-align: center;
+  text-decoration: none;
   transition-duration: 0.15s;
   vertical-align: middle; }
 
@@ -2471,6 +2473,7 @@ form .Active[type='submit'],
 
 .FormItem .InlineCheck {
   display: inline-block;
+  font-weight: normal;
   margin: 0 0 0 10px; }
 
 .FormItem .Checks:last-child {
@@ -2500,6 +2503,9 @@ form .Active[type='submit'],
 
 .Checks {
   margin-bottom: 20px; }
+
+.Checks label {
+  font-weight: normal; }
 
 .Checks > label {
   margin-top: 10px; }
@@ -3571,6 +3577,9 @@ form .Active[type='submit'],
 .FullCartProduct .ProductName {
   margin-bottom: 0; }
 
+.FullCartProduct .ProductName a {
+  text-decoration: none; }
+
 .FullCartProduct .ProductName + * {
   margin-top: 10px; }
 
@@ -3647,7 +3656,8 @@ form .Active[type='submit'],
   white-space: nowrap;
   display: block;
   font-weight: bold;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-decoration: none; }
 
 .MiniCartProduct .ProductQuantity {
   bottom: 2px;
@@ -4090,6 +4100,7 @@ form .Active[type='submit'],
   white-space: nowrap;
   display: block;
   padding: 15px;
+  text-decoration: none;
   transition-duration: 0.15s; }
 
 .MainNavigation ul {
@@ -4176,7 +4187,8 @@ form .Active[type='submit'],
   border-width: 0;
   display: block;
   padding: 10px 15px;
-  position: relative; }
+  position: relative;
+  text-decoration: none; }
   .SideNavigation a:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -4566,6 +4578,9 @@ form .Active[type='submit'],
   white-space: nowrap;
   display: block;
   margin: 0; }
+
+.ListProduct .ProductName a {
+  text-decoration: none; }
 
 .ListProduct .ProductPrices {
   overflow: hidden;

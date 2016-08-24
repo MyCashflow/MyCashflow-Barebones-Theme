@@ -91,7 +91,6 @@ audio, canvas, img, progress, video {
 @include link-colors($color-body-bg);
 
 a {
-	text-decoration: none;
 	transition-duration: $transition-fast;
 }
 
