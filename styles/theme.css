@@ -2329,10 +2329,12 @@ select::-ms-expand {
 label {
   cursor: pointer;
   display: block;
+  font-weight: bold;
   margin-bottom: 5px; }
 
 .label {
   font-size: 16px;
+  font-weight: bold;
   margin-bottom: 10px; }
 
 .GroupLabel {
@@ -2471,6 +2473,7 @@ form .Active[type='submit'],
 
 .FormItem .InlineCheck {
   display: inline-block;
+  font-weight: normal;
   margin: 0 0 0 10px; }
 
 .FormItem .Checks:last-child {
@@ -2500,6 +2503,9 @@ form .Active[type='submit'],
 
 .Checks {
   margin-bottom: 20px; }
+
+.Checks label {
+  font-weight: normal; }
 
 .Checks > label {
   margin-top: 10px; }
