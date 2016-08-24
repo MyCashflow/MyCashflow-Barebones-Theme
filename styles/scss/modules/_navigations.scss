@@ -239,6 +239,7 @@
 	@include truncate;
 	@include icon-before($fa-var-angle-right);
 	display: block;
+	text-decoration: none;
 }
 
 .SimpleNavigation ul {
