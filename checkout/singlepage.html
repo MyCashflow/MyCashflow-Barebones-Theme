@@ -3,15 +3,21 @@
 	<div class="Container">
 		<div class="Grid">
 			<div class="Col-4-12 Col-Tablet-Push-8-12 Hide-Tablet">
-				{Helper(
-					file: 'helpers/mini-cart',
-					before: '<div class="MiniCart MiniCart-Checkout" id="StickyCart">',
-					after: '</div>'
-				)}
+				<div id="StickyCart">
+					{Helper(
+						file: 'helpers/mini-cart',
+						before: '<div class="MiniCart MiniCart-Checkout">',
+						after: '</div>'
+					)}
+					{CampaignCode(
+						action: 'checkout',
+						before: '<div class="CampaignCodeForm">',
+						after: '</div>'
+					)}
+				</div>
 			</div>
 			<div class="Col-7-12 Col-Tablet-Pull-4-12 Col-Tablet-12-12">
 				{Notifications(
-					group: 'account',
 					before: '<div class="Notifications">',
 					after: '</div>'
 				)}
@@ -87,11 +93,18 @@
 					<div class="ContentSection">
 						<h2>{%CheckoutSendOrder}</h2>
 						<p>{%CheckoutAcceptTermsIntro}</p>
-						{Helper(
-							file: 'helpers/mini-cart',
-							before: '<div class="MiniCart MiniCart-Checkout Hide-Desktop">',
-							after: '</div>'
-						)}
+						<div class="Hide-Desktop">
+							{Helper(
+								file: 'helpers/mini-cart',
+								before: '<div class="MiniCart MiniCart-Checkout">',
+								after: '</div>'
+							)}
+							{CampaignCode(
+								action: 'checkout',
+								before: '<div class="CampaignCodeForm">',
+								after: '</div>'
+							)}
+						</div>
 						{CurrencyNotification}
 						{CheckoutAcceptTerms}
 					</div>

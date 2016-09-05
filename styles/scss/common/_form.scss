@@ -60,17 +60,14 @@ select::-ms-expand {
 // Labels
 //------------------------------------------------------------------------------
 
-label {
-	cursor: pointer;
+label, .label {
 	display: block;
 	font-weight: bold;
 	margin-bottom: 5px;
 }
 
-.label {
-	font-size: $font-size-large;
-	font-weight: bold;
-	margin-bottom: 10px;
+label {
+	cursor: pointer;
 }
 
 .GroupLabel {
@@ -408,4 +405,37 @@ form [type='submit'] {
 .PaginationForm label {
 	display: inline-block;
 	margin-right: 5px;
+}
+
+//------------------------------------------------------------------------------
+// Campaign Code Form
+//------------------------------------------------------------------------------
+
+.CampaignCodeForm {
+	@extend .CompactForm;
+	background-color: $color-base-2;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+
+.CampaignCodeForm form {
+	margin-bottom: 0;
+}
+
+.CampaignCodeForm input[type='hidden'] + button {
+	float: none;
+	width: 100%;
+}
+
+.CampaignCodeForm .label {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.CampaignCodeForm-InModal {
+	background-color: 0;
+	border: 0;
+	padding: 0;
 }
