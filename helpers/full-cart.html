@@ -12,15 +12,11 @@
 							<ul>
 								<li>
 									<span class="fa fa-link"></span>
-									<a href="#" data-modal data-modal-helper="helpers/modals/cart-share-link">
-										{%CartShareLink}
-									</a>
+									<a href="#" data-modal data-modal-helper="helpers/modals/cart-share-link">{%CartShareLink}</a>
 								</li>
 								<li>
 									<span class="fa fa-envelope"></span>
-									<a href="#" data-modal data-modal-helper="helpers/modals/cart-share-form">
-										{%CartShareSendToEmail}
-									</a>
+									<a href="#" data-modal data-modal-helper="helpers/modals/cart-share-form">{%CartShareSendToEmail}</a>
 								</li>
 							</ul>
 						</div>
@@ -50,11 +46,9 @@
 			)}
 			<div class="FullCartSection FullCartActions">
 				<div class="Flex Flex-Collapse">
-					<div class="FlexItem">
-						<a class="Button" href="#" data-modal data-modal-helper="helpers/modals/campaign-code">{%CampaignCodeInquiry}</a>
-					</div>
 					<div class="FlexItem FlexSpacer"></div>
 					<div class="FlexItem">
+						<a class="Button" href="#" data-modal data-modal-helper="helpers/modals/campaign-code">{%CampaignCodeInquiry}</a>
 						<button class="Button JS-Hide">{%ShoppingCartUpdateSubtotal}</button>
 						<a class="Button Button-Primary" href="/checkout/">{%ContinueToCheckout}</a>
 					</div>
