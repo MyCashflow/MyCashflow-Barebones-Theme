@@ -132,6 +132,7 @@
 			return $.post($form.attr('action'), data)
 				.then($.proxy(function (res) {
 					$form.html(res.content);
+					this.reloadKlarnaFrame();
 				}, this))
 				.always($.proxy(function () {
 					this.afterUpdate(this.$campaignCode);
