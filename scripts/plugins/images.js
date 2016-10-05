@@ -6,6 +6,8 @@
 ;(function ($) {
 	'use strict';
 
+	var LABEL_REGEX = /(.+),\s.[\d+\s\d]+[,.]\d+.+/i;
+
 	var Images = {
 		currentImage: '#CurrentProductImage',
 		thumbnails: '#ProductThumbnails a',
@@ -61,11 +63,14 @@
 				var $select = $(this.variationsSelect).find('select').first();
 				var $option;
 
-				$select.find('option').each(function (index, option) {
-					if ($(option).text().trim() === title) {
+				$select.find('option').each($.proxy(function (index, option) {
+					var text = $(option).text().trim();
+					text = this.parseVariationName(text);
+
+					if (text === title) {
 						$option = $(option);
 					}
-				});
+				}, this));
 
 				if ($option) {
 					$select.val($option.attr('value'));
@@ -74,11 +79,14 @@
 				var $labels = $(this.variationsRadio).find('label');
 				var $radio;
 
-				$labels.each(function (index, label) {
-					if ($(label).text().trim() === title) {
+				$labels.each($.proxy(function (index, label) {
+					var text = $(label).text().trim();
+					text = this.parseVariationName(text);
+
+					if (text === title) {
 						$radio = $(label).find('input');
 					}
-				});
+				}, this));
 
 				if ($radio) {
 					$radio.prop('checked', true);
@@ -96,12 +104,18 @@
 			this.setCurrentImageByText(label);
 		},
 
+		parseVariationName(text) {
+			var matches = LABEL_REGEX.exec(text);
+			return matches ? matches[1] : text;
+		},
+
 		setCaption: function (str) {
 			$(this.caption).text(str);
 		},
 
 		setCurrentImageByText: function (text) {
-			var $thumb = $(this.thumbnails).has('img[alt="' + text + '"]').first();
+			var textWithoutPrice = this.parseVariationName(text);
+			var $thumb = $(this.thumbnails).has('img[alt="' + textWithoutPrice + '"]').first();
 			var index = $thumb.closest('li').index();
 			this.setCaption($thumb.attr('title'));
 			window.MagicZoom.switchTo(this.currentImage.substr(1), index);
