@@ -6,7 +6,7 @@
 ;(function ($) {
 	'use strict';
 
-	var LABEL_REGEX = /(.+),[\d+\s\d]+[,.]\d+/;
+	var LABEL_REGEX = /(.+),\s.[\d+\s\d]+[,.]\d+.+/;
 
 	var Images = {
 		currentImage: '#CurrentProductImage',
@@ -64,8 +64,8 @@
 				var $option;
 
 				$select.find('option').each($.proxy(function (index, option) {
-					var text = option.text().trim();
-					text = this.getTextWithoutPrice(text);
+					var text = $(option).text().trim();
+					text = this.parseVariationName(text);
 
 					if (text === title) {
 						$option = $(option);
@@ -81,7 +81,7 @@
 
 				$labels.each($.proxy(function (index, label) {
 					var text = $(label).text().trim();
-					text = this.getTextWithoutPrice(text);
+					text = this.parseVariationName(text);
 
 					if (text === title) {
 						$radio = $(label).find('input');
@@ -104,7 +104,7 @@
 			this.setCurrentImageByText(label);
 		},
 
-		getTextWithoutPrice(text) {
+		parseVariationName(text) {
 			var matches = LABEL_REGEX.exec(text);
 			return matches ? matches[1] : text;
 		},
@@ -114,7 +114,7 @@
 		},
 
 		setCurrentImageByText: function (text) {
-			var textWithoutPrice = this.getTextWithoutPrice(text);
+			var textWithoutPrice = this.parseVariationName(text);
 			var $thumb = $(this.thumbnails).has('img[alt="' + textWithoutPrice + '"]').first();
 			var index = $thumb.closest('li').index();
 			this.setCaption($thumb.attr('title'));
