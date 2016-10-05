@@ -6,7 +6,7 @@
 ;(function ($) {
 	'use strict';
 
-	var LABEL_REGEX = /(.+),\s\d+,\d+/;
+	var LABEL_REGEX = /(.+),[\d+\s\d]+[,.]\d+/;
 
 	var Images = {
 		currentImage: '#CurrentProductImage',
