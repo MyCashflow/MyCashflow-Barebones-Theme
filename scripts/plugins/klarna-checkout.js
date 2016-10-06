@@ -7,6 +7,7 @@
 	'use strict';
 
 	var KlarnaCheckout = {
+		$klarnaFrameWrap: $('#KlarnaCheckoutWrap'),
 		$klarnaFrame: $('#KlarnaCheckout'),
 		$checkout: $('#Checkout'),
 		$shippingInformation: $('#CheckoutShippingInformation'),
@@ -33,7 +34,7 @@
 		bindEvents: function () {
 			this.$checkout.on('click change', '[data-toggle]', $.proxy(this.onToggle, this));
 			this.$shippingInformation.on('keydown', 'input', $.proxy(this.onKeyDownShippingInformation, this));
-			this.$shippingInformation.on('change', $.proxy(this.onChangeShippingInformation, this));
+			this.$shippingInformation.on('change', 'select', $.proxy(this.onChangeShippingInformation, this));
 			this.$orderComment.on('change', $.proxy(this.onChangeOrderComments, this));
 			this.$campaignCode.on('submit', $.proxy(this.onSubmitCampaignCode, this));
 			this.$marketingPermissions.on('change', $.proxy(this.onChangeMarketingPermissions, this));
@@ -91,11 +92,7 @@
 			$('a[data-toggle]').each(function (index, elem) {
 				var $elem = $(elem);
 				var $target = $($elem.attr('data-toggle'));
-				if ($elem.is('.Active')) {
-					$target.show();
-				} else {
-					$target.hide();
-				}
+				$target.toggle($elem.is('.Active'));
 			});
 		},
 
@@ -115,7 +112,9 @@
 
 			return $.post('/checkout/klarna/', data)
 				.then($.proxy(function (html) {
-					this.$shippingInformation.html(html);
+					if (!this.$shippingInformation.has(':focus')) {
+						this.$shippingInformation.html(html);
+					}
 					this.updatePaymentMethods();
 					this.reloadKlarnaFrame();
 				}, this))
@@ -178,7 +177,8 @@
 		reloadKlarnaFrame: function () {
 			return $.get('/interface/KlarnaCheckout')
 				.then($.proxy(function (res) {
-					this.$klarnaFrame.html(res);
+					this.$klarnaFrameWrap.html(res);
+					this.$klarnaFrame = $('#KlarnaCheckout');
 				}, this));
 		}
 	};

@@ -2085,7 +2085,7 @@
   content: ""; }
 
 h1, h2, .LogoLink, h3, table caption, h4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
-hr, dl, ol, ul, fieldset, .GroupLabel, .FormItem, .Notification, .GroupErrorMessage,
+hr, dl, ol, ul, .GroupLabel, .FormItem, .Notification, .GroupErrorMessage,
 .FormNotification, #OrderStatus, .Banner-Body, .Banner-Side, .Breadcrumb, .MiniCart-Checkout, .SideNavigation, .SimpleNavigation, #CurrentProductImage, .SearchFilter {
   margin: 0 0 20px; }
 
@@ -3726,10 +3726,10 @@ form .Active[type='submit'],
   #CheckoutMarketingPermissions .Checks > label {
     display: block; } }
 
-#KlarnaCheckout {
+#KlarnaCheckoutWrap {
   max-width: 640px; }
 
-#KlarnaCheckout > :last-child {
+#KlarnaCheckoutWrap > :last-child {
   margin-bottom: 0; }
 
 #klarna-checkout-container {
@@ -4209,7 +4209,7 @@ form .Active[type='submit'],
 .SideNavigation ul ul ul a {
   padding-left: 45px; }
 
-.SideNavigation li + li a {
+.SideNavigation li li a {
   border-width: 1px 0 0; }
 
 .SideNavigation .Current > a {
@@ -4277,7 +4277,8 @@ form .Active[type='submit'],
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  display: block; }
+  display: block;
+  text-decoration: none; }
   .SimpleNavigation a:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
