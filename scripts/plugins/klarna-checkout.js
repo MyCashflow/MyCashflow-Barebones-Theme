@@ -15,6 +15,8 @@
 		$campaignCode: $('#CheckoutSubmitCampaignCode'),
 		$marketingPermissions: $('#CheckoutMarketingPermissions'),
 
+		typingDelay: 2000,
+
 		beforeUpdate: function () {},
 		afterUpdate: function () {},
 
@@ -30,6 +32,7 @@
 
 		bindEvents: function () {
 			this.$checkout.on('click change', '[data-toggle]', $.proxy(this.onToggle, this));
+			this.$shippingInformation.on('keydown', 'input', $.proxy(this.onKeyDownShippingInformation, this));
 			this.$shippingInformation.on('change', $.proxy(this.onChangeShippingInformation, this));
 			this.$orderComment.on('change', $.proxy(this.onChangeOrderComments, this));
 			this.$campaignCode.on('submit', $.proxy(this.onSubmitCampaignCode, this));
@@ -48,6 +51,13 @@
 			}
 
 			$input.toggleClass('Active', $target.is(':visible'));
+		},
+
+		onKeyDownShippingInformation: function (evt) {
+			clearTimeout(this._submitShippingInformation);
+			this._submitShippingInformation = setTimeout($.proxy(function () {
+				this.submitShippingInformation();
+			}, this), this.typingDelay);
 		},
 
 		onChangeShippingInformation: function () {
