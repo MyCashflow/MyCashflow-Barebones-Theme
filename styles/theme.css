@@ -4184,7 +4184,6 @@ form .Active[type='submit'],
   white-space: nowrap;
   background-color: #fafafa;
   border-top: 1px solid #dadada;
-  border-width: 0;
   display: block;
   padding: 10px 15px;
   position: relative;
@@ -4209,8 +4208,8 @@ form .Active[type='submit'],
 .SideNavigation ul ul ul a {
   padding-left: 45px; }
 
-.SideNavigation li li a {
-  border-width: 1px 0 0; }
+.SideNavigation > ul > :first-child > a {
+  border-width: 0; }
 
 .SideNavigation .Current > a {
   color: #ee5500; }

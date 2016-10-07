@@ -143,7 +143,6 @@
 	@include truncate;
 	background-color: $color-boxed-bg;
 	border-top: 1px solid $color-body-border;
-	border-width: 0;
 	display: block;
 	padding: 10px 15px;
 	position: relative;
@@ -163,8 +162,8 @@
 	padding-left: 45px;
 }
 
-.SideNavigation li li a {
-	border-width: 1px 0 0;
+.SideNavigation > ul > :first-child > a {
+	border-width: 0;
 }
 
 .SideNavigation .Current > a {
