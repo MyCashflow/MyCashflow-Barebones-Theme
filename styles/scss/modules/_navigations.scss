@@ -48,129 +48,6 @@
 }
 
 //------------------------------------------------------------------------------
-// Main Navigation
-//------------------------------------------------------------------------------
-
-.MainNavigation a {
-	@include truncate;
-	display: block;
-	padding: 15px;
-	text-decoration: none;
-	transition-duration: $transition-fast;
-}
-
-.MainNavigation ul {
-	list-style: none;
-	margin: 0 -15px;
-	padding: 0;
-}
-
-.MainNavigation li {
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-}
-
-.MainNavigation li ul {
-	border: 1px solid $color-body-border;
-	box-shadow: 0 1px 2px $black-10;
-	margin: 0;
-	max-width: 300px;
-	min-width: 200px;
-	opacity: 0;
-	position: absolute;
-	top: 100%;
-	transition-duration: $transition-fast;
-	visibility: hidden;
-	z-index: 1000;
-}
-
-.MainNavigation li li {
-	display: block;
-}
-
-.MainNavigation li li ul {
-	left: 100%;
-	position: absolute;
-	top: 0;
-}
-
-.MainNavigation li li a {
-	background-color: $color-navbar-bg;
-	border: 1px solid $color-body-border;
-	border-width: 1px 0 0;
-	display: block;
-}
-
-.MainNavigation li li:first-child a {
-	border-width: 0;
-}
-
-.MainNavigation li:hover > ul {
-	opacity: 1;
-	visibility: visible;
-}
-
-.MainNavigation .Current > a {
-	color: $color-accent-2;
-}
-
-.MainNavigation .HasSubCategories > a {
-	@include icon-after($fa-var-angle-down);
-}
-
-.MainNavigation li .HasSubCategories > a {
-	@include icon-after($fa-var-angle-right);
-}
-
-.MainNavigation-Right ul ul {
-	left: auto;
-	right: 0;
-}
-
-//------------------------------------------------------------------------------
-// Side Navigation
-//------------------------------------------------------------------------------
-
-.SideNavigation {
-	@extend %default-margin;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
-}
-
-.SideNavigation a {
-	@include icon-before($fa-var-angle-right);
-	@include truncate;
-	background-color: $color-boxed-bg;
-	border-top: 1px solid $color-body-border;
-	display: block;
-	padding: 10px 15px;
-	position: relative;
-	text-decoration: none;
-}
-
-.SideNavigation ul {
-	list-style: none;
-	margin-bottom: 0;
-}
-
-.SideNavigation ul ul a {
-	padding-left: 30px;
-}
-
-.SideNavigation ul ul ul a {
-	padding-left: 45px;
-}
-
-.SideNavigation > ul > :first-child > a {
-	border-width: 0;
-}
-
-.SideNavigation .Current > a {
-	color: $color-accent-2;
-}
-
-//------------------------------------------------------------------------------
 // Inline Navigation
 //------------------------------------------------------------------------------
 
@@ -268,6 +145,66 @@
 }
 
 //------------------------------------------------------------------------------
+// Drop Navigation
+//------------------------------------------------------------------------------
+
+.DropNavigation a {
+	@include truncate;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	transition-duration: $transition-fast;
+}
+
+.DropNavigation ul {
+	list-style: none;
+	margin: 0 -15px;
+	padding: 0;
+}
+
+.DropNavigation li {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+
+.DropNavigation li ul {
+	margin: 0;
+	max-width: 300px;
+	min-width: 200px;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	transition-duration: $transition-fast;
+	visibility: hidden;
+	z-index: 1000;
+}
+
+.DropNavigation li li {
+	display: block;
+}
+
+.DropNavigation li li ul {
+	left: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.DropNavigation li li a {
+	display: block;
+}
+
+.DropNavigation li:hover > ul {
+	opacity: 1;
+	visibility: visible;
+}
+
+.DropNavigation-Right ul ul {
+	left: auto;
+	right: 0;
+}
+
+//------------------------------------------------------------------------------
 // Tabs Navigation
 //------------------------------------------------------------------------------
 
@@ -311,6 +248,87 @@
 		margin-left: 0;
 		width: 50%;
 	}
+}
+
+//------------------------------------------------------------------------------
+// Main Navigation
+//------------------------------------------------------------------------------
+
+.MainNavigation {
+	@extend .DropNavigation;
+}
+
+.MainNavigation-Right {
+	@extend .DropNavigation-Right;
+}
+
+.MainNavigation li ul {
+	border: 1px solid $color-body-border;
+	box-shadow: 0 1px 2px $black-10;
+}
+
+.MainNavigation li li a {
+	background-color: $color-navbar-bg;
+	border: 1px solid $color-body-border;
+	border-width: 1px 0 0;
+}
+
+.MainNavigation li li:first-child a {
+	border-width: 0;
+}
+
+.MainNavigation .Current > a {
+	color: $color-accent-2;
+}
+
+.MainNavigation .HasSubCategories > a {
+	@include icon-after($fa-var-angle-down);
+}
+
+.MainNavigation li .HasSubCategories > a {
+	@include icon-after($fa-var-angle-right);
+}
+
+//------------------------------------------------------------------------------
+// Side Navigation
+//------------------------------------------------------------------------------
+
+.SideNavigation {
+	@extend %default-margin;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+}
+
+.SideNavigation a {
+	@include icon-before($fa-var-angle-right);
+	@include truncate;
+	background-color: $color-boxed-bg;
+	border-top: 1px solid $color-body-border;
+	display: block;
+	padding: 10px 15px;
+	position: relative;
+	text-decoration: none;
+}
+
+.SideNavigation ul {
+	list-style: none;
+	margin-bottom: 0;
+}
+
+.SideNavigation ul ul a {
+	padding-left: 30px;
+}
+
+.SideNavigation ul ul ul a {
+	padding-left: 45px;
+}
+
+.SideNavigation > ul > :first-child > a {
+	border-width: 0;
+}
+
+.SideNavigation .Current > a {
+	color: $color-accent-2;
 }
 
 //------------------------------------------------------------------------------

@@ -2086,7 +2086,7 @@
 
 h1, h2, .LogoLink, h3, table caption, h4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
 hr, dl, ol, ul, .GroupLabel, .FormItem, .Notification, .GroupErrorMessage,
-.FormNotification, #OrderStatus, .Banner-Body, .Banner-Side, .Breadcrumb, .MiniCart-Checkout, .SideNavigation, .SimpleNavigation, #CurrentProductImage, .SearchFilter {
+.FormNotification, #OrderStatus, .Banner-Body, .Banner-Side, .Breadcrumb, .MiniCart-Checkout, .SimpleNavigation, .SideNavigation, #CurrentProductImage, .SearchFilter {
   margin: 0 0 20px; }
 
 html {
@@ -3863,7 +3863,7 @@ form .Active[type='submit'],
   opacity: 0.25;
   visibility: visible; }
 
-.FooterSection {
+.Footer {
   padding: 40px 0; }
 
 .FooterCopy .Copyright {
@@ -4094,126 +4094,6 @@ form .Active[type='submit'],
   -moz-osx-font-smoothing: grayscale;
   content: ""; }
 
-.MainNavigation a {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  transition-duration: 0.15s; }
-
-.MainNavigation ul {
-  list-style: none;
-  margin: 0 -15px;
-  padding: 0; }
-
-.MainNavigation li {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle; }
-
-.MainNavigation li ul {
-  border: 1px solid #dadada;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  margin: 0;
-  max-width: 300px;
-  min-width: 200px;
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  transition-duration: 0.15s;
-  visibility: hidden;
-  z-index: 1000; }
-
-.MainNavigation li li {
-  display: block; }
-
-.MainNavigation li li ul {
-  left: 100%;
-  position: absolute;
-  top: 0; }
-
-.MainNavigation li li a {
-  background-color: #fafafa;
-  border: 1px solid #dadada;
-  border-width: 1px 0 0;
-  display: block; }
-
-.MainNavigation li li:first-child a {
-  border-width: 0; }
-
-.MainNavigation li:hover > ul {
-  opacity: 1;
-  visibility: visible; }
-
-.MainNavigation .Current > a {
-  color: #ee5500; }
-
-.MainNavigation .HasSubCategories > a:after {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  margin-left: 0.5em; }
-
-.MainNavigation li .HasSubCategories > a:after {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  margin-left: 0.5em; }
-
-.MainNavigation-Right ul ul {
-  left: auto;
-  right: 0; }
-
-.SideNavigation {
-  border: 1px solid #dadada;
-  border-radius: 2px; }
-
-.SideNavigation a {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: #fafafa;
-  border-top: 1px solid #dadada;
-  display: block;
-  padding: 10px 15px;
-  position: relative;
-  text-decoration: none; }
-  .SideNavigation a:before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    margin-right: 0.5em; }
-
-.SideNavigation ul {
-  list-style: none;
-  margin-bottom: 0; }
-
-.SideNavigation ul ul a {
-  padding-left: 30px; }
-
-.SideNavigation ul ul ul a {
-  padding-left: 45px; }
-
-.SideNavigation > ul > :first-child > a {
-  border-width: 0; }
-
-.SideNavigation .Current > a {
-  color: #ee5500; }
-
 .InlineNavigation a {
   display: inline; }
 
@@ -4308,6 +4188,55 @@ form .Active[type='submit'],
 .SimpleNavigation .Current > a {
   color: #ee5500; }
 
+.DropNavigation a, .MainNavigation a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  transition-duration: 0.15s; }
+
+.DropNavigation ul, .MainNavigation ul {
+  list-style: none;
+  margin: 0 -15px;
+  padding: 0; }
+
+.DropNavigation li, .MainNavigation li {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle; }
+
+.DropNavigation li ul, .MainNavigation li ul {
+  margin: 0;
+  max-width: 300px;
+  min-width: 200px;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  transition-duration: 0.15s;
+  visibility: hidden;
+  z-index: 1000; }
+
+.DropNavigation li li, .MainNavigation li li {
+  display: block; }
+
+.DropNavigation li li ul, .MainNavigation li li ul {
+  left: 100%;
+  position: absolute;
+  top: 0; }
+
+.DropNavigation li li a, .MainNavigation li li a {
+  display: block; }
+
+.DropNavigation li:hover > ul, .MainNavigation li:hover > ul {
+  opacity: 1;
+  visibility: visible; }
+
+.DropNavigation-Right ul ul, .MainNavigation-Right ul ul {
+  left: auto;
+  right: 0; }
+
 .TabsNavigation a {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -4348,6 +4277,81 @@ form .Active[type='submit'],
   .TabsNavigation li {
     margin-left: 0;
     width: 50%; } }
+
+.MainNavigation li ul {
+  border: 1px solid #dadada;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.MainNavigation li li a {
+  background-color: #fafafa;
+  border: 1px solid #dadada;
+  border-width: 1px 0 0; }
+
+.MainNavigation li li:first-child a {
+  border-width: 0; }
+
+.MainNavigation .Current > a {
+  color: #ee5500; }
+
+.MainNavigation .HasSubCategories > a:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  margin-left: 0.5em; }
+
+.MainNavigation li .HasSubCategories > a:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  margin-left: 0.5em; }
+
+.SideNavigation {
+  border: 1px solid #dadada;
+  border-radius: 2px; }
+
+.SideNavigation a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: #fafafa;
+  border-top: 1px solid #dadada;
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+  text-decoration: none; }
+  .SideNavigation a:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    margin-right: 0.5em; }
+
+.SideNavigation ul {
+  list-style: none;
+  margin-bottom: 0; }
+
+.SideNavigation ul ul a {
+  padding-left: 30px; }
+
+.SideNavigation ul ul ul a {
+  padding-left: 45px; }
+
+.SideNavigation > ul > :first-child > a {
+  border-width: 0; }
+
+.SideNavigation .Current > a {
+  color: #ee5500; }
 
 .DrawerNavigation {
   margin-top: -1px; }
