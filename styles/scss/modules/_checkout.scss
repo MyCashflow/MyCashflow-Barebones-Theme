@@ -64,11 +64,11 @@
 // Klarna Checkout
 //------------------------------------------------------------------------------
 
-#KlarnaCheckout {
+#KlarnaCheckoutWrap {
 	max-width: 640px;
 }
 
-#KlarnaCheckout > :last-child {
+#KlarnaCheckoutWrap > :last-child {
 	margin-bottom: 0;
 }
 

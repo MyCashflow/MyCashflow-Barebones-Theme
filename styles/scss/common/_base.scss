@@ -31,7 +31,7 @@ input[type='search'] {
 //------------------------------------------------------------------------------
 
 h1, h2, h3, h4, h5, h6, p, form, table,
-hr, dl, ol, ul, fieldset {
+hr, dl, ol, ul {
 	@extend %default-margin;
 }
 
