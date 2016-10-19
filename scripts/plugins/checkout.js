@@ -122,8 +122,8 @@
 				this.beforeUpdatePart($part);
 				return $.get('/interface/' + this.getPartResponseParams($part))
 					.then($.proxy(function (response) {
-						this.afterUpdatePart($part);
 						$part.html(response);
+						this.afterUpdatePart($part);
 					}, this));
 			}
 		},
