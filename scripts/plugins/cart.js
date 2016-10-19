@@ -9,6 +9,13 @@
 	var Cart = {
 		updateDelay: 500,
 
+		beforeUpdate: function () {},
+		afterUpdate: function () {},
+		beforeAddProduct: function () {},
+		afterAddProduct: function () {},
+		beforeRemoveProduct: function () {},
+		afterRemoveProduct: function () {},
+
 		init: function (config) {
 			$.extend(true, this, config);
 			this.bindEvents();
@@ -44,42 +51,30 @@
 		},
 
 		updateCart: function ($cart) {
-			if (this.beforeUpdate) {
-				this.beforeUpdate($cart);
-			}
+			this.beforeUpdate($cart);
 			return $.post($cart.attr('action'), $cart.serializeArray())
 				.then($.proxy(function () {
-					if (this.afterUpdate) {
-						this.afterUpdate($cart);
-					}
+					this.afterUpdate($cart);
 				}, this));
 		},
 
 		addProduct: function ($buyForm) {
-			if (this.beforeAddProduct) {
-				this.beforeAddProduct($buyForm);
-			}
+			this.beforeAddProduct($buyForm);
 			var data = $buyForm.serializeArray().concat([
 				{ name: 'ajax', value: 1 },
 				{ name: 'response_type', value: 'json' }
 			]);
 			return $.post($buyForm.attr('action'), data)
 				.then($.proxy(function () {
-					if (this.afterAddProduct) {
-						this.afterAddProduct($buyForm);
-					}
+					this.afterAddProduct($buyForm);
 				}, this));
 		},
 
 		removeProduct: function ($removeLink) {
-			if (this.beforeRemoveProduct) {
-				this.beforeRemoveProduct($removeLink);
-			}
+			this.beforeRemoveProduct($removeLink);
 			return $.get($removeLink.attr('href') + '?ajax=1')
 				.then($.proxy(function () {
-					if (this.afterRemoveProduct) {
-						this.afterRemoveProduct($removeLink);
-					}
+					this.afterRemoveProduct($removeLink);
 				}, this));
 		}
 	};

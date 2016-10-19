@@ -3431,6 +3431,9 @@ form .Active[type='submit'],
 .Banner {
   position: relative; }
 
+.Banner a {
+  text-decoration: none; }
+
 .BannerLink {
   bottom: 0;
   left: 0;
