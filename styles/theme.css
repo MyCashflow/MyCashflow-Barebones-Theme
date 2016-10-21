@@ -4277,7 +4277,8 @@ form .Active[type='submit'],
   font-weight: bold;
   margin-bottom: -1px;
   padding: 10px 20px;
-  text-align: center; }
+  text-align: center;
+  text-decoration: none; }
 
 .TabsNavigation ul {
   list-style: none;
