@@ -104,7 +104,7 @@
 			this.setCurrentImageByText(label);
 		},
 
-		parseVariationName(text) {
+		parseVariationName: function (text) {
 			var matches = LABEL_REGEX.exec(text);
 			return matches ? matches[1] : text;
 		},
