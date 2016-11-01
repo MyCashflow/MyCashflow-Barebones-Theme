@@ -92,6 +92,7 @@
 @media screen and (max-width: $breakpoint-mobile) {
 	.InlineNavigation li {
 		display: block;
+		margin: 0;
 	}
 
 	.InlineNavigation li + li {
