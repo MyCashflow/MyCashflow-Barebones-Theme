@@ -99,11 +99,11 @@
 								before: '<div class="MiniCart MiniCart-Checkout">',
 								after: '</div>'
 							)}
-							{CampaignCode(
-								action: 'checkout',
-								before: '<div class="CampaignCodeForm">',
-								after: '</div>'
-							)}
+							<p>
+								<a class="Button Button-Block Button-Primary" href="#" data-modal data-modal-helper="helpers/modals/campaign-code-checkout">
+									{%CampaignCodeInquiry}
+								</a>
+							</p>
 						</div>
 						{CurrencyNotification}
 						{CheckoutAcceptTerms}

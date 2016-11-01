@@ -2604,7 +2604,7 @@ form .Active[type='submit'],
   text-align: center; }
 
 .CampaignCodeForm-InModal {
-  background-color: none;
+  background: none;
   border: 0;
   padding: 0; }
 
@@ -4174,7 +4174,8 @@ form .Active[type='submit'],
 
 @media screen and (max-width: 600px) {
   .InlineNavigation li {
-    display: block; }
+    display: block;
+    margin: 0; }
   .InlineNavigation li + li {
     margin-top: 10px; }
   .InlineNavigation li + li:before {
