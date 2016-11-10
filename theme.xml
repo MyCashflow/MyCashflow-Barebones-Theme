@@ -11,6 +11,7 @@
 			<SinglePage supported="true" default="default" />
 			<MultiPage supported="false" />
 		</Checkout>
+		<ProductBundles supported="true" />
 	</Features>
 	<Settings>
 		<Doctype standard="HTML5" />
