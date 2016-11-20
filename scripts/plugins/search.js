@@ -42,7 +42,6 @@
 		this.$searchInput.on('blur', $.proxy(this.onSearchInputBlur, this));
 		this.$searchInput.on('keydown', $.proxy(this.onSearchInputKeyDown, this));
 		this.$searchInput.on('keyup', $.proxy(this.onSearchInputKeyUp, this));
-		this.$searchInput.on('change', $.proxy(this.onSearchInputChange, this));
 		this.$fullResults.on('click', '.SearchFilter a, .SearchSuggestions a', $.proxy(this.onSearchFilterClick, this));
 	};
 
@@ -88,19 +87,10 @@
 	Search.prototype.onSearchInputKeyUp = function (evt) {
 		clearTimeout(this.typingTimeout);
 		if (!this.isKeyUpOrDown(evt.which) && evt.which !== ENTER_KEY) {
+			var term = $.trim(this.$searchInput.val());
 			this.typingTimeout = setTimeout($.proxy(function() {
-				this.$searchInput.trigger('change');
-			}, this), 500);
-		}
-	};
-
-	Search.prototype.onSearchInputChange = function () {
-		clearTimeout(this.changeTimeout);
-		var term = $.trim(this.$searchInput.val());
-		if (term) {
-			this.changeTimeout = setTimeout($.proxy(function() {
 				this.getLiveResults(term);
-			}, this), 50);
+			}, this), 500);
 		}
 	};
 
