@@ -16,7 +16,7 @@
 		$campaignCode: $('#CheckoutSubmitCampaignCode'),
 		$marketingPermissions: $('#CheckoutMarketingPermissions'),
 
-		typingDelay: 2000,
+		typingDelay: 3500,
 
 		beforeUpdate: function () {},
 		afterUpdate: function () {},
@@ -112,9 +112,7 @@
 
 			return $.post('/checkout/klarna/', data)
 				.then($.proxy(function (html) {
-					if (!this.$shippingInformation.has(':focus')) {
-						this.$shippingInformation.html(html);
-					}
+					this.$shippingInformation.html(html);
 					this.updatePaymentMethods();
 					this.reloadKlarnaFrame();
 				}, this))
