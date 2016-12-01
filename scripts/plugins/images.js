@@ -57,7 +57,6 @@
 
 		onClickThumb: function (evt) {
 			var title = $(evt.currentTarget).attr('title');
-			this.setCaption(title);
 
 			if (this.imageToVariation && $(this.variationsSelect).length) {
 				var $select = $(this.variationsSelect).find('select').first();
@@ -109,15 +108,10 @@
 			return matches ? matches[1] : text;
 		},
 
-		setCaption: function (str) {
-			$(this.caption).text(str);
-		},
-
 		setCurrentImageByText: function (text) {
 			var textWithoutPrice = this.parseVariationName(text);
 			var $thumb = $(this.thumbnails).has('img[alt="' + textWithoutPrice + '"]').first();
 			var index = $thumb.closest('li').index();
-			this.setCaption($thumb.attr('title'));
 			window.MagicZoom.switchTo(this.currentImage.substr(1), index);
 		}
 	};
