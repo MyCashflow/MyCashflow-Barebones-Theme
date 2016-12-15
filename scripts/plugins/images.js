@@ -50,7 +50,7 @@
 					var $caption = $(this.caption);
 					var title = $newSelector.attr('title');
 					if ($caption.length) {
-						$caption.text($(title);
+						$caption.text(title);
 					}
 
 					if (this.imageToVariation && $(this.variationsSelect).length) {
