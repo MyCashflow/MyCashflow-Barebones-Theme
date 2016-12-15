@@ -42,7 +42,7 @@
 				}, this),
 
 				onUpdate: $.proxy(function (zoomId, prevSelector, newSelector) {
-					var $newSelector = $(newSelector)
+					var $newSelector = $(newSelector);
 					if ($newSelector.is(prevSelector)) {
 						return false;
 					}
