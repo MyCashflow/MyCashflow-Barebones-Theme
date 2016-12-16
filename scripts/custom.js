@@ -172,15 +172,7 @@ $(document).ready(function () {
 		textExpandHint: MCF.Locales.get('expandImage'),
 		textBtnClose: MCF.Locales.get('close'),
 		textBtnPrev: MCF.Locales.get('previous'),
-		textBtnNext: MCF.Locales.get('next'),
-
-		onUpdate: function (zoomId, prevSelector, nextSelector) {
-			var $nextSelector = $(nextSelector);
-			var $imageCaption = $('#ProductImageCaption');
-			if ($imageCaption.length) {
-				$imageCaption.text($nextSelector.attr('title'));
-			}
-		}
+		textBtnNext: MCF.Locales.get('next')
 	});
 
 	MCF.Sliders.init({
