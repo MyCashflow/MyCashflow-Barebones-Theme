@@ -39,58 +39,62 @@
 					} else if (this.variationToImage && $(this.variationsRadio).length) {
 						$(this.variationsRadio).find('input:checked').trigger('change');
 					}
+				}, this),
+
+				onUpdate: $.proxy(function (zoomId, prevSelector, newSelector) {
+					var $newSelector = $(newSelector);
+					if ($newSelector.is(prevSelector)) {
+						return false;
+					}
+
+					var $caption = $(this.caption);
+					var title = $newSelector.attr('title');
+					if ($caption.length) {
+						$caption.text(title);
+					}
+
+					if (this.imageToVariation && $(this.variationsSelect).length) {
+						var $select = $(this.variationsSelect).find('select').first();
+						var $option;
+
+						$select.find('option').each($.proxy(function (index, option) {
+							var text = $(option).text().trim();
+							text = this.parseVariationName(text);
+							if (text === title) {
+								$option = $(option);
+							}
+						}, this));
+
+						if ($option) {
+							$select.val($option.attr('value'));
+						}
+					} else if (this.imageToVariation && $(this.variationsRadio).length) {
+						var $labels = $(this.variationsRadio).find('label');
+						var $radio;
+
+						$labels.each($.proxy(function (index, label) {
+							var text = $(label).text().trim();
+							text = this.parseVariationName(text);
+							if (text === title) {
+								$radio = $(label).find('input');
+							}
+						}, this));
+
+						if ($radio) {
+							$radio.prop('checked', true);
+						}
+					}
 				}, this)
 			}, config);
 		},
 
 		bindEvents: function () {
-			$(document).on('click', this.thumbnails, $.proxy(this.onClickThumb, this));
-
 			if (this.imageToVariation && $(this.variationsSelect).length) {
 				$(document).on('change', 'select', this.variationsSelect,
 					$.proxy(this.onChangeSelectVariation, this));
 			} else if (this.imageToVariation && $(this.variationsRadio).length) {
 				$(document).on('change', 'input', this.variationsRadio,
 					$.proxy(this.onChangeRadioVariation, this));
-			}
-		},
-
-		onClickThumb: function (evt) {
-			var title = $(evt.currentTarget).attr('title');
-			this.setCaption(title);
-
-			if (this.imageToVariation && $(this.variationsSelect).length) {
-				var $select = $(this.variationsSelect).find('select').first();
-				var $option;
-
-				$select.find('option').each($.proxy(function (index, option) {
-					var text = $(option).text().trim();
-					text = this.parseVariationName(text);
-
-					if (text === title) {
-						$option = $(option);
-					}
-				}, this));
-
-				if ($option) {
-					$select.val($option.attr('value'));
-				}
-			} else if (this.imageToVariation && $(this.variationsRadio).length) {
-				var $labels = $(this.variationsRadio).find('label');
-				var $radio;
-
-				$labels.each($.proxy(function (index, label) {
-					var text = $(label).text().trim();
-					text = this.parseVariationName(text);
-
-					if (text === title) {
-						$radio = $(label).find('input');
-					}
-				}, this));
-
-				if ($radio) {
-					$radio.prop('checked', true);
-				}
 			}
 		},
 
@@ -109,15 +113,10 @@
 			return matches ? matches[1] : text;
 		},
 
-		setCaption: function (str) {
-			$(this.caption).text(str);
-		},
-
 		setCurrentImageByText: function (text) {
 			var textWithoutPrice = this.parseVariationName(text);
 			var $thumb = $(this.thumbnails).has('img[alt="' + textWithoutPrice + '"]').first();
 			var index = $thumb.closest('li').index();
-			this.setCaption($thumb.attr('title'));
 			window.MagicZoom.switchTo(this.currentImage.substr(1), index);
 		}
 	};

@@ -4590,8 +4590,11 @@ form .Active[type='submit'],
   transition-duration: 0.15s; }
 
 .ProductImage:hover, #ProductThumbnails .ProductThumbnail:hover {
-  border-color: #ee5500;
-  box-shadow: 0 1px 6px #ee5500; }
+  -moz-box-shadow: 0 1px 6px #ee5500;
+  -ms-box-shadow: 0 1px 6px #ee5500;
+  -webkit-box-shadow: 0 1px 6px #ee5500;
+  box-shadow: 0 1px 6px #ee5500;
+  border-color: #ee5500; }
 
 .ProductDiscountPrice {
   color: #ee5500; }
@@ -4648,6 +4651,7 @@ form .Active[type='submit'],
   width: 25%; }
 
 #ProductThumbnails .ProductThumbnail {
+  height: 80px;
   line-height: 68px;
   padding: 5px; }
 
@@ -4655,11 +4659,21 @@ form .Active[type='submit'],
   display: block; }
 
 #ProductThumbnails .mz-thumb img {
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   -ms-filter: none;
   -moz-filter: none;
   -webkit-filter: none;
-  filter: none;
-  box-shadow: none; }
+  filter: none; }
+
+#ProductThumbnails .mz-thumb-selected {
+  -moz-box-shadow: 0 1px 6px #ee5500;
+  -ms-box-shadow: 0 1px 6px #ee5500;
+  -webkit-box-shadow: 0 1px 6px #ee5500;
+  box-shadow: 0 1px 6px #ee5500;
+  border-color: #ee5500; }
 
 @media screen and (max-width: 1024px) {
   #ProductThumbnails li {

@@ -14,8 +14,8 @@
 }
 
 .ProductImage:hover {
+	@include box-shadow(0 1px 6px $color-accent-2);
 	border-color: $color-accent-2;
-	box-shadow: 0 1px 6px $color-accent-2;
 }
 
 .ProductDiscountPrice {
@@ -55,7 +55,7 @@
 }
 
 //------------------------------------------------------------------------------
-// Product Images
+// Current Product Image
 //------------------------------------------------------------------------------
 
 #CurrentProductImage {
@@ -70,6 +70,10 @@
 #ProductImageCaption {
 	text-align: center;
 }
+
+//------------------------------------------------------------------------------
+// Product Thumbnails
+//------------------------------------------------------------------------------
 
 #ProductThumbnails {
 	@include clearfix;
@@ -86,6 +90,7 @@
 
 #ProductThumbnails .ProductThumbnail {
 	@extend .ProductImage;
+	height: 80px;
 	line-height: 68px;
 	padding: 5px;
 }
@@ -95,8 +100,13 @@
 }
 
 #ProductThumbnails .mz-thumb img {
+	@include box-shadow(none);
 	@include filter(none);
-	box-shadow: none;
+}
+
+#ProductThumbnails .mz-thumb-selected {
+	@include box-shadow(0 1px 6px $color-accent-2);
+	border-color: $color-accent-2;
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
