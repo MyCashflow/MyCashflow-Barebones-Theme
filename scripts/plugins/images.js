@@ -6,7 +6,7 @@
 ;(function ($) {
 	'use strict';
 
-	var LABEL_REGEX = /(.+),\s.?[\d+\s\d]+[,.]\d+.+/i;
+	var LABEL_REGEX = /(?:(?!,|\s\().)*/i;
 
 	var Images = {
 		currentImage: '#CurrentProductImage',
@@ -110,12 +110,12 @@
 
 		parseVariationName: function (text) {
 			var matches = LABEL_REGEX.exec(text);
-			return matches ? matches[1] : text;
+			return matches ? matches[0] : text;
 		},
 
 		setCurrentImageByText: function (text) {
-			var textWithoutPrice = this.parseVariationName(text);
-			var $thumb = $(this.thumbnails).has('img[alt="' + textWithoutPrice + '"]').first();
+			var variationName = this.parseVariationName(text);
+			var $thumb = $(this.thumbnails).has('img[alt="' + variationName + '"]').first();
 			var index = $thumb.closest('li').index();
 			window.MagicZoom.switchTo(this.currentImage.substr(1), index);
 		}
