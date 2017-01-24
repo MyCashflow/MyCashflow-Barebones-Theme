@@ -6,7 +6,7 @@
 ;(function ($) {
 	'use strict';
 
-	var LABEL_REGEX = /(?:(?!,|\s\().)*/i;
+	var LABEL_REGEX = /(?:(?!,\s|\s\().)*/i;
 
 	var Images = {
 		currentImage: '#CurrentProductImage',
