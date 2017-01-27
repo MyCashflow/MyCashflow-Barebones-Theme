@@ -125,22 +125,6 @@ label {
 	background-color: darken($color-accent-1, 2.5%);
 }
 
-.Button-Primary {
-	background-color: $color-accent-1;
-	border-color: darken($color-accent-1, 10%);
-	color: text-contrast($color-accent-1) !important;
-}
-
-.Button-Primary:hover {
-	background-color: lighten($color-accent-1, 2.5%);
-	color: text-contrast($color-accent-1) !important;
-}
-
-.Button-Primary:active,
-.Button-Primary.Active {
-	background-color: darken($color-accent-1, 2.5%);
-}
-
 .Button-Block {
 	display: block;
 	text-align: center;
