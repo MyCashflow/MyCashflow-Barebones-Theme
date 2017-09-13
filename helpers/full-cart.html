@@ -1,6 +1,9 @@
 {CartProducts(
+	or: '{Notifications(group: 'coupon')}{Notifications(group: 'cart')}',
 	before: '
 		<form class="FullCart" action="/cart/update/" method="post">
+			{Notifications(group: 'coupon')}
+			{Notifications(group: 'cart')}
 			<div class="FullCartSection FullCartHeader">
 				<div class="Flex Flex-Collapse">
 					<div class="FlexItem">
