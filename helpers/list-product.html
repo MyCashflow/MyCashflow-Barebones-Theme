@@ -20,9 +20,11 @@
 		)}
 		<div class="ProductPrices">
 			{ProductComparePrice(
+				includetax: 'false',
 				currencysymbol: 'true',
 				before: '
 					{ProductPrice(
+						includetax: 'false',
 						currencysymbol: 'true',
 						before: '<span class="ProductDiscountPrice">',
 						after: '</span>'
@@ -31,6 +33,7 @@
 				after: '</span>',
 				or: '
 					{ProductPrice(
+						includetax: 'false',
 						currencysymbol: 'true',
 						before: '<span class="ProductCurrentPrice">',
 						after: '</span>'
