@@ -13,9 +13,11 @@
 					<h1>{PageTitle}</h1>
 					<p class="Text-Large ProductPrices ProductCardPrices">
 						{ProductComparePrice(
+							includetax: 'false',
 							currencysymbol: 'true',
 							before: '
 								{ProductPrice(
+									includetax: 'false',
 									currencysymbol: 'true',
 									before: '<span class="ProductDiscountPrice">{%Price}&nbsp;',
 									after: '</span>'
@@ -24,6 +26,7 @@
 							after: '</span>',
 							or: '
 								{ProductPrice(
+									includetax: 'false',
 									currencysymbol: 'true',
 									before: '<span class="ProductCurrentPrice">{%Price}&nbsp;',
 									after: '</span>'
@@ -35,7 +38,10 @@
 				</div>
 				<div class="ContentSection">
 					{ProductAvailability}
-					{ProductBuy(variations: 'radio')}
+					{ProductBuy(
+						includetax: 'false',
+						variations: 'radio'
+					)}
 				</div>
 				{AvailabilityNotificationForm(
 					before:'
