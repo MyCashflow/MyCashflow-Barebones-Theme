@@ -6,23 +6,23 @@
 		<div class="MiniCartProducts">',
 	after: '
 		</div>
-		{CartSubTotal(
+		{CartSubTotalWithoutTax(
 			before: '<div class="MiniCartTotal">{%CheckoutProductsTotal}&nbsp;',
 			after: '</div>'
 		)}
-		{CartShippingCosts(
+		{CartShippingCostsWithoutTax(
 			before: '<div class="MiniCartTotal">{%CheckoutShipping}: {CartShippingMethod}&nbsp;',
 			after: '</div>'
 		)}
-		{CartPaymentCosts(
+		{CartPaymentCostsWithoutTax(
 			before: '<div class="MiniCartTotal">{%PaymentMethod}: {CartPaymentMethod}&nbsp;',
 			after: '</div>'
 		)}
-		{CartDiscount(
+		{CartDiscountWithoutTax(
 			before: '<div class="MiniCartTotal">{%CampaignCode}: &nbsp;',
 			after: '</div>'
 		)}
-		{CartTotal(
+		{CartTotalWithoutTax(
 			before: '<div class="MiniCartTotal">{%Total}: &nbsp;',
 			after: '</div>'
 		)}
@@ -57,10 +57,10 @@
 				after: '</a>'
 			)}
 			<div class="ProductPrices">
-				{CartProductComparePrice(
+				{CartProductComparePriceWithoutTax(
 					currencysymbol: 'true',
 					before: '
-						{CartProductPrice(
+						{CartProductPriceWithoutTax(
 							currencysymbol: 'true',
 							before: '<span class="ProductDiscountPrice">',
 							after: '</span>'
@@ -68,7 +68,7 @@
 						<span class="ProductComparePrice">',
 					after: '</span>',
 					or: '
-						{CartProductPrice(
+						{CartProductPriceWithoutTax(
 							currencysymbol: 'true',
 							before: '<span class="ProductCurrentPrice">',
 							after: '</span>'

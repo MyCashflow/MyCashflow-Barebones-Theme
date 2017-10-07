@@ -29,7 +29,7 @@
 			<div class="FullCartProducts">',
 	after: '
 			</div>
-			{CartSubTotal(
+			{CartSubTotalWithoutTax(
 				before: '
 					<div class="FullCartSection FullCartTotal">
 						<span class="H4">
@@ -38,7 +38,7 @@
 						</span>
 					</div>'
 			)}
-			{CartDiscount(
+			{CartDiscountWithoutTax(
 				before: '
 					<div class="FullCartSection FullCartTotal">
 						<span class="H4">
@@ -81,7 +81,7 @@
 				{CartProductQuantity}
 			</div>
 			<div class="FullCartCol FullCartColPrice">
-				<span class="H4 ProductTotal">{CartProductTotal}</span>
+				<span class="H4 ProductTotal">{CartProductTotalWithoutTax}</span>
 			</div>
 			<div class="FullCartCol FullCartColRemove">
 				<a class="ProductRemove" href="/cart/delete/{CartProductId}">{%Delete}</a>
