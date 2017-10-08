@@ -47,6 +47,15 @@
 						</span>
 					</div>'
 			)}
+			{CartSubTotal(
+				before: '
+					<div class="FullCartSection FullCartTotal">
+						<span class="H4">
+							{%Total}&nbsp;({%VAT} &nbsp;{CartTaxRate} %)&nbsp;',
+				after: '
+						</span>
+					</div>'
+			)}
 			<div class="FullCartSection FullCartActions">
 				<div class="Flex Flex-Collapse">
 					<div class="FlexItem FlexSpacer"></div>
