@@ -47,7 +47,16 @@
 						</span>
 					</div>'
 			)}
-			{CartSubTotal(
+			{CartTotalWithoutTax(
+				before: '
+					<div class="FullCartSection FullCartTotal">
+						<span class="H4">
+							{%Total}&nbsp;',
+				after: '
+						</span>
+					</div>'
+			)}
+			{CartTotal(
 				before: '
 					<div class="FullCartSection FullCartTotal">
 						<span class="H4">
