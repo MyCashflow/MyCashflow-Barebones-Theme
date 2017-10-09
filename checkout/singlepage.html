@@ -75,6 +75,7 @@
 						<p>{%CheckoutChooseShippingMethodIntro}</p>
 						<div id="CheckoutShippingMethods" data-checkout-part="ShippingMethods">
 							{CheckoutShippingMethods(
+								includetax: 'false',
 								mode: 'form',
 								ajax: 'true'
 							)}
@@ -85,6 +86,7 @@
 						<p>{%CheckoutChoosePaymentMethodIntro}</p>
 						<fieldset id="CheckoutPaymentMethods" data-checkout-part="PaymentMethods">
 							{CheckoutPaymentMethods(
+								includetax: 'false',
 								mode: 'form',
 								ajax: 'true'
 							)}
