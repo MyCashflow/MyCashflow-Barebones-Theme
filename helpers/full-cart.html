@@ -61,7 +61,7 @@
 	helper: {{
 		<div class="Product FullCartProduct {ProductClass}">
 			<div class="FullCartCol FullCartColImage">
-				<a class="ProductImage" href="{ProductUrl}">
+				<a class="ProductImage" href="{ProductUrl}" {ProductLinkData}>
 					{ProductImage(
 						imagesize: 'list',
 						link: false
@@ -70,7 +70,7 @@
 			</div>
 			<div class="FullCartCol FullCartColDetails">
 				<h3 class="H3 ProductName">
-					<a href="{ProductUrl}">{ProductName}</a>
+					<a href="{ProductUrl}" {ProductLinkData}>{ProductName}</a>
 				</h3>
 				{CartProductDetails(
 					before: '<div class="CompactDl">',
@@ -84,7 +84,7 @@
 				<span class="H4 ProductTotal">{CartProductTotal}</span>
 			</div>
 			<div class="FullCartCol FullCartColRemove">
-				<a class="ProductRemove" href="/cart/delete/{CartProductId}">{%Delete}</a>
+				<a class="ProductRemove" href="/cart/delete/{CartProductId}" {ProductLinkData(type: 'remove_from_cart')}>{%Delete}</a>
 			</div>
 		</div>
 	}}
