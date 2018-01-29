@@ -36,6 +36,20 @@
 						helper: 'helpers/list-product'
 					)}
 				</div>
+				{Bundles(
+					category:'{CategoryID}',
+					type: 'normal',
+					before: '
+						<div class="ContentSection">
+							<h2 class="ContentTitle">{%Bundles}</h2>
+							<div class="List ProductList">
+								<div class="GridList" data-slider="grid-list">',
+					after: '
+								</div>
+							</div>
+						</div>',
+					helper: 'helpers/list-bundle'
+				)}
 				{CategoryNewProducts(
 					limit: '15',
 					type: 'normal',
