@@ -29,12 +29,17 @@
 			this.bindEvents();
 			this.runToggles();
 			this.reloadKlarnaFrame();
+
+			if (this.$klarnaFrame.length) {
+				this.insertSavePostalCodeButton();
+			}
 		},
 
 		bindEvents: function () {
 			this.$checkout.on('click change', '[data-toggle]', $.proxy(this.onToggle, this));
 			this.$shippingInformation.on('keydown', 'input', $.proxy(this.onKeyDownShippingInformation, this));
 			this.$shippingInformation.on('change', 'select', $.proxy(this.onChangeShippingInformation, this));
+			this.$shippingInformation.on('click', 'button.Submit', $.proxy(this.onSubmitShippingInformation, this));
 			this.$orderComment.on('change', $.proxy(this.onChangeOrderComments, this));
 			this.$campaignCode.on('submit', $.proxy(this.onSubmitCampaignCode, this));
 			this.$marketingPermissions.on('change', $.proxy(this.onChangeMarketingPermissions, this));
@@ -59,6 +64,11 @@
 			this._submitShippingInformation = setTimeout($.proxy(function () {
 				this.submitShippingInformation();
 			}, this), this.typingDelay);
+		},
+
+		onSubmitShippingInformation: function () {
+			clearTimeout(this._submitShippingInformation);
+			this.submitShippingInformation();
 		},
 
 		onChangeShippingInformation: function () {
@@ -106,6 +116,14 @@
 			]);
 		},
 
+		insertSavePostalCodeButton: function () {
+			var $input = this.$shippingInformation.find('input#postal_code');
+			$('<button />')
+				.addClass('Button Button-Primary Submit')
+				.text(MCF.Locales.get('save'))
+				.insertAfter($input);
+		},
+
 		submitShippingInformation: function () {
 			this.beforeUpdate(this.$shippingInformation);
 			var data = this.serialize(this.$shippingInformation, 'html');
@@ -113,6 +131,7 @@
 			return $.post('/checkout/klarna/', data)
 				.then($.proxy(function (html) {
 					this.$shippingInformation.html(html);
+					this.insertSavePostalCodeButton();
 					this.updatePaymentMethods();
 					this.reloadKlarnaFrame();
 				}, this))
