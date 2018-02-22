@@ -29,10 +29,7 @@
 			this.bindEvents();
 			this.runToggles();
 			this.reloadKlarnaFrame();
-
-			if (this.$klarnaFrame.length) {
-				this.insertSavePostalCodeButton();
-			}
+			this.insertSavePostalCodeButton();
 		},
 
 		bindEvents: function () {
