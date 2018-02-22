@@ -1,6 +1,16 @@
 <script type="text/javascript">
 	window.MCF = window.MCF || {};
 	window.MCF.locale = '{CurrentLanguageCode}';
+
+	function addDictionaryTranslation (key, translation) {
+		var locale = window.MCF.locale.toLowerCase();
+		var locales = window.MCF.Locales || {};
+		locales[locale] = locales[locale] || {};
+		locales[locale][key] = translation;
+		window.MCF.Locales = locales;
+	}
+
+	addDictionaryTranslation('save', '{%Save}');
 </script>
 {MinifyJS(
 	mode: 'production',
