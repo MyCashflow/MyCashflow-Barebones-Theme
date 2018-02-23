@@ -35,8 +35,7 @@
 			var locale = window.MCF.locale.toLowerCase();
 			if (!!this[locale] && !!this[locale][key]) {
 				return this[locale][key];
-			}
-			else if (!!window.MCF.dictionary && !!window.MCF.dictionary[key]) {
+			} else if (!!window.MCF.dictionary && !!window.MCF.dictionary[key]) {
 				return window.MCF.dictionary[key];
 			}
 			return this.en[key] || key;
