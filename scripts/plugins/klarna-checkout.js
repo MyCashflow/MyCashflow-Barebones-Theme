@@ -35,7 +35,7 @@
 		bindEvents: function () {
 			this.$checkout.on('click change', '[data-toggle]', $.proxy(this.onToggle, this));
 			this.$shippingInformation.on('keydown', 'input', $.proxy(this.onKeyDownShippingInformation, this));
-			this.$shippingInformation.on('change', 'select', $.proxy(this.onChangeShippingInformation, this));
+			this.$shippingInformation.on('change', 'select, [type="radio"]', $.proxy(this.onChangeShippingInformation, this));
 			this.$shippingInformation.on('click', 'button.Submit', $.proxy(this.onSubmitShippingInformation, this));
 			this.$orderComment.on('change', $.proxy(this.onChangeOrderComments, this));
 			this.$campaignCode.on('submit', $.proxy(this.onSubmitCampaignCode, this));
