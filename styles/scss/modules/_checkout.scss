@@ -81,3 +81,13 @@
 	border-radius: $border-radius;
 	padding: 20px;
 }
+
+.JS input#postal_code {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+input#postal_code + button.Submit {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}

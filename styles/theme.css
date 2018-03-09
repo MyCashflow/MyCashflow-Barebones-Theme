@@ -2392,21 +2392,6 @@ form .Active[type='submit'],
 #OrderDocuments a.Active {
   background-color: #6e9d00; }
 
-.Button-Primary, form [type='submit'], #OrderDocuments a {
-  background-color: #77aa00;
-  border-color: #537700;
-  color: #fefefe !important; }
-
-.Button-Primary:hover, form [type='submit']:hover, #OrderDocuments a:hover {
-  background-color: #80b700;
-  color: #fefefe !important; }
-
-.Button-Primary:active, form [type='submit']:active, #OrderDocuments a:active,
-.Button-Primary.Active,
-form .Active[type='submit'],
-#OrderDocuments a.Active {
-  background-color: #6e9d00; }
-
 .Button-Block, .Buttons-Block .Button, .Buttons-Block form button, form .Buttons-Block button, .Buttons-Block #OrderDocuments a, #OrderDocuments .Buttons-Block a {
   display: block;
   text-align: center;
@@ -3767,6 +3752,14 @@ form .Active[type='submit'],
   border: 1px solid #dadada;
   border-radius: 2px;
   padding: 20px; }
+
+.JS input#postal_code {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
+
+input#postal_code + button.Submit {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
 
 .Drawer {
   background-color: #fafafa;

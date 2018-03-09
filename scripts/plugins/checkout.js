@@ -21,6 +21,7 @@
 			'PaymentMethods': []
 		},
 
+		afterInit: function () {},
 		beforeUpdate: function () {},
 		afterUpdate: function () {},
 		beforeUpdatePart: function () {},
@@ -31,6 +32,7 @@
 			this.$form = $(this.formSelector);
 			this.bindEvents();
 			this.runToggles();
+			this.afterInit(this.$form);
 		},
 
 		bindEvents: function () {

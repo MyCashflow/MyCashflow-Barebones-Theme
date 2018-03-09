@@ -8,7 +8,7 @@
 
 	var Sliders = {
 		init: function (config) {
-			$.extend(true, this, config);
+			$.extend(this, config);
 			this.createSliders();
 		},
 
@@ -16,7 +16,7 @@
 			$('[data-slider]').each($.proxy(function (index, elem) {
 				var config = this[$(elem).attr('data-slider')];
 				var defaults = this['default'] || {};
-				$(elem).slick(config ? $.extend(true, defaults, config) : defaults);
+				$(elem).slick(config ? $.extend({}, defaults, config) : defaults);
 			}, this));
 		}
 	};

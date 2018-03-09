@@ -33,7 +33,12 @@
 
 		get: function (key) {
 			var locale = window.MCF.locale.toLowerCase();
-			return !!this[locale] ? this[locale][key] : this.en[key];
+			if (!!this[locale] && !!this[locale][key]) {
+				return this[locale][key];
+			} else if (!!window.MCF.dictionary && !!window.MCF.dictionary[key]) {
+				return window.MCF.dictionary[key];
+			}
+			return this.en[key] || key;
 		}
 	};
 
