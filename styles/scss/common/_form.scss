@@ -28,6 +28,12 @@ input, select, textarea {
 	width: auto;
 }
 
+[type='checkbox'], [type='radio'] {
+	all: revert;
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+}
+
 textarea {
 	height: auto;
 	resize: none;
