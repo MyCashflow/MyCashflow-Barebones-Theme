@@ -51,7 +51,7 @@
 		handleClick: function () {
 			var $input = $(this).closest('.Spinner').find('input');
 			var max = parseInt($input.attr('data-max')) || null;
-			var value = parseInt($input.val());
+			var value = parseInt($input.val()) || 0;
 			value = $(this).is('.SpinnerButtonInc') ? value + 1 : value - 1;
 			value = value <= 0 ? 0 : value;
 			value = !!max && value > max ? max : value;
