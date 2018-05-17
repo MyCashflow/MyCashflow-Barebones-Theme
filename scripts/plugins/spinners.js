@@ -42,13 +42,19 @@
 				.before(decrTmpl)
 				.after(incrTmpl)
 				.wrap($('<div class="SpinnerInput"></div>'));
+
+			if ($input.attr('max')) {
+				$newInput.attr('data-max', $input.attr('max'));
+			}
 		},
 
 		handleClick: function () {
 			var $input = $(this).closest('.Spinner').find('input');
+			var max = parseInt($input.attr('data-max')) || null;
 			var value = parseInt($input.val());
 			value = $(this).is('.SpinnerButtonInc') ? value + 1 : value - 1;
 			value = value <= 0 ? 0 : value;
+			value = !!max && value > max ? max : value;
 			$input.val(value).trigger('change');
 		}
 	};
