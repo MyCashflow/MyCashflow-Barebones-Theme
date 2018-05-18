@@ -67,7 +67,7 @@
 					.appendTo($select);
 
 				visibleOptions.forEach(function(option) {
-					var price = option.price ? '(' + option.price + ')' : null;
+					var price = option.price ? ': ' + option.price : null;
 
 					$('<option />')
 						.text([option.value, price].join(' '))
