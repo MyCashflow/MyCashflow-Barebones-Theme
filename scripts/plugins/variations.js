@@ -99,11 +99,8 @@
 			var selected = formData.variations.find(function(variation) {
 				return variation.path.join('.') === state.join('.');
 			});
-
-			formData.submitButton
-				.text(formData.submitButtonText)
-				.prop('disabled', !selected);
-
+			
+			formData.submitButton.prop('disabled', !selected);
 			formData.variations.forEach(function(variation) {
 				variation.input.prop('checked', false);
 			});
@@ -111,13 +108,10 @@
 			if (selected) {
 				selected.input.prop('checked', true);
 			}
-
-			if (selected && (selected.price || selected.availability)) {
-				var $availability =
-					selected.availability && $('<span />').text(selected.availability);
-
+			
+			if (selected && selected.availability) {
 				$('<div class="FormItem" />')
-					.append($availability)
+					.text(selected.availability)
 					.appendTo($items);
 			}
 
@@ -137,8 +131,7 @@
 			return {
 				variations: variations,
 				selections: this.variationsToSelections(variations),
-				submitButton: $submitButton,
-				submitButtonText: $submitButton.text()
+				submitButton: $submitButton
 			};
 		},
 
