@@ -26,8 +26,13 @@
 					return;
 				}
 
+				var formData = self.parse($form);
+				if (!formData) {
+					return;
+				}
+				
 				var $original = $form.find('[class*=BuyFormVariation]');
-				$original.hide().after(self.render(self.parse($form)));
+				$original.hide().after(self.render(formData));
 				$form.data('variations', true);
 			});
 		},
@@ -119,8 +124,8 @@
 		},
 
 		parse: function($form) {
-			var $variations = $form.find('[class*=BuyFormVariation] label');
-			if (!$variations) {
+			var $variations = $form.find('[class*=BuyFormVariation] label:contains("|")');
+			if (!$variations.length) {
 				return null;
 			}
 
