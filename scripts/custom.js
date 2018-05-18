@@ -15,8 +15,14 @@ $(document).ready(function () {
 		motionThreshold: 5
 	};
 
-	var plugins = ['Drawers', 'Loaders', 'Navigations', 'Notifications', 'Spinners', 'Tabs'];
-	$.each(plugins, function (index, name) {
+	$.each([
+		'Drawers',
+		'Loaders',
+		'Navigations',
+		'Notifications',
+		'Spinners',
+		'Tabs'
+	], function (index, name) {
 		var plugin = MCF[name];
 		if (plugin) {
 			plugin.init();
@@ -224,6 +230,10 @@ $(document).ready(function () {
 				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
 			]
 		}
+	});
+
+	MCF.Variations.init({
+		selectText: MCF.Locales.get('choose')
 	});
 
 	$(document).on('click', '[href="/terms/"]', function () {
