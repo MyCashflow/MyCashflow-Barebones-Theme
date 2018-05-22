@@ -1,6 +1,9 @@
 <script type="text/javascript">
 	window.MCF = window.MCF || {};
 	window.MCF.locale = '{CurrentLanguageCode}';
+	window.MCF.dictionary = window.MCF.dictionary || {};
+	window.MCF.dictionary.choose = '{%Choose}';
+	window.MCF.dictionary.save = '{%Save}';
 </script>
 {MinifyJS(
 	mode: 'production',
@@ -26,6 +29,7 @@
 		scripts/plugins/sliders.js|
 		scripts/plugins/spinners.js|
 		scripts/plugins/tabs.js|
+		scripts/plugins/variations.js|
 		scripts/custom.js'
 )}
 <script type="text/javascript" src="/assets/defaults/vendor/magiczoomplus/magiczoomplus.js"></script>

@@ -47,7 +47,7 @@
 			{ProductImage(
 				imagesize: 'mini',
 				link: 'false',
-				before: '<a class="ProductImage" href="{ProductURL}">',
+				before: '<a class="ProductImage" href="{ProductURL}" {ProductLinkData}>',
 				after: '
 						{CartProductQuantity(
 							mode: 'preview',
@@ -57,7 +57,7 @@
 					</a>'
 			)}
 			{CartProductName(
-				before: '<a class="ProductName" href="{ProductURL}">',
+				before: '<a class="ProductName" href="{ProductURL}" {ProductLinkData}>',
 				after: '</a>'
 			)}
 			<div class="ProductPrices">

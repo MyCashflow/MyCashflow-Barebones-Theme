@@ -2304,6 +2304,11 @@ input, select, textarea {
   max-width: none;
   width: auto; }
 
+[type='checkbox'], [type='radio'] {
+  all: revert;
+  margin: 0 5px 0 0;
+  vertical-align: middle; }
+
 textarea {
   height: auto;
   resize: none; }
@@ -2376,21 +2381,6 @@ form button.Active,
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #efefef; }
-
-.Button-Primary, form [type='submit'], #OrderDocuments a {
-  background-color: #77aa00;
-  border-color: #537700;
-  color: #fefefe !important; }
-
-.Button-Primary:hover, form [type='submit']:hover, #OrderDocuments a:hover {
-  background-color: #80b700;
-  color: #fefefe !important; }
-
-.Button-Primary:active, form [type='submit']:active, #OrderDocuments a:active,
-.Button-Primary.Active,
-form .Active[type='submit'],
-#OrderDocuments a.Active {
-  background-color: #6e9d00; }
 
 .Button-Primary, form [type='submit'], #OrderDocuments a {
   background-color: #77aa00;
@@ -3767,6 +3757,14 @@ form .Active[type='submit'],
   border: 1px solid #dadada;
   border-radius: 2px;
   padding: 20px; }
+
+.JS input#postal_code {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
+
+input#postal_code + button.Submit {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
 
 .Drawer {
   background-color: #fafafa;
