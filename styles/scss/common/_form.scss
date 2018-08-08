@@ -62,6 +62,16 @@ select::-ms-expand {
 	}
 }
 
+// Expose Webkit Autocomplete event for javascript
+@keyframes onAutoComplete {
+	from {/**/}
+	to {/**/}
+}
+
+input:-webkit-autofill {
+    animation-name: onAutoComplete;
+}
+
 //------------------------------------------------------------------------------
 // Labels
 //------------------------------------------------------------------------------
