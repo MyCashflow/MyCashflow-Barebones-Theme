@@ -12,6 +12,7 @@
 		formSelector: '#CheckoutForm',
 		typingDelay: 3000,
 		changeDelay: 100,
+		autoFillDebounceDelay: 100,
 		blurCheckDelay: 50,
 
 		dependencies: {
@@ -36,12 +37,21 @@
 		},
 
 		bindEvents: function () {
+			this.$form.on('animationstart', '[data-checkout-part]', $.proxy(this.onAutoFill, this));
 			this.$form.on('change', '[data-checkout-part]', $.proxy(this.onChange, this));
 			this.$form.on('keypress', '[data-checkout-part]', $.proxy(this.onKeyPress, this));
 			this.$form.on('blur', '[data-checkout-part]', $.proxy(this.onBlur, this));
 			this.$form.on('change', '[data-checkout-toggle]', $.proxy(this.onToggle, this));
 			this.$form.on('click', '[data-checkout-clear]', $.proxy(this.onClear, this));
 			this.$form.on('change', '.DefineShippingMethod, .DefinePaymentMethod', $.proxy(this.onDefineMethod, this));
+		},
+
+		onAutoFill: function(evt) {
+			var $part = $(evt.currentTarget);
+
+			$(document).one('click', $.proxy(function () {
+				this.requestSubmit($part, this.autoFillDebounceDelay);
+			}, this));
 		},
 
 		onChange: function (evt) {
