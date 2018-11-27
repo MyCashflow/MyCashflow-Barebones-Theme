@@ -38,6 +38,20 @@
 						or: '<div class="Notification">0 {%Products}</div>'
 					)}
 				</div>
+				{Bundles(
+					category: '{CategoryId}',
+					type: 'normal',
+					before: '
+						<div class="ContentSection">
+							<h2 class="ContentTitle">{%ProductBundles}</h2>
+							<div class="List ProductList">
+								<div class="GridList">',
+					after: '
+								</div>
+							</div>
+						</div>',
+					helper: 'helpers/list-bundle'
+				)}
 			</div>
 			<div class="Col-3-12 Col-Tablet-12-12">
 				{Helper(file: 'helpers/sidebar')}

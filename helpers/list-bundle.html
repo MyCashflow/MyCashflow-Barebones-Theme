@@ -1,0 +1,31 @@
+<div class="ListItem">
+	<div class="{ProductClass} ListProduct">
+		{BundleImage(
+			imagesize: 'list',
+			link: 'false',
+			before: '<a class="ProductImage" href="{BundleURL}" {ProductLinkData}>',
+			after: '</a>'
+		)}
+		{BundleName(
+			before: '
+				<h3 class="H5 ProductName">
+					<a href="{BundleURL}" {ProductLinkData}>',
+			after: '
+					</a>
+				</h3>'
+		)}
+		<div class="ProductPrices">
+			{BundleComparePrice(
+				currencysymbol: 'true',
+				before: '
+					{BundlePrice(
+						currencysymbol: 'true',
+						before: '<span class="ProductDiscountPrice">',
+						after: '</span>'
+					)}
+					<span class="ProductComparePrice">',
+				after: '</span>'
+			)}
+		</div>
+	</div>
+</div>
