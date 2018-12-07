@@ -39,6 +39,7 @@
 
 		render: function(formData, state) {
 			state = state || [];
+			
 			var self = this;
 			var $items = $('<div class="FormItem Variations" />');
 
@@ -135,7 +136,7 @@
 
 			return {
 				variations: variations,
-				selections: this.variationsToSelections(variations),
+				selections: selections,
 				submitButton: $submitButton
 			};
 		},
@@ -176,11 +177,13 @@
 			return $.trim($variation.text().replace(PRICE_REGEX, ''))
 				.split('|')
 				.map(function(descriptor) {
-					const parts = descriptor.split(':');
+					var parts = descriptor.split(':');
+					var name = $.trim(parts[0]).toLowerCase();
+					var value = $.trim(parts[1]);
 
 					return {
-						name: $.trim(parts[0]),
-						value: $.trim(parts[1])
+						name: name.charAt(0).toUpperCase() + name.slice(1),
+						value: value
 					};
 				});
 		},
