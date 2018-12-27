@@ -11,6 +11,7 @@
 
 	var Variations = {
 		selectText: 'Choose',
+		_attributes: {},
 
 		init: function(config) {
 			$.extend(this, config);
@@ -39,6 +40,7 @@
 
 		render: function(formData, state) {
 			state = state || [];
+			
 			var self = this;
 			var $items = $('<div class="FormItem Variations" />');
 
@@ -135,7 +137,7 @@
 
 			return {
 				variations: variations,
-				selections: this.variationsToSelections(variations),
+				selections: selections,
 				submitButton: $submitButton
 			};
 		},
@@ -173,14 +175,22 @@
 		},
 
 		parseVariationAttributes: function($variation) {
+			var self = this;
+
 			return $.trim($variation.text().replace(PRICE_REGEX, ''))
 				.split('|')
 				.map(function(descriptor) {
-					const parts = descriptor.split(':');
+					var parts = descriptor.split(':');
+					var name = $.trim(parts[0]);
+					var value = $.trim(parts[1]);
+
+					// Remember the first spelling of each attribute.
+					var attribute = name.toLocaleLowerCase();
+					self._attributes[attribute] = self._attributes[attribute] || name;
 
 					return {
-						name: $.trim(parts[0]),
-						value: $.trim(parts[1])
+						name: self._attributes[attribute],
+						value: value
 					};
 				});
 		},
