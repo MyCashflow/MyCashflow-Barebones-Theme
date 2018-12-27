@@ -185,7 +185,7 @@
 					var value = $.trim(parts[1]);
 
 					// Remember the first spelling of each attribute.
-					const attribute = name.toLocaleLowerCase();
+					var attribute = name.toLocaleLowerCase();
 					self._attributes[attribute] = self._attributes[attribute] || name;
 
 					return {
