@@ -11,6 +11,7 @@
 
 	var Variations = {
 		selectText: 'Choose',
+		_attributes: {},
 
 		init: function(config) {
 			$.extend(this, config);
@@ -174,15 +175,21 @@
 		},
 
 		parseVariationAttributes: function($variation) {
+			var self = this;
+
 			return $.trim($variation.text().replace(PRICE_REGEX, ''))
 				.split('|')
 				.map(function(descriptor) {
 					var parts = descriptor.split(':');
-					var name = $.trim(parts[0]).toLowerCase();
+					var name = $.trim(parts[0]);
 					var value = $.trim(parts[1]);
 
+					// Remember the first spelling of each attribute.
+					const attribute = name.toLocaleLowerCase();
+					self._attributes[attribute] = self._attributes[attribute] || name;
+
 					return {
-						name: name.charAt(0).toUpperCase() + name.slice(1),
+						name: self._attributes[attribute],
 						value: value
 					};
 				});
