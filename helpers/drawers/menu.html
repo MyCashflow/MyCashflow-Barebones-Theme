@@ -9,6 +9,17 @@
 		before: '<div class="DrawerNavigation">',
 		after: '</div>'
 	)}
+	{Campaigns(
+		before: '
+			<div class="DrawerNavigation">
+				<ul>
+					<li class="HasSubCategories">
+						<a class="#">{%Campaigns}</a>',
+		after: '
+					</li>
+				</ul>
+			</div>'
+	)}
 	{CurrencyNavigation(
 		before: '
 			<div class="DrawerNavigation">
