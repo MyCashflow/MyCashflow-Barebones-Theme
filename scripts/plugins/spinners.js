@@ -47,15 +47,13 @@
 				.wrap($('<div class="SpinnerInput"></div>'));
 
 			if ($input.attr('max')) {
-				$newInput.attr('data-max', $input.attr('max'));
+				$newInput.data('max', this._parseValue($input.attr('max')));
 			}
-
 			if ($input.attr('min')) {
-				$newInput.attr('data-min', $input.attr('min'));
+				$newInput.data('min', this._parseValue($input.attr('min')));
 			}
-
 			if ($input.attr('step')) {
-				$newInput.attr('data-step', $input.attr('step'));
+				$newInput.data('step', this._parseValue($input.attr('step')));
 			}
 		},
 
@@ -66,20 +64,25 @@
 			var $buttonDec = $spinner.find('button.SpinnerButtonDec');
 			var value = this._parseValue($input.val());
 
-			$buttonInc.prop('disabled', value >= $input.attr('data-max'));
-			$buttonDec.prop('disabled', value <= $input.attr('data-min'));
+			$buttonInc.prop('disabled', value >= $input.data('max'));
+			$buttonDec.prop('disabled', value <= $input.data('min'));
 		},
 
 		handleClick: function (evt) {
 			var $input = $(evt.currentTarget).closest('.Spinner').find('input');
-			var max = parseFloat($input.attr('data-max')) || null;
-			var min = parseFloat($input.attr('data-min')) || null;
-			var step = parseFloat($input.attr('data-step') || 1);
+			var max = $input.data('max') || null;
+			var min = $input.data('min') || 0;
+			var step = $input.data('step') || 1;
 			var value = this._parseValue($input.val() || 0);
 
 			value = $(evt.currentTarget).is('.SpinnerButtonInc') ? value + step : value - step;
-			value = !!min && value <= min ? min : value;
-			value = !!max && value >= max ? max : value;
+
+			if (min >= 0 && value < min) {
+				value = min;
+			}
+			if (max > 0 && value > max) {
+				value = max;
+			}
 
 			$input.val(this._formatValue(value)).trigger('change');
 		},
