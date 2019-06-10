@@ -18,8 +18,8 @@
 		decimalSeparator: ',',
 
 		init: function () {
-			this.wrapInputs($(document.body));
 			this.bindEvents();
+			this.wrapInputs($(document.body));
 		},
 
 		bindEvents: function () {
@@ -55,6 +55,8 @@
 			if ($input.attr('step')) {
 				$newInput.data('step', this._parseValue($input.attr('step')));
 			}
+
+			$newInput.trigger('change');
 		},
 
 		handleChange: function (evt) {
