@@ -47,6 +47,13 @@
 						</span>
 					</div>'
 			)}
+			{CartGiftCards(
+				helper: '{{
+					<div class="FullCartSection FullCartTotal">
+						{%CartPaidByGiftCard}: {CartGiftCardBalanceReserved} €
+					</div>
+				}}'
+			)}
 			<div class="FullCartSection FullCartActions">
 				<div class="Flex Flex-Collapse">
 					<div class="FlexItem FlexSpacer"></div>

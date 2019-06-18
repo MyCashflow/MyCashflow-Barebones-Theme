@@ -241,6 +241,11 @@ $(document).ready(function () {
 		return false;
 	});
 
+	$(document).on('click', '.Drawer .GiftCardDetails', function () {
+		MCF.Drawers.toggleByName('gift-cards');
+		return false;
+	});
+
 	$(document).on('change', '[data-auto-submit]', function (evt) {
 		$(evt.currentTarget).closest('form').submit();
 	});

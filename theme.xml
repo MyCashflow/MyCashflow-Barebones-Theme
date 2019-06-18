@@ -12,6 +12,7 @@
 			<MultiPage supported="false" />
 		</Checkout>
 		<ProductBundles supported="true" />
+		<GiftCards supported="true" />
 	</Features>
 	<Settings>
 		<Doctype standard="HTML5" />

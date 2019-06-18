@@ -19,13 +19,27 @@
 			after: '</div>'
 		)}
 		{CartDiscount(
-			before: '<div class="MiniCartTotal">{%CampaignCode}: &nbsp;',
+			before: '<div class="MiniCartTotal">{%CampaignCode}:&nbsp;',
 			after: '</div>'
 		)}
 		{CartTotal(
-			before: '<div class="MiniCartTotal">{%Total}: &nbsp;',
+			before: '<div class="MiniCartTotal">{%Total}:&nbsp;',
 			after: '</div>'
 		)}
+		{CartGiftCards(
+			before: '<div class="MiniCartTotal">',
+			helper: '{{
+				{%CartPaidByGiftCard}: <strong>{CartGiftCardBalanceReserved}&nbsp;€</strong><br>
+			}}',
+			after: '
+					<a href="#" data-drawer-toggle="gift-cards" class="GiftCardDetails">{%CartGiftCardDetaild}</a>
+				</div>
+				{CartOpenTotal(
+					before: '<div class="MiniCartTotal">{%CartOpenTotal}: &nbsp;',
+					after: '</div>'
+				)}'
+		)}
+
 		<div class="MiniCartActions">
 			<div class="Buttons Buttons-Block">
 				<a class="Button" href="/cart/">{%ShoppingCartEdit}</a>
