@@ -24,7 +24,7 @@
 
 		bindEvents: function () {
 			$(document).on('click.spinner', '.SpinnerButton', $.proxy(this.handleClick, this));
-			$(document).on('change', '.SpinnerInput input', $.proxy(this.handleChange, this));
+			$(document).on('change.spinner', '.SpinnerInput input', $.proxy(this.handleChange, this));
 		},
 
 		unbindEvents: function () {
@@ -56,7 +56,7 @@
 				$newInput.data('step', this._parseValue($input.attr('step')));
 			}
 
-			$newInput.trigger('change');
+			$newInput.trigger('change.spinner');
 		},
 
 		handleChange: function (evt) {
