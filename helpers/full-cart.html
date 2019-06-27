@@ -86,6 +86,17 @@
 					after: '</div>'
 				)}
 			</div>
+			<div class="FullCartCol FullCartColPrice">
+				{CartProductComparePrice(
+					before: '
+						<span class="ProductDiscountPrice">{CartProductPrice}</span><br>
+						<span class="ProductComparePrice">',
+					after: '
+						</span>',
+					or: '{CartProductPrice}'
+				)}
+			</div>
+			<div class="FullCartCol FullCartColTimes">&times;</div>
 			<div class="FullCartCol FullCartColQuantity">
 				{CartProductQuantity}
 			</div>
