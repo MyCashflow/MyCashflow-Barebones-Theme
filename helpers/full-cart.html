@@ -29,30 +29,32 @@
 			<div class="FullCartProducts">',
 	after: '
 			</div>
-			{CartSubTotal(
-				before: '
-					<div class="FullCartSection FullCartTotal">
-						<span class="H4">
-							{%CheckoutProductsTotal}&nbsp;',
-				after: '
-						</span>
-					</div>'
+			{CartShippingCosts(
+				before: '<div class="FullCartSection FullCartTotal">{%CheckoutShipping}: {CartShippingMethod}&nbsp;',
+				after: '</div>'
+			)}
+			{CartPaymentCosts(
+				before: '<div class="FullCartSection FullCartTotal">{%PaymentMethod}: {CartPaymentMethod}&nbsp;',
+				after: '</div>'
 			)}
 			{CartDiscount(
-				before: '
-					<div class="FullCartSection FullCartTotal">
-						<span class="H4">
-							{%CampaignCode}&nbsp;',
-				after: '
-						</span>
-					</div>'
+				before: '<div class="FullCartSection FullCartTotal">{%CampaignCode}:&nbsp;',
+				after: '</div>'
 			)}
 			{CartGiftCards(
 				helper: '{{
 					<div class="FullCartSection FullCartTotal">
 						{%CartPaidByGiftCard}: {CartGiftCardBalanceReserved} €
 					</div>
-				}}'
+				}}',
+				after: '{CartOpenTotal(
+					before: '<div class="FullCartSection FullCartTotal"><span class="H4">{%CartOpenTotal}:&nbsp;',
+					after: '</span></div>'
+				)}',
+				or: '{CartTotal(
+					before: '<div class="FullCartSection FullCartTotal"><span class="H4">{%Total}:&nbsp;',
+					after: '</span></div>'
+				)}'
 			)}
 			<div class="FullCartSection FullCartActions">
 				<div class="Flex Flex-Collapse">
