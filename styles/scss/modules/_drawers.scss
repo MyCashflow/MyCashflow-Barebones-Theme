@@ -81,8 +81,19 @@
 	margin-bottom: 0;
 }
 
-.Drawer hr {
-	margin: 0;
+.GiftCard {
+	padding: 15px;
+	margin: 15px;
+	border: 1px solid $color-drawer-border;
+	border-radius: $border-radius-medium;
+}
+
+.GiftCard h4 {
+	margin-bottom: 0;
+}
+
+.GiftCard p {
+	margin-bottom: 0;
 }
 
 //------------------------------------------------------------------------------

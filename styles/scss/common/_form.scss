@@ -405,7 +405,7 @@ form [type='submit'] {
 // Campaign Code Form
 //------------------------------------------------------------------------------
 
-.CampaignCodeForm {
+.CampaignCodeForm form {
 	@extend .CompactForm;
 	background-color: $color-boxed-bg;
 	border: 1px solid $color-body-border;
@@ -414,13 +414,11 @@ form [type='submit'] {
 	padding: 15px;
 }
 
-.CampaignCodeForm form {
-	margin-bottom: 0;
-}
-
 .CampaignCodeForm input[type='hidden'] + button {
 	float: none;
-	width: 100%;
+	display: block;
+	margin: 0 auto;
+	//width: 100%;
 }
 
 .CampaignCodeForm .label {

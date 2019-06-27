@@ -1,18 +1,17 @@
 <div class="Drawer" data-drawer="gift-cards" data-drawer-side="right">
 	<div class="DrawerSection">
 		<h4>{%CartGiftCardsSubmitted}</h4>
+		<a href="#" data-drawer-toggle="cart" class="ToggleCart">‹ {%ShoppingCart}</a>
 	</div>
-	<hr>
 	{CartGiftCards(
 		helper: '{{
-			<div class="DrawerSection">
+			<div class="GiftCard">
+				<h4>{CartGiftCardCode}</h4>
 				<p>{%CartPaidByGiftCard}: <strong>{CartGiftCardBalanceReserved}&nbsp;€</strong><br>
-				{%CartGiftCardCode}: {CartGiftCardCode}<br>
 				{%CartGiftCardBalance}: {CartGiftCardBalance}&nbsp;€<br>
 				{%CartGiftCardBalanceLeft}: {CartGiftCardBalanceLeft}&nbsp;€<br>
 				<a href="{CartGiftCardRemoveUrl}">{%CartGiftCardRemove}</a></p>
 			</div>
-			<hr>
 		}}'
 	)}
 </div>

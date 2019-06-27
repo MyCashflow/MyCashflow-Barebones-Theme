@@ -246,6 +246,11 @@ $(document).ready(function () {
 		return false;
 	});
 
+	$(document).on('click', '.Drawer .ToggleCart', function () {
+		MCF.Drawers.toggleByName('cart');
+		return false;
+	});
+
 	$(document).on('change', '[data-auto-submit]', function (evt) {
 		$(evt.currentTarget).closest('form').submit();
 	});
