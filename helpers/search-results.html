@@ -12,7 +12,19 @@
 			</div>
 			<div class="FlexItem FlexSpacer"></div>
 			<div class="FlexItem">
-				{Helper(file: 'helpers/pagination-form')}
+				{PaginationFormParameters(
+					before: '<form class="PaginationForm" action="{SearchUrl(or: '{CurrentUrl}')}" data-auto-submit>',
+					after: '
+							<div class="Flex Flex-NoMargin Flex-Collapse">
+								<div class="FlexItem">
+									{PaginationSort}
+								</div>
+								<div class="FlexItem">
+									{PaginationLimit}
+								</div>
+							</div>
+						</form>'
+				)}
 			</div>
 		</div>
 	</div>
