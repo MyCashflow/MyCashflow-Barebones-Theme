@@ -81,11 +81,24 @@
 	margin-bottom: 0;
 }
 
+//------------------------------------------------------------------------------
+// Gift Card Details
+//------------------------------------------------------------------------------
+
 .GiftCard {
 	padding: 15px;
 	margin: 15px;
 	border: 1px solid $color-drawer-border;
 	border-radius: $border-radius-medium;
+}
+
+.GiftCardTitle {
+	margin-bottom: 0;
+}
+
+.GiftCardHeader {
+	border-bottom: 1px solid $color-body-border;
+	padding: 15px;
 }
 
 .GiftCard h4 {
