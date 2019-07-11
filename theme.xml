@@ -11,6 +11,7 @@
 			<SinglePage supported="true" default="default" />
 			<MultiPage supported="false" />
 		</Checkout>
+		<GiftCards supported="true" />
 		<ProductBundles supported="true" />
 	</Features>
 	<Settings>

@@ -82,6 +82,44 @@
 }
 
 //------------------------------------------------------------------------------
+// Gift Card Details
+//------------------------------------------------------------------------------
+
+.GiftCard {
+	border: 1px solid $color-drawer-border;
+	border-radius: $border-radius-medium;
+	margin: 15px;
+	padding: 15px;
+}
+
+.GiftCardTitle {
+	margin-bottom: 0;
+}
+
+.GiftCardHeader {
+	border-bottom: 1px solid $color-body-border;
+	padding: 15px;
+}
+
+.GiftCard h4 {
+	margin-bottom: 5px;
+}
+
+.GiftCard p {
+	margin-bottom: 0;
+}
+
+.GiftCard form,
+.GiftCard .FormItem {
+	margin: 0;
+}
+
+.GiftCard button {
+	margin: 10px 0 0;
+	padding: 0 6px;
+}
+
+//------------------------------------------------------------------------------
 // Drawer Container
 //------------------------------------------------------------------------------
 

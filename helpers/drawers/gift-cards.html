@@ -1,0 +1,16 @@
+<div class="Drawer" data-drawer="gift-cards" data-drawer-side="right">
+	<div class="GiftCardTitle">
+		<h3 class="GiftCardHeader">{%CartGiftCardsSubmitted}</h4>
+	</div>
+	{CartGiftCards(
+		helper: '{{
+			<div class="GiftCard">
+				<h4>{GiftCardCode}</h4>
+				<p>{%CartPaidByGiftCard}: <strong>{GiftCardBalanceReserved}</strong><br>
+				{%CartGiftCardBalance}: {GiftCardBalance}<br>
+				{%CartGiftCardBalanceLeft}: {GiftCardBalanceLeft}</p>
+				{GiftCardRemoveButton}
+			</div>
+		}}'
+	)}
+</div>
