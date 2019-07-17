@@ -78,7 +78,7 @@
 
 		onSubmitCampaignCode: function (evt) {
 			evt.preventDefault();
-			this.submitCampaignCode();
+			this.submitCampaignCode(evt);
 		},
 
 		onChangeMarketingPermissions: function (evt) {
@@ -92,7 +92,7 @@
 			$commentToggle.prop('checked', hasComment);
 
 			var $campaignCodeToggle = $('[data-toggle="#' + this.$campaignCode.attr('id') + '"]');
-			var hasCampaignCode = !!$.trim(this.$campaignCode.find('[type="text"]').val());
+			var hasCampaignCode = !!$.trim(this.$campaignCode.find('[type="hidden"]').val());
 			this.$campaignCode.toggle(hasCampaignCode);
 			$campaignCodeToggle.prop('checked', hasCampaignCode);
 
@@ -147,14 +147,14 @@
 				}, this));
 		},
 
-		submitCampaignCode: function () {
-			var $form = this.$campaignCode.find('form');
+		submitCampaignCode: function (evt) {
+			var $form = $(evt.target);
 			var data = this.serialize($form);
 			this.beforeUpdate(this.$campaignCode);
 
 			return $.post($form.attr('action'), data)
 				.then($.proxy(function (res) {
-					$form.html(res.content);
+					this.$campaignCode.html(res.content);
 					this.reloadKlarnaFrame();
 				}, this))
 				.always($.proxy(function () {
