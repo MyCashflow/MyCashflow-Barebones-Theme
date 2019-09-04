@@ -1,0 +1,116 @@
+//------------------------------------------------------------------------------
+// Category Filters
+//------------------------------------------------------------------------------
+
+.CategoryFilters {
+	@include flexbox;
+	flex-wrap: wrap;
+	margin: -($grid-list-gutter / 4);
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.CategoryFilters {
+		display: block;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Filter Group
+//------------------------------------------------------------------------------
+
+.FilterGroup {
+	margin: ($grid-list-gutter / 4);
+}
+
+.FilterGroup a {
+	text-decoration: none;
+}
+
+.FilterGroupName {
+	@extend select;
+	border-radius: $border-radius;
+	background-image: none;
+	margin: 0;
+	position: relative;
+
+	&:after {
+		@include icon($fa-var-angle-down);
+		padding: 5px 12px;
+		position: absolute;
+	}
+}
+
+.FilterGroup:hover .FilterGroupName {
+	background-color: $color-boxed-bg;
+}
+
+.FilterGroup.Navigable .FilterGroupName {
+	background-color: mix($color-body-border, $color-boxed-bg, 25%);
+
+	&:after {
+		content: $fa-var-angle-up;
+	}
+}
+
+.ActiveGroup .FilterGroupName {
+	border-color: $color-accent-2;
+	color: $color-accent-2;
+}
+
+//------------------------------------------------------------------------------
+// Filter Group List
+//------------------------------------------------------------------------------
+
+.FilterList {
+	background-color: $color-input-bg;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius-large;
+	box-shadow: 0 1px 2px $black-10;
+	display: none;
+	list-style: none;
+	margin: 5px 0 0;
+	// max-height: 300px;
+	max-width: 300px;
+	min-width: 210px;
+	outline: none;
+	overflow: auto;
+	position: absolute;
+	z-index: 1;
+}
+
+.Navigable .FilterList {
+	display: block;
+}
+
+.FilterList li {
+	@include flexbox;
+	background-color: $color-boxed-bg;
+	border-radius: $border-radius-large;
+	margin: 5px;
+	padding: 3px 10px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.FilterList li:hover {
+	background-color: darken($color-boxed-bg, 2%);
+}
+
+.FilterList .Selected {
+	box-shadow: inset 0 0 0 1px $color-accent-2;
+}
+
+.FilterList li .ApplyFilter {
+	@include flex(1);
+}
+
+.FilterList li a:not(.ApplyFilter) {
+	@include cover;
+	border-radius: $border-radius-large;
+	color: $color-accent-2;
+	position: absolute;
+	padding: 3px 10px;
+	text-align: right;
+}

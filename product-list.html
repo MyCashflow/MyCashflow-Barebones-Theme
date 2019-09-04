@@ -4,6 +4,9 @@
 <div class="SiteContent">
 	<div class="Container">
 		<div class="Grid">
+			<div class="Col-3-12 Col-Tablet-12-12">
+				{Helper(file: 'helpers/sidebar')}
+			</div>
 			<div class="Col-9-12 Col-Tablet-12-12">
 				<div class="ContentSection">
 					<div class="Flex Flex-Collapse">
@@ -24,7 +27,24 @@
 						after: '</div>'
 					)}
 					{CategoryDescription}
-					{Products(
+					{SearchFilters(
+						before: '<div class="CategoryFilters">',
+						after: '</div>',
+						helper: '{{
+							{SearchFilterOptions(
+								before: '
+									<div class="FilterGroup">
+										<a href="#{SearchFilterName(escape: 'true')}" class="FilterGroupName" tabindex="0">{SearchFilterName}</a>
+										<ul id="{SearchFilterName(escape: 'true')}" class="FilterList" tabindex="-1">',
+								after: '
+										</ul>
+									</div>'
+							)}
+						}}'
+					)}
+					{FacetedSearchProducts(
+						subcategories: 'true',
+						limit: '40|100',
 						pagination: 'true',
 						type: 'normal',
 						before: '
@@ -52,9 +72,6 @@
 						</div>',
 					helper: 'helpers/list-bundle'
 				)}
-			</div>
-			<div class="Col-3-12 Col-Tablet-12-12">
-				{Helper(file: 'helpers/sidebar')}
 			</div>
 		</div>
 	</div>
