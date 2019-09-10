@@ -53,9 +53,8 @@
 	}
 }
 
-.ActiveGroup .FilterGroupName {
-	border-color: $color-accent-2;
-	color: $color-accent-2;
+.FilterGroup.ActiveGroup .FilterGroupName {
+	border-color: $color-text-dark;
 }
 
 //------------------------------------------------------------------------------
