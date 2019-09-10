@@ -3954,7 +3954,8 @@ input#postal_code + button.Submit {
     -moz-osx-font-smoothing: grayscale;
     content: "";
     padding: 5px 12px;
-    position: absolute; }
+    position: absolute;
+    right: 0; }
 
 .FilterGroup:hover .FilterGroupName {
   background-color: #fafafa; }
@@ -4997,3 +4998,51 @@ input#postal_code + button.Submit {
     border-width: 1px 0 0;
     margin: 0 -15px;
     padding: 20px 15px 0; } }
+
+.TagsList, .FilterTags {
+  list-style: none; }
+
+.TagsList li, .FilterTags li {
+  display: inline;
+  margin: 2px 3px; }
+
+.TagsList li:first-child, .FilterTags li:first-child {
+  margin-left: 0; }
+
+.TagsList li:last-child, .FilterTags li:last-child {
+  margin-right: 0; }
+
+.Tag, .RemoveFilter {
+  background-color: #f6f6f6;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none; }
+  .Tag:before, .RemoveFilter:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    margin-right: 0.5em; }
+
+.FilterTags {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap; }
+
+.RemoveFilters {
+  -webkit-box-flex: 1 0 auto;
+  -moz-box-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  text-align: right; }
+
+.RemoveFilter:before {
+  content: ""; }

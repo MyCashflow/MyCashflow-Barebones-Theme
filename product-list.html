@@ -42,6 +42,15 @@
 							)}
 						}}'
 					)}
+					{SearchFilters(
+						before: '
+							<ul class="FilterTags">
+								<li>Valitut suodattimet: </li>',
+						after: '
+								<li class="RemoveFilters"><a href="{CategoryUrl}">Tyhjennä suodattimet</a></li>
+							</ul>',
+						helper: 'helpers/filter-tag'
+					)}
 					{FacetedSearchProducts(
 						subcategories: 'true',
 						limit: '40|100',
