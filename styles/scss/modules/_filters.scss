@@ -86,30 +86,27 @@
 	@include flexbox;
 	background-color: $color-boxed-bg;
 	border-radius: $border-radius-large;
+	justify-content: space-between;
 	margin: 5px;
 	padding: 3px 10px;
 	position: relative;
-	overflow: hidden;
-	z-index: 1;
 }
 
 .FilterList li:hover {
 	background-color: darken($color-boxed-bg, 2%);
 }
 
-.FilterList .Selected {
+.FilterList li.Selected {
 	box-shadow: inset 0 0 0 1px $color-accent-2;
 }
 
-.FilterList li .ApplyFilter {
-	@include flex(1);
-}
-
-.FilterList li a:not(.ApplyFilter) {
+.FilterList a:before {
 	@include cover;
-	border-radius: $border-radius-large;
+	content: '';
+	display: block;
+} 
+
+.FilterList a:not(.ApplyFilter) {
 	color: $color-accent-2;
-	position: absolute;
-	padding: 3px 10px;
-	text-align: right;
+	margin-left: 5px;
 }
