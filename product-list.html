@@ -45,9 +45,9 @@
 					{SearchFilters(
 						before: '
 							<ul class="FilterTags">
-								<li>Valitut suodattimet: </li>',
+								<li>{%ProductFiltersSelected}: </li>',
 						after: '
-								<li class="RemoveFilters"><a href="{CategoryUrl}">Tyhjennä suodattimet</a></li>
+								<li class="RemoveFilters"><a href="{CategoryUrl}">{%ProductFiltersRemove}</a></li>
 							</ul>',
 						helper: 'helpers/filter-tag'
 					)}
