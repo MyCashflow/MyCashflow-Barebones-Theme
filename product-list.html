@@ -27,22 +27,22 @@
 						after: '</div>'
 					)}
 					{CategoryDescription}
-					{SearchFilters(
+					{ProductListFilters(
 						before: '<div class="CategoryFilters">',
 						after: '</div>',
 						helper: '{{
-							{SearchFilterOptions(
+							{FilterOptions(
 								before: '
 									<div class="FilterGroup">
-										<a href="#{SearchFilterName(escape: 'true')}" class="FilterGroupName" tabindex="0">{SearchFilterName}</a>
-										<ul id="{SearchFilterName(escape: 'true')}" class="FilterList" tabindex="-1">',
+										<a href="#{FilterName(escape: 'true')}" class="FilterGroupName" tabindex="0">{FilterName}</a>
+										<ul id="{FilterName(escape: 'true')}" class="FilterList" tabindex="-1">',
 								after: '
 										</ul>
 									</div>'
 							)}
 						}}'
 					)}
-					{SearchFilters(
+					{ProductListFilters(
 						before: '
 							<ul class="FilterTags">
 								<li>{%ProductFiltersSelected}: </li>',
@@ -51,7 +51,7 @@
 							</ul>',
 						helper: 'helpers/filter-tag'
 					)}
-					{FacetedSearchProducts(
+					{Products(
 						subcategories: 'true',
 						limit: '40|100',
 						pagination: 'true',
