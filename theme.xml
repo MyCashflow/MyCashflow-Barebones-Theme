@@ -13,8 +13,16 @@
 		</Checkout>
 		<GiftCards supported="true" />
 		<ProductBundles supported="true" />
+		<ProductListFilters supported="true" />
 	</Features>
 	<Settings>
 		<Doctype standard="HTML5" />
+		<ProductList>
+			<PageSizes>
+				<PageSize>25</PageSize>
+				<PageSize>50</PageSize>
+				<PageSize>100</PageSize>
+			</PageSizes>
+		</ProductList>
 	</Settings>
 </Theme>
