@@ -48,10 +48,10 @@
 					)}
 					{ProductListFilters(
 						before: '
-							<ul class="FilterTags">
-								<li>{%ProductFiltersSelected}: </li>',
+							<label>{%ProductFiltersSelected}: </label>
+							<ul class="FilterTags">',
 						after: '
-								<li class="RemoveFilters"><a href="{CategoryUrl}">{%ProductFiltersRemove}</a></li>
+								<li class="ClearAllFilters"><a href="{CategoryUrl}" class="RemoveFilter">{%ProductFiltersRemove}</a></li>
 							</ul>',
 						helper: 'helpers/filter-tag'
 					)}
