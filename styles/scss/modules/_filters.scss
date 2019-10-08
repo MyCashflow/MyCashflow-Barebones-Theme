@@ -58,6 +58,11 @@
 	border-color: $color-text-dark;
 }
 
+.FilterResultCount {
+	color: mix($color-text-dark, $color-text-light, 50%);
+	font-size: $font-size-small;
+}
+
 //------------------------------------------------------------------------------
 // Filter Group List
 //------------------------------------------------------------------------------
