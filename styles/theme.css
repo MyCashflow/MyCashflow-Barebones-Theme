@@ -3920,7 +3920,7 @@ input#postal_code + button.Submit {
   opacity: 0.25;
   visibility: visible; }
 
-.CategoryFilters {
+.ProductListFilters {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3931,7 +3931,7 @@ input#postal_code + button.Submit {
   margin-bottom: 20px; }
 
 @media screen and (max-width: 600px) {
-  .CategoryFilters {
+  .ProductListFilters {
     display: block; } }
 
 .FilterGroup {
@@ -3968,10 +3968,14 @@ input#postal_code + button.Submit {
 .FilterGroup.ActiveGroup .FilterGroupName {
   border-color: #5a5a5a; }
 
+.FilterResultCount {
+  color: #acacac;
+  font-size: 12px; }
+
 .FilterList {
   background-color: #fefefe;
   border: 1px solid #dadada;
-  border-radius: 6px;
+  border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   display: none;
   list-style: none;
@@ -3986,6 +3990,9 @@ input#postal_code + button.Submit {
 .Navigable .FilterList {
   display: block; }
 
+.FilterList ul {
+  margin: 0; }
+
 .FilterList li {
   display: -webkit-box;
   display: -moz-box;
@@ -3993,7 +4000,7 @@ input#postal_code + button.Submit {
   display: -webkit-flex;
   display: flex;
   background-color: #fafafa;
-  border-radius: 6px;
+  border-radius: 2px;
   justify-content: space-between;
   margin: 5px;
   padding: 3px 10px;
@@ -4017,6 +4024,15 @@ input#postal_code + button.Submit {
 .FilterList a:not(.ApplyFilter) {
   color: #ee5500;
   margin-left: 5px; }
+
+.FilterTags .RemoveFilter:before {
+  content: ""; }
+
+.ClearAllFilters .RemoveFilter {
+  background-color: transparent; }
+
+.ClearAllFilters .RemoveFilter:before {
+  content: ""; }
 
 .Footer {
   padding: 40px 0; }
@@ -5003,7 +5019,7 @@ input#postal_code + button.Submit {
   list-style: none; }
 
 .TagsList li, .FilterTags li {
-  display: inline;
+  display: inline-block;
   margin: 2px 3px; }
 
 .TagsList li:first-child, .FilterTags li:first-child {
@@ -5027,22 +5043,3 @@ input#postal_code + button.Submit {
     -moz-osx-font-smoothing: grayscale;
     content: "";
     margin-right: 0.5em; }
-
-.FilterTags {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap; }
-
-.RemoveFilters {
-  -webkit-box-flex: 1 0 auto;
-  -moz-box-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  flex: 1 0 auto;
-  text-align: right; }
-
-.RemoveFilter:before {
-  content: ""; }
