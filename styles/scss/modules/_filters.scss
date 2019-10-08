@@ -2,7 +2,7 @@
 // Category Filters
 //------------------------------------------------------------------------------
 
-.CategoryFilters {
+.ProductListFilters {
 	@include flexbox;
 	flex-wrap: wrap;
 	margin: -($grid-list-gutter / 4);
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
-	.CategoryFilters {
+	.ProductListFilters {
 		display: block;
 	}
 }
