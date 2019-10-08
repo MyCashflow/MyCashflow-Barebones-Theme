@@ -6,15 +6,6 @@
 ;(function ($) {
 	'use strict';
 
-	$.fn.initFilterGroups = function() {
-		$(this).each(function(i) {
-			var filterGroup = $(this);
-			filterGroup.children('.FilterGroupName').attr('href', '#Group-' + i);
-			filterGroup.children('.FilterList').attr('id', 'Group-' + i);
-		});
-	};
-	$('.FilterGroup').initFilterGroups();
-
 	$.fn.activeFilterGroups = function() {
 		var active = 'ActiveGroup';
 
