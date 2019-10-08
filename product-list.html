@@ -25,8 +25,15 @@
 					)}
 					{CategoryDescription}
 					{ProductListFilters(
-						before: '<div class="CategoryFilters">',
-						after: '</div>',
+						before: '
+							<p class="Hide-Desktop">
+								<a href="#" class="Button Button-Block" data-drawer-toggle="product-filters">{Text(code: 'ProductFiltersLabel', or: 'Suodata tuotteita')}</a>
+							</p>
+							<div class="Hide-Tablet">
+								<div class="CategoryFilters">',
+						after: '
+								</div>
+							</div>',
 						helper: '{{
 							{FilterOptions(
 								before: '
