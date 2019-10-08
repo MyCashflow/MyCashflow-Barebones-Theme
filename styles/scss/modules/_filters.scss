@@ -82,6 +82,10 @@
 	display: block;
 }
 
+.FilterList ul {
+	margin: 0;
+}
+
 .FilterList li {
 	@include flexbox;
 	background-color: $color-boxed-bg;
