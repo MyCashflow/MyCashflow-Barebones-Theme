@@ -111,3 +111,27 @@
 	color: $color-accent-2;
 	margin-left: 5px;
 }
+
+//------------------------------------------------------------------------------
+// Filter Tags List
+//------------------------------------------------------------------------------
+
+.FilterTags {
+	@extend .TagsList;
+}
+
+.RemoveFilter {
+	@extend .Tag;
+}
+
+.FilterTags .RemoveFilter:before {
+	content: $fa-var-remove;
+}
+
+.ClearAllFilters .RemoveFilter {
+	background-color: transparent;
+}
+
+.ClearAllFilters .RemoveFilter:before {
+	content: $fa-var-trash;
+}

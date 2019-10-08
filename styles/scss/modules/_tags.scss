@@ -7,7 +7,7 @@
 }
 
 .TagsList li {
-	display: inline;
+	display: inline-block;
 	margin: 2px 3px;
 }
 
@@ -30,27 +30,4 @@
 	display: inline-block;
 	padding: 0 10px;
 	text-decoration: none;
-}
-
-//------------------------------------------------------------------------------
-// Filter Tags List
-//------------------------------------------------------------------------------
-
-.FilterTags {
-	@extend .TagsList;
-	@include flexbox;
-	flex-wrap: wrap;
-}
-
-.RemoveFilters {
-	@include flex(1 0 auto);
-	text-align: right;
-}
-
-.RemoveFilter {
-	@extend .Tag;
-}
-
-.RemoveFilter:before {
-	content: $fa-var-remove;
 }
