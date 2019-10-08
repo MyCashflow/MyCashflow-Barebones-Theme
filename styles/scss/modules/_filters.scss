@@ -65,12 +65,11 @@
 .FilterList {
 	background-color: $color-input-bg;
 	border: 1px solid $color-body-border;
-	border-radius: $border-radius-large;
+	border-radius: $border-radius;
 	box-shadow: 0 1px 2px $black-10;
 	display: none;
 	list-style: none;
 	margin: 5px 0 0;
-	// max-height: 300px;
 	max-width: 300px;
 	min-width: 210px;
 	outline: none;
@@ -86,7 +85,7 @@
 .FilterList li {
 	@include flexbox;
 	background-color: $color-boxed-bg;
-	border-radius: $border-radius-large;
+	border-radius: $border-radius;
 	justify-content: space-between;
 	margin: 5px;
 	padding: 3px 10px;
