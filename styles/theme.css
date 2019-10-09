@@ -3935,7 +3935,8 @@ input#postal_code + button.Submit {
     display: block; } }
 
 .FilterGroup {
-  margin: 5px; }
+  margin: 5px;
+  position: relative; }
 
 .FilterGroup a {
   text-decoration: none; }
@@ -3976,10 +3977,13 @@ input#postal_code + button.Submit {
   background-color: #fefefe;
   border: 1px solid #dadada;
   border-radius: 2px;
+  top: 100%;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   display: none;
+  left: 0;
   list-style: none;
   margin: 5px 0 0;
+  max-height: 300px;
   max-width: 300px;
   min-width: 210px;
   outline: none;
@@ -4021,9 +4025,20 @@ input#postal_code + button.Submit {
   content: '';
   display: block; }
 
-.FilterList a:not(.ApplyFilter) {
+.FilterList .RemoveFilter {
   color: #ee5500;
-  margin-left: 5px; }
+  margin-left: 5px;
+  padding: 0; }
+
+.FilterList .RemoveFilter:before {
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px #ee5500;
+  margin: 0; }
+
+@media screen and (max-width: 600px) {
+  .FilterList {
+    max-width: none;
+    width: 100%; } }
 
 .FilterTags .RemoveFilter:before {
   content: ""; }
