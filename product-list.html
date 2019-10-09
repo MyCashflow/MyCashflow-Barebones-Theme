@@ -25,21 +25,14 @@
 					)}
 					{CategoryDescription}
 					{ProductListFilters(
-						before: '
-							<p class="Hide-Desktop">
-								<a href="#" class="Button Button-Block" data-drawer-toggle="product-filters">{Text(code: 'ProductFiltersLabel', or: 'Suodata tuotteita')}</a>
-							</p>
-							<div class="Hide-Tablet">
-								<div class="ProductListFilters">',
-						after: '
-								</div>
-							</div>',
+						before: '<div class="ProductListFilters">',
+						after: '</div>',
 						helper: '{{
 							{FilterOptions(
 								before: '
 									<div class="FilterGroup">
-										<a href="#{FilterClass}" class="FilterGroupName" tabindex="0">{FilterName}</a>
-										<div id="{FilterClass}" class="FilterList" tabindex="-1">',
+										<a class="FilterGroupName" href="#FilterList-{FilterClass}" tabindex="0">{FilterName}</a>
+										<div id="FilterList-{FilterClass}" class="FilterList" tabindex="-1">',
 								after: '
 										</div>
 									</div>'
