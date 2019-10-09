@@ -6,60 +6,33 @@
 ;(function ($) {
 	'use strict';
 
-	$.fn.activeFilterGroups = function() {
-		var active = 'ActiveGroup';
+	var Filters = {
+		init: function () {
+			this.markActiveGroups();
 
-		$(this).each(function() {
-			var filterGroup = $(this);
-			var filterOptions = filterGroup.find('li');
-			if (filterOptions.find(':not(.ApplyFilter)').length !== 0) {
-				filterGroup.addClass(active);
-			}
-		});
-	};
-	$('.FilterGroup').activeFilterGroups();
+			// Toggle filter lists open when clicking the label.
+			$(document).on('click', '.FilterGroupName', function (evt) {
+				var $targetGroup = $(this).parent('.FilterGroup');
+				$targetGroup.siblings('.FilterGroup').removeClass('Navigable');
+				$targetGroup.toggleClass('Navigable');
+				return false;
+			});
 
-	$.fn.clearSelected = function() {
-		var active = 'Selected';
-		$(this).each(function() {
-			var filterGroup = $(this);
-			$('li', filterGroup).removeClass(active);
-		});
-	};
+			// Prevent filter lists from closing when clicking inside them.
+			$(document).on('click', '.FilterGroup', function (evt) {
+				evt.stopPropagation();
+			});
 
-	$(document).on('click', '.FilterGroupName', function (evt) {
-		evt.preventDefault();
-		var filterGroup = $(this).parent('.FilterGroup'),
-		filterList = $(this).next('.FilterList');
-		filterGroup.toggleClass('Navigable');
-		filterList.focus();
-	});
-
-	$(document).on('click', '.FilterList a', function (evt) {
-		evt.preventDefault();
-		$(this).closest('li').toggleClass('Selected');
-		location.href = $(this).attr('href');
-	});
-
-	$('.FilterList').on({
-		focusout: function () {
-			$(this).data('timer', setTimeout(function () {
-				$(this).parent('.FilterGroup').removeClass('Navigable').clearSelected();
-			}.bind(this), 0));
+			// Close filter lists when clicking outside them.
+			$(document).on('click', function (evt) {
+				$('.FilterGroup.Navigable').removeClass('Navigable');				
+			});
 		},
-		focusin: function () {
-			clearTimeout($(this).data('timer'));
-		}
-	});
 
-	$('.FilterGroupName').on({
-		focusout: function () {
-			$(this.hash).data('timer', setTimeout(function () {
-				$(this).parent('.FilterGroup').removeClass('Navigable');
-			}.bind(this.hash), 0));
-		},
-		focusin: function () {
-			clearTimeout($(this.hash).data('timer'));
+		markActiveGroups: function () {
+			$('.FilterGroup:has(.RemoveFilter)').addClass('ActiveGroup');
 		}
-	});
+	};
+
+	$.extend(true, window, { MCF: { Filters: Filters }});
 })(jQuery);
