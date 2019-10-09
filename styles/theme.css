@@ -3945,7 +3945,8 @@ input#postal_code + button.Submit {
   border-radius: 2px;
   background-image: none;
   margin: 0;
-  position: relative; }
+  position: relative;
+  transition: none; }
   .FilterGroupName:after {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -3958,16 +3959,21 @@ input#postal_code + button.Submit {
     position: absolute;
     right: 0; }
 
-.FilterGroup:hover .FilterGroupName {
-  background-color: #fafafa; }
-
-.FilterGroup.Navigable .FilterGroupName {
-  background-color: #f2f2f2; }
-  .FilterGroup.Navigable .FilterGroupName:after {
-    content: ""; }
-
 .FilterGroup.ActiveGroup .FilterGroupName {
   border-color: #5a5a5a; }
+
+.FilterGroup.ActiveGroup .FilterList {
+  border-color: #5a5a5a; }
+
+.FilterGroup.Navigable .FilterGroupName {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+  box-shadow: none;
+  outline: 0;
+  z-index: 2; }
+  .FilterGroup.Navigable .FilterGroupName:after {
+    content: ""; }
 
 .FilterResultCount {
   color: #acacac;
@@ -3976,17 +3982,16 @@ input#postal_code + button.Submit {
 .FilterList {
   background-color: #fefefe;
   border: 1px solid #dadada;
-  border-radius: 2px;
-  top: 100%;
+  border-radius: 0 2px 2px 2px;
+  top: calc(100% - 1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   display: none;
   left: 0;
-  list-style: none;
-  margin: 5px 0 0;
+  margin: 0;
   max-height: 300px;
   max-width: 300px;
   min-width: 210px;
-  outline: none;
+  outline: 0;
   overflow: auto;
   position: absolute;
   z-index: 1; }
