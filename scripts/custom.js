@@ -17,6 +17,7 @@ $(document).ready(function () {
 
 	$.each([
 		'Drawers',
+		'Filters',
 		'Loaders',
 		'Navigations',
 		'Notifications',

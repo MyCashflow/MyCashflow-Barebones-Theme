@@ -1,0 +1,168 @@
+//------------------------------------------------------------------------------
+// Category Filters
+//------------------------------------------------------------------------------
+
+.ProductListFilters {
+	@include flexbox;
+	flex-wrap: wrap;
+	margin: -($grid-list-gutter / 4);
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.ProductListFilters {
+		display: block;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Filter Group
+//------------------------------------------------------------------------------
+
+.FilterGroup {
+	margin: ($grid-list-gutter / 4);
+	position: relative;
+}
+
+.FilterGroup a {
+	text-decoration: none;
+}
+
+.FilterGroupName {
+	@extend select;
+	border-radius: $border-radius;
+	background-image: none;
+	margin: 0;
+	position: relative;
+	transition: none;
+
+	&:after {
+		@include icon($fa-var-angle-down);
+		padding: 5px 12px;
+		position: absolute;
+		right: 0;
+	}
+}
+
+.FilterGroup.ActiveGroup .FilterGroupName {
+	border-color: $color-text-dark;
+}
+
+.FilterGroup.ActiveGroup .FilterList {
+	border-color: $color-text-dark;
+}
+
+.FilterGroup.Navigable .FilterGroupName {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom: 0;
+	box-shadow: none;
+	outline: 0;
+	z-index: 2;
+
+	&:after {
+		content: $fa-var-angle-up;
+	}
+}
+
+.FilterResultCount {
+	color: mix($color-text-dark, $color-text-light, 50%);
+	font-size: $font-size-small;
+}
+
+//------------------------------------------------------------------------------
+// Filter Group List
+//------------------------------------------------------------------------------
+
+.FilterList {
+	background-color: $color-input-bg;
+	border: 1px solid $color-body-border;
+	border-radius: 0 $border-radius $border-radius $border-radius;
+	top: calc(100% - 1px);
+	box-shadow: 0 1px 2px $black-10;
+	display: none;
+	left: 0;
+	margin: 0;
+	max-height: 300px;
+	max-width: 300px;
+	min-width: 210px;
+	outline: 0;
+	overflow: auto;
+	position: absolute;
+	z-index: 1;
+}
+
+.Navigable .FilterList {
+	display: block;
+}
+
+.FilterList ul {
+	margin: 0;
+}
+
+.FilterList li {
+	@include flexbox;
+	background-color: $color-boxed-bg;
+	border-radius: $border-radius;
+	justify-content: space-between;
+	margin: 5px;
+	padding: 3px 10px;
+	position: relative;
+}
+
+.FilterList li:hover {
+	background-color: darken($color-boxed-bg, 2%);
+}
+
+.FilterList li.Selected {
+	box-shadow: inset 0 0 0 1px $color-accent-2;
+}
+
+.FilterList a:before {
+	@include cover;
+	content: '';
+	display: block;
+} 
+
+.FilterList .RemoveFilter {
+	color: $color-accent-2;
+	margin-left: 5px;
+	padding: 0;
+}
+
+.FilterList .RemoveFilter:before {
+	border-radius: $border-radius;
+	box-shadow: inset 0 0 0 1px $color-accent-2;
+	margin: 0;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.FilterList {
+		max-width: none;
+		width: 100%;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Filter Tags List
+//------------------------------------------------------------------------------
+
+.FilterTags {
+	@extend .TagsList;
+}
+
+.RemoveFilter {
+	@extend .Tag;
+}
+
+.FilterTags .RemoveFilter:before {
+	content: $fa-var-remove;
+}
+
+.ClearAllFilters .RemoveFilter {
+	background-color: transparent;
+}
+
+.ClearAllFilters .RemoveFilter:before {
+	content: $fa-var-trash;
+}

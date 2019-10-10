@@ -1,0 +1,33 @@
+//------------------------------------------------------------------------------
+// Tags List
+//------------------------------------------------------------------------------
+
+.TagsList {
+	list-style: none;
+}
+
+.TagsList li {
+	display: inline-block;
+	margin: 2px 3px;
+}
+
+.TagsList li:first-child {
+	margin-left: 0;
+}
+
+.TagsList li:last-child {
+	margin-right: 0;
+}
+
+//------------------------------------------------------------------------------
+// Tag
+//------------------------------------------------------------------------------
+
+.Tag {
+	@include icon-before($fa-var-tag);
+	background-color: mix($color-body-border, $color-body-bg, 25%);
+	border-radius: 30px;
+	display: inline-block;
+	padding: 0 10px;
+	text-decoration: none;
+}
