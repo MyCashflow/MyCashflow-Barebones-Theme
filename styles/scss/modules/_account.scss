@@ -1,0 +1,11 @@
+//------------------------------------------------------------------------------
+// Account Information
+//------------------------------------------------------------------------------
+
+#AccountInformation dd > :last-child {
+	margin-bottom: 0;
+}
+
+#AccountInformation dt:not(:first-child) {
+	margin-top: 20px;
+}

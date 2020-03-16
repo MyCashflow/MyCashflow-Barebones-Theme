@@ -92,7 +92,7 @@
 			$commentToggle.prop('checked', hasComment);
 
 			var $campaignCodeToggle = $('[data-toggle="#' + this.$campaignCode.attr('id') + '"]');
-			var hasCampaignCode = !!$.trim(this.$campaignCode.find('[type="hidden"]').val());
+			var hasCampaignCode = this.$campaignCode.find('form').length > 1;
 			this.$campaignCode.toggle(hasCampaignCode);
 			$campaignCodeToggle.prop('checked', hasCampaignCode);
 
