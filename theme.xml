@@ -14,6 +14,8 @@
 		<GiftCards supported="true" />
 		<ProductBundles supported="true" />
 		<ProductListFilters supported="true" />
+		<BrandProductListFilters supported="true" />
+		<CampaignProductListFilters supported="true" />
 	</Features>
 	<Settings>
 		<Doctype standard="HTML5" />
