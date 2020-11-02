@@ -27,4 +27,4 @@ Barebones contains several useful features for developing a responsive and versa
 * JavaScript plugins for developing AJAX-functionality and more
 * Font Awesome icons
 
-See further documentation at https://www.mycashflow.fi/docs/interface/barebones/
+See further documentation at https://support.mycashflow.com/fi/teemaopas/barebones-teema
