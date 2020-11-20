@@ -15,7 +15,7 @@
 
 		init: function(config) {
 			$.extend(this, config);
-			this.run($('.BuyForm'));
+			this.run($('.BuyForm:not(:has(.HiddenInput[name*="[bundle_id]"]))'));
 		},
 
 		run: function($forms) {
