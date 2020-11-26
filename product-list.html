@@ -25,30 +25,7 @@
 						after: '</div>'
 					)}
 					{CategoryDescription}
-					{ProductListFilters(
-						before: '<div class="ProductListFilters">',
-						after: '</div>',
-						helper: '{{
-							{FilterOptions(
-								before: '
-									<div class="FilterGroup">
-										<a class="FilterGroupName" href="#FilterList-{FilterClass}" tabindex="0">{FilterName}</a>
-										<div id="FilterList-{FilterClass}" class="FilterList" tabindex="-1">',
-								after: '
-										</div>
-									</div>'
-							)}
-						}}'
-					)}
-					{ProductListFilters(
-						before: '
-							<label>{%ProductFiltersSelected}: </label>
-							<ul class="FilterTags">',
-						after: '
-								<li class="ClearAllFilters"><a href="{CategoryUrl}" class="RemoveFilter">{%ProductFiltersRemove}</a></li>
-							</ul>',
-						helper: 'helpers/filter-tag'
-					)}
+					{Helper(file: 'helpers/product-list-filters')}
 					{Products(
 						subcategories: 'true',
 						limit: '40|100',
