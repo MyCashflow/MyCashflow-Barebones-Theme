@@ -30,7 +30,7 @@ $white-25:                    rgba(255, 255, 255, 0.25);
 $white-50:                    rgba(255, 255, 255, 0.5);
 $white-75:                    rgba(255, 255, 255, 0.75);
 
-$color-base-1:                #ffffff !default;
+$color-base-1:                #e1c699 !default;
 $color-base-2:                #fafafa !default;
 
 $color-accent-1:              #77aa00 !default;
@@ -48,7 +48,7 @@ $color-link-dark:             #5a5a5a !default;
 $color-discount:              $color-accent-2 !default;
 
 $color-document-bg:           $color-base-1 !default;
-$color-body-bg:               $color-base-1 !default;
+$color-body-bg:               $color-base-1 #e1c699;
 $color-header-bg:             $color-base-2 !default;
 $color-footer-bg:             $color-base-2 !default;
 $color-navbar-bg:             $color-base-2 !default;
