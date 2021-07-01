@@ -4,8 +4,8 @@
 
 .SearchFilter {
 	@extend %default-margin;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 }
 
 .SearchFilter a {
@@ -15,8 +15,8 @@
 .SearchFilter li,
 .SearchFilterTitle {
 	@include truncate;
-	background-color: $color-boxed-bg;
-	border: 1px solid $color-body-border;
+	background-color: #fafafa;
+	border: 1px solid #dadada;
 	border-width: 1px 0 0;
 	display: block;
 	margin: 0;
@@ -57,18 +57,17 @@
 }
 
 .FullSearchSuggestions a {
-	background-color: $color-accent-2;
-	border-radius: $border-radius;
-	color: text-contrast($color-accent-2);
+	background-color: var(--theme-color-accent-2);
+	border-radius: var(--theme-border-radius-small);
+	color: var(--theme-color-accent-2-fg);
 	display: block;
 	padding: 0 10px;
 }
 
 .FullSearchSuggestions a:hover,
 .FullSearchSuggestions .Active a {
-	$bg: lighten($color-accent-2, 10%);
-	background-color: $bg;
-	color: text-contrast($bg);
+	background-color: var(--theme-color-accent-2-lighter);
+	color: var(--theme-color-accent-2-fg);
 }
 
 .FullSearchSuggestionsTitle {

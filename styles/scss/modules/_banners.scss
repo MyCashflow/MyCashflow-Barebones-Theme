@@ -29,9 +29,9 @@
 
 .Banner-Body {
 	@extend %default-margin;
-	background-color: $color-boxed-bg;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+	background-color: #fafafa;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 	display: block;
 }
 
@@ -49,9 +49,9 @@
 
 .Banner-Side {
 	@extend %default-margin;
-	background-color: $color-boxed-bg;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+	background-color: #fafafa;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 	display: inline-block;
 	position: relative;
 }
@@ -64,7 +64,7 @@
 }
 
 .Banner-Side .BannerContent {
-	border-top: 1px solid $color-body-border;
+	border-top: 1px solid #dadada;
 	padding: 10px;
 	text-align: center;
 }
@@ -74,10 +74,10 @@
 //------------------------------------------------------------------------------
 
 .Banners-Wide {
-	border: 1px solid $color-body-border;
+	border: 1px solid #dadada;
 	border-radius: 0;
 	border-width: 0 0 1px;
-	font-size: $font-size-large;
+	font-size: var(--theme-font-size-large);
 	height: 480px;
 	overflow: hidden;
 }

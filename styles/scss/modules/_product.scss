@@ -3,23 +3,23 @@
 //------------------------------------------------------------------------------
 
 .ProductImage {
-	background-color: $color-image-bg;
-	border: 1px solid $color-image-border;
-	border-radius: $border-radius;
+	background-color: #ffffff;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 	display: block;
 	margin-bottom: 10px;
 	padding: 10px;
 	text-align: center;
-	transition-duration: $transition-fast;
+	transition-duration: var(--theme-transition-fast);
 }
 
 .ProductImage:hover {
-	@include box-shadow(0 1px 6px $color-accent-2);
-	border-color: $color-accent-2;
+	@include box-shadow(0 1px 6px var(--theme-color-accent-2));
+	border-color: var(--theme-color-accent-2);
 }
 
 .ProductDiscountPrice {
-	color: $color-discount;
+	color: var(--theme-color-accent-2);
 }
 
 .ProductComparePrice {
@@ -71,7 +71,7 @@
 
 #CurrentProductImage {
 	@extend %default-margin;
-	border-radius: $border-radius;
+	border-radius: var(--theme-border-radius-small);
 	display: block;
 	height: auto;
 	padding: 10px;
@@ -116,8 +116,8 @@
 }
 
 #ProductThumbnails .mz-thumb-selected {
-	@include box-shadow(0 1px 6px $color-accent-2);
-	border-color: $color-accent-2;
+	@include box-shadow(0 1px 6px var(--theme-color-accent-2));
+	border-color: var(--theme-color-accent-2);
 }
 
 @media screen and (max-width: $breakpoint-tablet) {

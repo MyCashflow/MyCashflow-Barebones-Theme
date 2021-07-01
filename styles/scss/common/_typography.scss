@@ -3,8 +3,10 @@
 //------------------------------------------------------------------------------
 
 body {
-	color: text-contrast($color-body-bg);
-	font: #{$font-size}/#{$line-height} $font-body;
+	color: var(--theme-color-text-dark);
+	font-family: var(--theme-font-body);
+	font-size: var(--theme-font-size-base);
+	line-height: var(--theme-line-height);
 }
 
 button, input, select, textarea {
@@ -13,8 +15,8 @@ button, input, select, textarea {
 }
 
 blockquote {
-	border-left: 5px solid $color-accent-2;
-	font-size: $font-size-large;
+	border-left: 5px solid var(--theme-color-accent-2);
+	font-size: var(--theme-font-size-large);
 	margin-left: 0;
 	padding-left: 15px;
 }
@@ -28,7 +30,7 @@ strong {
 //------------------------------------------------------------------------------
 
 %headings {
-	font-family: $font-headings;
+	font-family: var(--theme-font-headings);
 	font-weight: bold;
 	margin: 40px 0 20px;
 
@@ -89,11 +91,11 @@ h6, .H6 {
 //------------------------------------------------------------------------------
 
 .Text-Small {
-	font-size: $font-size-small;
+	font-size: var(--theme-font-size-small);
 }
 
 .Text-Large {
-	font-size: $font-size-large;
+	font-size: var(--theme-font-size-large);
 }
 
 //------------------------------------------------------------------------------
@@ -101,7 +103,7 @@ h6, .H6 {
 //------------------------------------------------------------------------------
 
 .Text-Accent {
-	color: $color-accent-2;
+	color: var(--theme-color-accent-2);
 }
 
 //------------------------------------------------------------------------------

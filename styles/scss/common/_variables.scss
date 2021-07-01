@@ -1,112 +1,75 @@
 //------------------------------------------------------------------------------
-// Typography
+// Sass
 //------------------------------------------------------------------------------
 
-$font-base-1:                 'Raleway', sans-serif !default;
-$font-base-2:                 'Roboto', sans-serif !default;
+$fa-font-path: '../vendor/font-awesome/fonts' !default;
 
-$font-headings:               $font-base-1 !default;
-$font-body:                   $font-base-2 !default;
+$breakpoint-desktop: 1200px !default;
+$breakpoint-tablet: 1024px !default;
+$breakpoint-mobile-wide: 800px !default;
+$breakpoint-mobile: 600px !default;
 
-$font-size:                   14px !default;
-$font-size-small:             12px !default;
-$font-size-large:             16px !default;
-
-$line-height:                 24px !default;
+$icon-select-dark: '../images/angle-down-dark.png' !default;
+$icon-select-light: '../images/angle-down-light.png' !default;
 
 //------------------------------------------------------------------------------
-// Colors
+// CSS
 //------------------------------------------------------------------------------
 
-$black-0:                     rgba(0, 0, 0, 0);
-$black-10:                    rgba(0, 0, 0, 0.1);
-$black-25:                    rgba(0, 0, 0, 0.25);
-$black-50:                    rgba(0, 0, 0, 0.5);
-$black-75:                    rgba(0, 0, 0, 0.75);
+:root {
+	--theme-font-base-1: 'Raleway', sans-serif;
+	--theme-font-base-2: 'Roboto', sans-serif;
 
-$white-0:                     rgba(255, 255, 255, 0);
-$white-10:                    rgba(255, 255, 255, 0.1);
-$white-25:                    rgba(255, 255, 255, 0.25);
-$white-50:                    rgba(255, 255, 255, 0.5);
-$white-75:                    rgba(255, 255, 255, 0.75);
+	--theme-font-headings: var(--theme-font-base-1);
+	--theme-font-body: var(--theme-font-base-2);
 
-$color-base-1:                #ffffff !default;
-$color-base-2:                #fafafa !default;
+	--theme-font-size-base: 14px;
+	--theme-font-size-small: 12px;
+	--theme-font-size-large: 16px;
 
-$color-accent-1:              #77aa00 !default;
-$color-accent-2:              #ee5500 !default;
+	--theme-line-height: 24px;
 
-$color-success:               #88bb33 !default;
-$color-error:                 #dd3333 !default;
+	--theme-color-base-1: #ffffff;
+	--theme-color-base-2: #fafafa;
+	
+	--theme-color-accent-1-hue: 78;
+	--theme-color-accent-1: hsla(var(--theme-color-accent-1-hue), 100%, 33%, 1);
+	--theme-color-accent-1-darker: hsla(var(--theme-color-accent-1-hue), 100%, 30%, 1);
+	--theme-color-accent-1-lighter: hsla(var(--theme-color-accent-1-hue), 100%, 37%, 1);
+	--theme-color-accent-1-fg: hsla(var(--theme-color-accent-1-hue), 100%, 100%, 1);
 
-$color-text-light:            #fefefe !default;
-$color-text-dark:             #5a5a5a !default;
+	--theme-color-accent-2-hue: 21;
+	--theme-color-accent-2: hsla(var(--theme-color-accent-2-hue), 100%, 47%, 1);
+	--theme-color-accent-2-darker: hsla(var(--theme-color-accent-2-hue), 100%, 44%, 1);
+	--theme-color-accent-2-lighter: hsla(var(--theme-color-accent-2-hue), 100%, 50%, 1);
+	--theme-color-accent-2-fg: hsla(var(--theme-color-accent-2-hue), 100%, 100%, 1);
 
-$color-link-light:            #fafafa !default;
-$color-link-dark:             #5a5a5a !default;
+	--theme-color-text-light: #fefefe;
+	--theme-color-text-dark: #5a5a5a;
 
-$color-discount:              $color-accent-2 !default;
+	--theme-color-black-0: hsla(0, 0%, 0%, 0);
+	--theme-color-black-10: hsla(0, 0%, 0%, 0.1);
+	--theme-color-black-25: hsla(0, 0%, 0%, 0.25);
+	--theme-color-black-50: hsla(0, 0%, 0%, 0.5);
+	--theme-color-black-75: hsla(0, 0%, 0%, 0.75);
+	
+	--theme-color-white-0: hsla(0, 0%, 100%, 0);
+	--theme-color-white-10: hsla(0, 0%, 100%, 0.1);
+	--theme-color-white-25: hsla(0, 0%, 100%, 0.25);
+	--theme-color-white-50: hsla(0, 0%, 100%, 0.5);
+	--theme-color-white-75: hsla(0, 0%, 100%, 0.75);
+	
+	--theme-container-width: 1200px;
 
-$color-document-bg:           $color-base-1 !default;
-$color-body-bg:               $color-base-1 !default;
-$color-header-bg:             $color-base-2 !default;
-$color-footer-bg:             $color-base-2 !default;
-$color-navbar-bg:             $color-base-2 !default;
-$color-path-bg:               $color-base-2 !default;
-$color-drawer-bg:             $color-base-2 !default;
-$color-boxed-bg:              #fafafa !default;
+	--theme-grid-gutter: 30px;
+	--theme-grid-list-gutter: 20px;
 
-$color-banner-bg:             $white-75 !default;
-$color-loader-bg:             $white-50 !default;
-$color-notification-bg:       #ffeecc !default;
-$color-button-bg:             #f5f5f5 !default;
-$color-image-bg:              #ffffff !default;
-$color-input-bg:              #fefefe !default;
+	--theme-border-radius-small: 2px;
+	--theme-border-radius-medium: 4px;
+	--theme-border-radius-large: 6px;
 
-$color-body-border:           #dadada !default;
-$color-navbar-border:         #dadada !default;
-$color-footer-border:         #dadada !default;
-$color-drawer-border:         #dadada !default;
-$color-image-border:          #dadada !default;
+	--theme-transition-fast: 0.15s;
+	--theme-transition-slow: 0.3s;
+}
 
-//------------------------------------------------------------------------------
-// Raster Icons
-//------------------------------------------------------------------------------
 
-$icon-select-dark:            '../images/angle-down-dark.png' !default;
-$icon-select-light:           '../images/angle-down-light.png' !default;
-
-//------------------------------------------------------------------------------
-// Grid System
-//------------------------------------------------------------------------------
-
-$container-max-width:         1200px !default;
-
-$grid-gutter:                 30px !default;
-$grid-list-gutter:            20px !default;
-
-$breakpoint-desktop:          1200px !default;
-$breakpoint-tablet:           1024px !default;
-$breakpoint-mobile-wide:      800px !default;
-$breakpoint-mobile:           600px !default;
-
-//------------------------------------------------------------------------------
-// Border Radiuses
-//------------------------------------------------------------------------------
-
-$border-radius:               2px !default;
-$border-radius-medium:        4px !default;
-$border-radius-large:         6px !default;
-
-//------------------------------------------------------------------------------
-// Transition Durations
-//------------------------------------------------------------------------------
-
-$transition-fast:             0.15s !default;
-$transition-slow:             0.3s !default;
-
-//------------------------------------------------------------------------------
-// Font Awesome
-//------------------------------------------------------------------------------
-
-$fa-font-path:                '../vendor/font-awesome/fonts' !default;

@@ -4,26 +4,26 @@
 
 .Notification {
 	@extend %default-margin;
-	background-color: $color-notification-bg;
-	border: 1px solid darken($color-notification-bg, 20%);
-	border-radius: $border-radius;
-	color: text-contrast($color-notification-bg);
+	background-color: #ffeecc;
+	border: 1px solid darken(#ffeecc, 20%);
+	border-radius: var(--theme-border-radius-small);
+	color: var(--theme-color-text-dark);
 	padding: 10px 15px;
 	position: relative;
 }
 
 .Notification.Success {
-	$color-bg: mix(#fff, $color-success, 90%);
+	$color-bg: mix(#fff, #88bb33, 90%);
 	background-color: $color-bg;
-	border-color: $color-success;
-	color: text-contrast($color-bg);
+	border-color: #88bb33;
+	color: var(--theme-color-text-dark);
 }
 
 .Notification.Error {
-	$color-bg: mix(#fff, $color-error, 90%);
+	$color-bg: mix(#fff, #dd3333, 90%);
 	background-color: $color-bg;
-	border-color: $color-error;
-	color: text-contrast($color-bg);
+	border-color: #dd3333;
+	color: var(--theme-color-text-dark);
 }
 
 .Notification > :last-child {
@@ -44,7 +44,7 @@
 }
 
 .NotificationCenter > .Notification {
-	box-shadow: 0 1px 2px $black-10;
+	box-shadow: 0 1px 2px var(--theme-color-black-10);
 	margin-bottom: 10px;
 }
 

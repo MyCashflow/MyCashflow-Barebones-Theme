@@ -4,8 +4,8 @@
 
 .Container {
 	margin: 0 auto;
-	max-width: $container-max-width;
-	padding: 0 ($grid-gutter / 2);
+	max-width: var(--theme-container-width);
+	padding: 0 calc(var(--theme-grid-gutter) / 2);
 }
 
 //------------------------------------------------------------------------------
@@ -14,7 +14,7 @@
 
 .Grid {
 	@include clearfix;
-	margin: 0 (-($grid-gutter / 2));
+	margin: 0 calc(var(--theme-grid-gutter) / 2 * -1);
 }
 
 //------------------------------------------------------------------------------
@@ -23,7 +23,7 @@
 
 .Col, [class^=Col-] {
 	float: left;
-	padding: 0 ($grid-gutter / 2);
+	padding: 0 calc(var(--theme-grid-gutter) / 2);
 	position: relative;
 }
 
@@ -36,12 +36,12 @@
 
 .GridList {
 	@include clearfix;
-	margin: -($grid-list-gutter / 2);
+	margin: calc(var(--theme-grid-list-gutter) / 2 * -1);
 }
 
 .GridList > .ListItem {
 	float: left;
-	padding: ($grid-list-gutter / 2);
+	padding: calc(var(--theme-grid-list-gutter) / 2);
 	position: relative;
 	width: 20%;
 }
@@ -81,7 +81,7 @@
 //------------------------------------------------------------------------------
 
 .GridList.slick-slider .slick-slide {
-	padding: ($grid-list-gutter / 2);
+	padding: calc(var(--theme-grid-list-gutter) / 2);
 }
 
 .GridList.slick-slider .slick-prev {
@@ -106,13 +106,13 @@
 	@include align-items(center);
 	@include flexbox;
 	margin-bottom: 20px;
-	margin-left: -($grid-gutter / 2);
-	margin-right: -($grid-gutter / 2);
+	margin-left: calc(var(--theme-grid-gutter) / 2 * -1);
+	margin-right: calc(var(--theme-grid-gutter) / 2 * -1);
 }
 
 .FlexItem {
-	padding-left: ($grid-gutter / 2);
-	padding-right: ($grid-gutter / 2);
+	padding-left: calc(var(--theme-grid-gutter) / 2);
+	padding-right: calc(var(--theme-grid-gutter) / 2);
 }
 
 .FlexItem > :first-child {

@@ -3,16 +3,16 @@
 //------------------------------------------------------------------------------
 
 input, select, textarea {
-	@include box-shadow(inset 0 1px 1px $black-10);
-	background-color: $color-input-bg;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
-	color: text-contrast($color-input-bg);
+	@include box-shadow(inset 0 1px 1px var(--theme-color-black-10));
+	background-color: #fefefe;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
+	color: var(--theme-color-text-dark);
 	display: inline-block;
 	height: 38px;
 	max-width: 100%;
 	padding: 6px 12px;
-	transition-duration: $transition-slow;
+	transition-duration: var(--theme-transition-slow);
 	vertical-align: middle;
 }
 
@@ -41,10 +41,10 @@ textarea {
 
 select {
 	@include appearance(none);
-	@include box-shadow(0 1px 2px $black-10);
-	background: $color-input-bg url($icon-select-dark) top 50% right 14px no-repeat;
+	@include box-shadow(0 1px 2px var(--theme-color-black-10));
+	background: #fefefe url($icon-select-dark) top 50% right 14px no-repeat;
 	background-size: 12px 12px;
-	color: text-contrast($color-input-bg);
+	color: var(--theme-color-text-dark);
 	cursor: pointer;
 	height: 38px;
 	padding-right: 35px;
@@ -82,9 +82,9 @@ label {
 
 .GroupLabel {
 	@extend %default-margin;
-	border-bottom: 1px solid $color-body-border;
+	border-bottom: 1px solid #dadada;
 	display: block;
-	font-size: $font-size-large;
+	font-size: var(--theme-font-size-large);
 	font-weight: bold;
 	padding-bottom: 10px;
 }
@@ -94,45 +94,45 @@ label {
 //------------------------------------------------------------------------------
 
 .Button {
-	@include box-shadow(inset 0 1px 0 $white-25, 0 1px 2px $black-10);
-	background: $color-button-bg;
-	border: 1px solid darken($color-button-bg, 15%);
-	border-radius: $border-radius;
-	color: text-contrast($color-button-bg) !important;
+	@include box-shadow(inset 0 1px 0 var(--theme-color-white-25), 0 1px 2px var(--theme-color-black-10));
+	background: #f5f5f5;
+	border: 1px solid darken(#f5f5f5, 15%);
+	border-radius: var(--theme-border-radius-small);
+	color: var(--theme-color-text-dark) !important;
 	cursor: pointer;
 	display: inline-block;
 	padding: 6px 12px;
 	text-align: center;
 	text-decoration: none;
-	transition-duration: $transition-fast;
+	transition-duration: var(--theme-transition-fast);
 	vertical-align: middle;
 }
 
 .Button:hover {
-	background-color: lighten($color-button-bg, 2.5%);
-	color: text-contrast($color-button-bg) !important;
+	background-color: lighten(#f5f5f5, 2.5%);
+	color: var(--theme-color-text-dark) !important;
 }
 
 .Button:active,
 .Button.Active {
-	@include box-shadow(inset 0 1px 2px $black-10);
-	background-color: darken($color-button-bg, 2.5%);
+	@include box-shadow(inset 0 1px 2px var(--theme-color-black-10));
+	background-color: darken(#f5f5f5, 2.5%);
 }
 
 .Button-Primary {
-	background-color: $color-accent-1;
-	border-color: darken($color-accent-1, 10%);
-	color: text-contrast($color-accent-1) !important;
+	background-color: var(--theme-color-accent-1);
+	border-color: var(--theme-color-accent-1-darker);
+	color: var(--theme-color-accent-1-fg) !important;
 }
 
 .Button-Primary:hover {
-	background-color: lighten($color-accent-1, 2.5%);
-	color: text-contrast($color-accent-1) !important;
+	background-color: var(--theme-color-accent-1-lighter);
+	color: var(--theme-color-accent-1-fg) !important;
 }
 
 .Button-Primary:active,
 .Button-Primary.Active {
-	background-color: darken($color-accent-1, 2.5%);
+	background-color: var(--theme-color-accent-1-darker);
 }
 
 .Button-Block {
@@ -163,8 +163,8 @@ form [type='submit'] {
 
 .ShippingMethodWrapper,
 .PaymentMethodWrapper {
-	background-color: $color-boxed-bg;
-	border: 1px solid $color-body-border;
+	background-color: #fafafa;
+	border: 1px solid #dadada;
 	padding: 10px 15px;
 }
 
@@ -175,14 +175,14 @@ form [type='submit'] {
 
 .ShippingMethodWrapper:first-child,
 .PaymentMethodWrapper:first-child {
-	border-top-left-radius: $border-radius;
-	border-top-right-radius: $border-radius;
+	border-top-left-radius: var(--theme-border-radius-small);
+	border-top-right-radius: var(--theme-border-radius-small);
 }
 
 .ShippingMethodWrapper:last-child,
 .PaymentMethodWrapper:last-child {
-	border-bottom-left-radius: $border-radius;
-	border-bottom-right-radius: $border-radius;
+	border-bottom-left-radius: var(--theme-border-radius-small);
+	border-bottom-right-radius: var(--theme-border-radius-small);
 }
 
 .ShippingMethodWrapper > label,
@@ -199,21 +199,21 @@ form [type='submit'] {
 //------------------------------------------------------------------------------
 
 .FormError {
-	color: $color-error;
+	color: #dd3333;
 	position: relative;
 }
 
 .FormError > input,
 .FormError > select,
 .FormError > textarea {
-	background-color: mix($color-error, $color-input-bg, 5%) !important;
-	border-color: $color-error !important;
+	background-color: mix(#dd3333, #fefefe, 5%) !important;
+	border-color: #dd3333 !important;
 }
 
 .FormErrorMessage {
 	@include truncate;
-	background-color: $color-body-bg;
-	color: $color-error;
+	background-color: var(--theme-color-base-1);
+	color: #dd3333;
 	display: block;
 	margin: 0;
 	opacity: 1;
@@ -229,7 +229,7 @@ form [type='submit'] {
 
 @media screen and (max-width: $breakpoint-mobile) {
 	.FormErrorMessage {
-		font-size: $font-size-small;
+		font-size: var(--theme-font-size-small);
 		opacity: 1;
 		position: static;
 	}
@@ -312,7 +312,7 @@ form [type='submit'] {
 //------------------------------------------------------------------------------
 
 .FormHelp {
-	font-size: $font-size-small;
+	font-size: var(--theme-font-size-small);
 	margin: 5px 0 0;
 }
 
@@ -407,9 +407,9 @@ form [type='submit'] {
 
 .CampaignCodeForm form {
 	@extend .CompactForm;
-	background-color: $color-boxed-bg;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+	background-color: #fafafa;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 	margin-bottom: 20px;
 	padding: 15px;
 }

@@ -1,5 +1,6 @@
-$color-base-1: #ffffff !default;
-$color-base-2: #fdfffa !default;
-$color-text-dark-1: #666666 !default;
-$color-accent-1: #7ca800 !default;
-$color-accent-2: #7ca800 !default;
+:root {
+	--theme-color-base-1: hsla(0, 0%, 100%, 1);
+	--theme-color-base-2: hsla(324, 100%, 99%, 1);
+	--theme-color-accent-1-hue: 76;
+	--theme-color-accent-2-hue: 76;
+}

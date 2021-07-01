@@ -70,7 +70,7 @@ select::-ms-expand {
 //------------------------------------------------------------------------------
 
 body {
-	background-color: $color-footer-bg;
+	background-color: var(--theme-color-base-2);
 }
 
 //------------------------------------------------------------------------------
@@ -88,10 +88,13 @@ audio, canvas, img, progress, video {
 // Links
 //------------------------------------------------------------------------------
 
-@include link-colors($color-body-bg);
-
 a {
-	transition-duration: $transition-fast;
+	color: var(--theme-color-text-dark);
+	transition-duration: var(--theme-transition-fast);
+}
+
+a:hover {
+	color: var(--theme-color-accent-2);
 }
 
 //------------------------------------------------------------------------------
@@ -143,7 +146,7 @@ dl dd {
 //------------------------------------------------------------------------------
 
 table {
-	border: 1px solid $color-body-border;
+	border: 1px solid #dadada;
 	border-collapse: collapse;
 	border-spacing: 0;
 	text-align: left;
@@ -156,8 +159,8 @@ table caption {
 
 table th,
 table td {
-	background-color: $color-boxed-bg;
-	border-bottom: 1px solid $color-body-border;
+	background-color: #fafafa;
+	border-bottom: 1px solid #dadada;
 	padding: 10px 15px;
 	vertical-align: top;
 }
@@ -169,7 +172,7 @@ table td > :last-child {
 
 table tbody th,
 table tbody td {
-	background-color: $color-body-bg;
+	background-color: var(--theme-color-base-1);
 }
 
 //------------------------------------------------------------------------------
@@ -177,7 +180,7 @@ table tbody td {
 //------------------------------------------------------------------------------
 
 hr {
-	background-color: $color-body-border;
+	background-color: #dadada;
 	border: 0;
 	display: block;
 	height: 1px;

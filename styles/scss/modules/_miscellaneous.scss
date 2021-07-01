@@ -19,11 +19,11 @@
 //------------------------------------------------------------------------------
 
 .Badge {
-	background-color: $color-accent-2;
-	border-radius: $border-radius;
-	color: text-contrast($color-accent-2);
+	background-color: var(--theme-color-accent-2);
+	border-radius: var(--theme-border-radius-small);
+	color: var(--theme-color-accent-2-fg);
 	display: block;
-	font-size: $font-size-small;
+	font-size: var(--theme-font-size-small);
 	padding: 0 0.5em;
 	position: absolute;
 	right: 5px;
@@ -51,7 +51,7 @@
 }
 
 .ContentSection + .ContentSection {
-	border-top: 1px solid $color-body-border;
+	border-top: 1px solid #dadada;
 	margin-top: 40px;
 	padding-top: 40px;
 }

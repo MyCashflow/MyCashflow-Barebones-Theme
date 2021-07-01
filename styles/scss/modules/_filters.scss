@@ -5,7 +5,7 @@
 .ProductListFilters {
 	@include flexbox;
 	flex-wrap: wrap;
-	margin: -($grid-list-gutter / 4);
+	margin: -(var(--theme-grid-list-gutter) / 4);
 	margin-bottom: 20px;
 }
 
@@ -20,7 +20,7 @@
 //------------------------------------------------------------------------------
 
 .FilterGroup {
-	margin: ($grid-list-gutter / 4);
+	margin: (var(--theme-grid-list-gutter) / 4);
 	position: relative;
 }
 
@@ -30,7 +30,7 @@
 
 .FilterGroupName {
 	@extend select;
-	border-radius: $border-radius;
+	border-radius: var(--theme-border-radius-small);
 	background-image: none;
 	margin: 0;
 	position: relative;
@@ -45,11 +45,11 @@
 }
 
 .FilterGroup.ActiveGroup .FilterGroupName {
-	border-color: $color-text-dark;
+	border-color: var(--theme-color-text-dark);
 }
 
 .FilterGroup.ActiveGroup .FilterList {
-	border-color: $color-text-dark;
+	border-color: var(--theme-color-text-dark);
 }
 
 .FilterGroup.Navigable .FilterGroupName {
@@ -66,8 +66,8 @@
 }
 
 .FilterResultCount {
-	color: mix($color-text-dark, $color-text-light, 50%);
-	font-size: $font-size-small;
+	color: var(--theme-color-text-dark);
+	font-size: var(--theme-font-size-small);
 }
 
 //------------------------------------------------------------------------------
@@ -75,11 +75,10 @@
 //------------------------------------------------------------------------------
 
 .FilterList {
-	background-color: $color-input-bg;
-	border: 1px solid $color-body-border;
-	border-radius: 0 $border-radius $border-radius $border-radius;
-	top: calc(100% - 1px);
-	box-shadow: 0 1px 2px $black-10;
+	background-color: #fefefe;
+	border: 1px solid #dadada;
+	border-radius: 0 var(--theme-border-radius-small) var(--theme-border-radius-small) var(--theme-border-radius-small);
+	box-shadow: 0 1px 2px var(--theme-color-black-10);
 	display: none;
 	left: 0;
 	margin: 0;
@@ -89,6 +88,7 @@
 	outline: 0;
 	overflow: auto;
 	position: absolute;
+	top: calc(100% - 1px);
 	z-index: 1;
 }
 
@@ -102,8 +102,8 @@
 
 .FilterList li {
 	@include flexbox;
-	background-color: $color-boxed-bg;
-	border-radius: $border-radius;
+	background-color: #fafafa;
+	border-radius: var(--theme-border-radius-small);
 	justify-content: space-between;
 	margin: 5px;
 	padding: 3px 10px;
@@ -111,11 +111,11 @@
 }
 
 .FilterList li:hover {
-	background-color: darken($color-boxed-bg, 2%);
+	background-color: darken(#fafafa, 2%);
 }
 
 .FilterList li.Selected {
-	box-shadow: inset 0 0 0 1px $color-accent-2;
+	box-shadow: inset 0 0 0 1px var(--theme-color-accent-2);
 }
 
 .FilterList a:before {
@@ -125,14 +125,14 @@
 } 
 
 .FilterList .RemoveFilter {
-	color: $color-accent-2;
+	color: var(--theme-color-accent-2);
 	margin-left: 5px;
 	padding: 0;
 }
 
 .FilterList .RemoveFilter:before {
-	border-radius: $border-radius;
-	box-shadow: inset 0 0 0 1px $color-accent-2;
+	border-radius: var(--theme-border-radius-small);
+	box-shadow: inset 0 0 0 1px var(--theme-color-accent-2);
 	margin: 0;
 }
 

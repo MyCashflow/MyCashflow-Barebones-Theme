@@ -4,7 +4,7 @@
 
 .Loader {
 	@include cover;
-	background-color: $color-loader-bg;
+	background-color: var(--theme-color-white-50);
 	display: none;
 	z-index: 10;
 }

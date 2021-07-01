@@ -20,7 +20,7 @@
 }
 
 .LiveSearchSeparator {
-	border-top: 1px solid $color-body-border;
+	border-top: 1px solid #dadada;
 	margin: 15px 0;
 }
 
@@ -29,11 +29,11 @@
 //------------------------------------------------------------------------------
 
 .LiveSearchResults {
-	@include box-shadow(0 2px 1px $black-10);
-	@include transition($transition-fast);
+	@include box-shadow(0 2px 1px var(--theme-color-black-10));
+	@include transition(var(--theme-transition-fast));
 	@include transform(translateY(20px));
-	background-color: $color-body-bg;
-	border-radius: $border-radius;
+	background-color: var(--theme-color-base-1);
+	border-radius: var(--theme-border-radius-small);
 	margin-top: 5px;
 	opacity: 0;
 	position: absolute;
@@ -55,7 +55,7 @@
 
 .LiveSearchResults a:hover,
 .LiveSearchResults .Active > a {
-	background-color: mix(#fff, $color-accent-2, 95%);
+	background-color: var(--theme-color-accent-2);
 	display: block;
 	padding: 5px 15px;
 }

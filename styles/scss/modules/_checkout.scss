@@ -16,18 +16,18 @@
 }
 
 .CheckoutTransferToPayment [type='submit'] {
-	background-color: $color-image-bg;
-	border-color: $color-body-border;
-	color: text-contrast($color-image-bg) !important;
+	background-color: #ffffff;
+	border-color: #dadada;
+	color: var(--theme-color-text-dark) !important;
 	display: block;
 	height: 140px;
 	width: 100%;
 }
 
 .CheckoutTransferToPayment [type='submit']:hover {
-	background-color: $color-image-bg;
-	border-color: $color-accent-2;
-	color: text-contrast($color-image-bg) !important;
+	background-color: #ffffff;
+	border-color: var(--theme-color-accent-2);
+	color: var(--theme-color-text-dark) !important;
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
@@ -42,9 +42,9 @@
 //------------------------------------------------------------------------------
 
 #CheckoutMarketingPermissions .Checks label {
-	background-color: $color-button-bg;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+	background-color: #f5f5f5;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 	display: inline-block;
 	padding: 10px 15px;
 	vertical-align: middle;
@@ -77,8 +77,8 @@
 }
 
 #KlarnaCheckoutThanks {
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 	padding: 20px;
 }
 

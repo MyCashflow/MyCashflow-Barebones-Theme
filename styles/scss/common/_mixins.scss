@@ -214,7 +214,7 @@
 
 	&:before {
 		@include icon($icon);
-		font-size: $font-size;
+		font-size: var(--theme-font-size-base);
 		vertical-align: middle;
 	}
 }
@@ -229,7 +229,7 @@
 	}
 
 	a:hover {
-		color: $color-accent-2;
+		color: var(--theme-color-accent-2);
 	}
 }
 

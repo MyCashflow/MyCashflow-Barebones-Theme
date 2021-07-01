@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 .FullCartSection {
-	border-bottom: 1px solid $color-body-border;
+	border-bottom: 1px solid #dadada;
 	padding: 20px 0;
 }
 
@@ -29,9 +29,9 @@
 }
 
 .FullCartCol {
-	border-bottom: 1px solid $color-body-border;
+	border-bottom: 1px solid #dadada;
 	display: table-cell;
-	padding: 20px $grid-list-gutter;
+	padding: 20px var(--theme-grid-list-gutter);
 	vertical-align: middle;
 	white-space: nowrap;
 }
@@ -77,9 +77,9 @@
 }
 
 .FullCartProduct .ProductImage {
-	background-color: $color-image-bg;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+	background-color: #ffffff;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 	display: block;
 	height: 160px;
 	line-height: 138px;
@@ -108,7 +108,7 @@
 	}
 
 	.FullCartProduct {
-		border-bottom: 1px solid $color-body-border;
+		border-bottom: 1px solid #dadada;
 		display: block;
 		padding: 40px 0;
 		position: relative;
@@ -140,12 +140,12 @@
 .MiniCartHeader,
 .MiniCartTotal,
 .MiniCartActions {
-	border-bottom: 1px solid $color-body-border;
+	border-bottom: 1px solid #dadada;
 	padding: 15px;
 }
 
 .MiniCartProduct {
-	border-bottom: 1px solid $color-body-border;
+	border-bottom: 1px solid #dadada;
 	padding: 15px 15px 15px 75px;
 	position: relative;
 }
@@ -168,7 +168,7 @@
 
 .MiniCartProduct .ProductQuantity {
 	bottom: 2px;
-	font-size: $font-size-small;
+	font-size: var(--theme-font-size-small);
 	line-height: 15px;
 	right: 2px;
 	top: auto;
@@ -176,10 +176,10 @@
 
 .MiniCart-Checkout {
 	@extend %default-margin;
-	@include box-shadow(0 1px 2px $black-10);
-	background-color: $color-boxed-bg;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+	@include box-shadow(0 1px 2px var(--theme-color-black-10));
+	background-color: #fafafa;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-small);
 	z-index: 1;
 }
 

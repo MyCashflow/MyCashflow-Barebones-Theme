@@ -3,10 +3,10 @@
 //------------------------------------------------------------------------------
 
 .Drawer {
-	background-color: $color-drawer-bg;
-	color: text-contrast($color-drawer-bg);
+	background-color: var(--theme-color-base-2);
+	color: var(--theme-color-text-dark);
 	position: fixed;
-	transition-duration: $transition-slow;
+	transition-duration: var(--theme-transition-slow);
 }
 
 .Drawer[data-drawer-side='top'],
@@ -27,45 +27,45 @@
 
 .Drawer[data-drawer-side='top'] {
 	@include transform(translateY(-100%));
-	border-bottom: 1px solid $color-drawer-border;
+	border-bottom: 1px solid #dadada;
 	top: 0;
 }
 
 .Drawer[data-drawer-side='bottom'] {
 	@include transform(translateY(100%));
-	border-top: 1px solid $color-drawer-border;
+	border-top: 1px solid #dadada;
 	bottom: 0;
 }
 
 .Drawer[data-drawer-side='left'] {
 	@include transform(translateX(-100%));
-	border-right: 1px solid $color-drawer-border;
+	border-right: 1px solid #dadada;
 	left: 0;
 }
 
 .Drawer[data-drawer-side='right'] {
 	@include transform(translateX(100%));
-	border-left: 1px solid $color-drawer-border;
+	border-left: 1px solid #dadada;
 	right: 0;
 }
 
 .Drawer[data-drawer-side='top'].Open {
-	@include box-shadow(0 1px 3px $black-25);
+	@include box-shadow(0 1px 3px var(--theme-color-black-25));
 	@include transform(translateY(0));
 }
 
 .Drawer[data-drawer-side='bottom'].Open {
-	@include box-shadow(0 -1px 3px $black-25);
+	@include box-shadow(0 -1px 3px var(--theme-color-black-25));
 	@include transform(translateY(0));
 }
 
 .Drawer[data-drawer-side='left'].Open {
-	@include box-shadow(1px 0 3px $black-25);
+	@include box-shadow(1px 0 3px var(--theme-color-black-25));
 	@include transform(translateX(0));
 }
 
 .Drawer[data-drawer-side='right'].Open {
-	@include box-shadow(-1px 0 3px $black-25);
+	@include box-shadow(-1px 0 3px var(--theme-color-black-25));
 	@include transform(translateX(0));
 }
 
@@ -86,8 +86,8 @@
 //------------------------------------------------------------------------------
 
 .GiftCard {
-	border: 1px solid $color-drawer-border;
-	border-radius: $border-radius-medium;
+	border: 1px solid #dadada;
+	border-radius: var(--theme-border-radius-base);
 	margin: 15px;
 	padding: 15px;
 }
@@ -97,7 +97,7 @@
 }
 
 .GiftCardHeader {
-	border-bottom: 1px solid $color-body-border;
+	border-bottom: 1px solid #dadada;
 	padding: 15px;
 }
 
@@ -125,7 +125,7 @@
 
 .DrawerContainer {
 	position: relative;
-	transition-duration: $transition-slow;
+	transition-duration: var(--theme-transition-slow);
 }
 
 .Drawers {
@@ -138,7 +138,7 @@
 	background-color: #000;
 	cursor: pointer;
 	opacity: 0;
-	transition-duration: $transition-slow;
+	transition-duration: var(--theme-transition-slow);
 	visibility: hidden;
 	z-index: 1000;
 }

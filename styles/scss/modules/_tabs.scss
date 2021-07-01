@@ -19,9 +19,9 @@
 //------------------------------------------------------------------------------
 
 .Tabs {
-	background-color: $color-body-bg;
-	border: 1px solid $color-body-border;
-	border-radius: 0 $border-radius $border-radius $border-radius;
+	background-color: var(--theme-color-base-1);
+	border: 1px solid #dadada;
+	border-radius: 0 var(--theme-border-radius-small) var(--theme-border-radius-small) var(--theme-border-radius-small);
 	padding: 20px;
 }
 

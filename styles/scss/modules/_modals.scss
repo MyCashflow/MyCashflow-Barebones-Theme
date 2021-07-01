@@ -3,8 +3,8 @@
 //------------------------------------------------------------------------------
 
 .mfp-ajax-content {
-	background-color: $color-body-bg;
-	border-radius: $border-radius;
+	background-color: var(--theme-color-base-1);
+	border-radius: var(--theme-border-radius-small);
 	margin: 0 auto;
 	max-width: 640px;
 	padding: 20px;
