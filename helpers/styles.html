@@ -14,3 +14,49 @@
 <!--[if lte IE 8]>
 	<link rel="stylesheet" href="{ThemeURL}/styles/ie8.css">
 <![endif]-->
+<style type="text/css">
+:root {
+	--theme-font-base-1: 'Raleway', sans-serif;
+	--theme-font-base-2: 'Roboto', sans-serif;
+	--theme-font-headings: var(--theme-font-base-1);
+	--theme-font-body: var(--theme-font-base-2);
+	--theme-font-size-base: 14px;
+	--theme-font-size-small: 12px;
+	--theme-font-size-large: 16px;
+	--theme-line-height: 24px;
+	--theme-color-base-1: #ffffff;
+	--theme-color-base-2: #fafafa;
+	--theme-color-accent-1-hue: {Setting(name: 'primary_color.hue')};
+	--theme-color-accent-1: hsla(var(--theme-color-accent-1-hue), {Setting(name: 'primary_color.saturation')}, {Setting(name: 'primary_color.lightness')}, 1);
+	--theme-color-accent-1-darker: hsla(var(--theme-color-accent-1-hue), {Setting(name: 'primary_color.saturation')}, calc({Setting(name: 'primary_color.lightness')} - 3%), 1);
+	--theme-color-accent-1-lighter: hsla(var(--theme-color-accent-1-hue), {Setting(name: 'primary_color.saturation')}, calc({Setting(name: 'primary_color.lightness')} + 3%), 1);
+	--theme-color-accent-1-fg: hsla(var(--theme-color-accent-1-hue), {Setting(name: 'primary_color.saturation')}, 100%, 1);
+	--theme-color-accent-2-hue: {Setting(name: 'secondary_color.hue')};
+	--theme-color-accent-2: hsla(var(--theme-color-accent-2-hue), {Setting(name: 'secondary_color.saturation')}, {Setting(name: 'secondary_color.lightness')}, 1);
+	--theme-color-accent-2-darker: hsla(var(--theme-color-accent-2-hue), {Setting(name: 'secondary_color.saturation')}, calc({Setting(name: 'secondary_color.lightness')} - 3%), 1);
+	--theme-color-accent-2-lighter: hsla(var(--theme-color-accent-2-hue), {Setting(name: 'secondary_color.saturation')}, calc({Setting(name: 'secondary_color.lightness')} + 3%), 1);
+	--theme-color-accent-2-fg: hsla(var(--theme-color-accent-2-hue), {Setting(name: 'secondary_color.saturation')}, 100%, 1);
+	--theme-color-text-light: #fefefe;
+	--theme-color-text-dark: #5a5a5a;
+	--theme-color-black-0: hsla(0, 0%, 0%, 0);
+	--theme-color-black-10: hsla(0, 0%, 0%, 0.1);
+	--theme-color-black-25: hsla(0, 0%, 0%, 0.25);
+	--theme-color-black-50: hsla(0, 0%, 0%, 0.5);
+	--theme-color-black-75: hsla(0, 0%, 0%, 0.75);
+	--theme-color-white-0: hsla(0, 0%, 100%, 0);
+	--theme-color-white-10: hsla(0, 0%, 100%, 0.1);
+	--theme-color-white-25: hsla(0, 0%, 100%, 0.25);
+	--theme-color-white-50: hsla(0, 0%, 100%, 0.5);
+	--theme-color-white-75: hsla(0, 0%, 100%, 0.75);
+	--theme-container-width: 1200px;
+	--theme-grid-gutter: 30px;
+	--theme-grid-list-gutter: 20px;
+	--theme-border-radius-small: 2px;
+	--theme-border-radius-medium: 4px;
+	--theme-border-radius-large: 6px;
+	--theme-transition-fast: 0.15s;
+	--theme-transition-slow: 0.3s;
+	--theme-transition-fast: 0.15s;
+	--theme-transition-slow: 0.3s;
+}
+</style>

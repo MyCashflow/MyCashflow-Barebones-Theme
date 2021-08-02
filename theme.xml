@@ -27,4 +27,10 @@
 			</PageSizes>
 		</ProductList>
 	</Settings>
+	<ThemeSettings>
+		<SettingGroup label="Colors">
+			<Setting type="color" name="primary_color" label="Primary color" default="#76a800" />
+			<Setting type="color" name="secondary_color" label="Secondary color" default="#f05400" />
+		</SettingGroup>
+	</ThemeSettings>
 </Theme>
