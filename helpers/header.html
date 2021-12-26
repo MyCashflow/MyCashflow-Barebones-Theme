@@ -9,7 +9,7 @@
 		<meta name="robots" content="index, follow" />
 		{Feed}
 		<link rel="canonical" href="{ShopUrl}{CanonicalUrl}" />
-		<link rel="shortcut icon" type="image/ico" href="{ThemeUrl}/images/favicon.ico" />
+		{Favicon}
 		<script>document.documentElement.className += ' JS JS-Loading';</script>
 		{Helper(file: 'helpers/styles')}
 		{Extensions(for: 'head')}
@@ -19,6 +19,12 @@
 		{AdminTools}
 		<div class="SiteWrapper">
 			<div class="Site">
+				<!-- Placement v2 -->
+				<klarna-placement
+				data-key="top-strip-promotion-badge"
+				data-locale="fi-FI"
+				></klarna-placement>
+				<!-- end Placement -->
 				<div class="SiteHeader">
 					<div class="BrandHeader Hide-Tablet">
 						<div class="Container">
