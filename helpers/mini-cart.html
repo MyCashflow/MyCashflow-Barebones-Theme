@@ -35,13 +35,19 @@
 					after: '</div>'
 				)}'
 		)}
-
 		<div class="MiniCartActions">
 			<div class="Buttons Buttons-Block">
 				<a class="Button" href="/cart/">{%ShoppingCartEdit}</a>
 				<a class="Button Button-Primary OrderProducts" href="/checkout/">{%OrderProducts}</a>
 			</div>
-		</div>',
+		</div>
+		<!-- Placement v2 -->
+		<klarna-placement
+		data-key="credit-promotion-auto-size"
+		data-locale="fi-FI"
+		data-purchase-amount="{CartTotal(decimalsep: '', thousandssep: '', currencysymbol: 'false')}"
+		></klarna-placement>
+		<!-- end Placement -->',
 	or: '
 		<div class="DrawerSection">
 			<div class="Notification">
