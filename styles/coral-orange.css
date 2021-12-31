@@ -2772,7 +2772,7 @@ select::-ms-expand, .FilterGroupName::-ms-expand {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #fffdfa;
 }
 
 audio, canvas, img, progress, video {
@@ -2787,7 +2787,7 @@ a {
 }
 
 a:hover {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 a {
@@ -2882,7 +2882,7 @@ button, input, select, .FilterGroupName, textarea {
 }
 
 blockquote {
-  border-left: 5px solid #ee5500;
+  border-left: 5px solid #ff5500;
   font-size: 16px;
   margin-left: 0;
   padding-left: 15px;
@@ -2950,7 +2950,7 @@ h6, .H6 {
 }
 
 .Text-Accent {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .Text-Truncate {
@@ -3085,13 +3085,13 @@ form button.Active {
 }
 
 .Button-Primary, #OrderDocuments a, form [type=submit] {
-  background-color: #77aa00;
-  border-color: #537700;
+  background-color: #ff5500;
+  border-color: #cc4400;
   color: #fefefe !important;
 }
 
 .Button-Primary:hover, #OrderDocuments a:hover, form [type=submit]:hover {
-  background-color: #80b700;
+  background-color: #ff5e0d;
   color: #fefefe !important;
 }
 
@@ -3099,7 +3099,7 @@ form button.Active {
 .Button-Primary.Active,
 #OrderDocuments a.Active,
 form .Active[type=submit] {
-  background-color: #6e9d00;
+  background-color: #f25100;
 }
 
 .Button-Block, .Buttons-Block .Button, .Buttons-Block #OrderDocuments a, #OrderDocuments .Buttons-Block a, .Buttons-Block form button, form .Buttons-Block button {
@@ -4830,7 +4830,7 @@ form .Active[type=submit] {
 
 .CheckoutTransferToPayment [type=submit]:hover {
   background-color: #ffffff;
-  border-color: #ee5500;
+  border-color: #ff5500;
   color: #5a5a5a !important;
 }
 
@@ -4887,7 +4887,7 @@ input#postal_code + button.Submit {
 }
 
 .Drawer {
-  background-color: #fafafa;
+  background-color: #fffdfa;
   color: #5a5a5a;
   position: fixed;
   transition-duration: 0.3s;
@@ -5175,7 +5175,7 @@ input#postal_code + button.Submit {
 }
 
 .FilterList li.Selected {
-  box-shadow: inset 0 0 0 1px #ee5500;
+  box-shadow: inset 0 0 0 1px #ff5500;
 }
 
 .FilterList a:before {
@@ -5189,14 +5189,14 @@ input#postal_code + button.Submit {
 }
 
 .FilterList .RemoveFilter {
-  color: #ee5500;
+  color: #ff5500;
   margin-left: 5px;
   padding: 0;
 }
 
 .FilterList .RemoveFilter:before {
   border-radius: 2px;
-  box-shadow: inset 0 0 0 1px #ee5500;
+  box-shadow: inset 0 0 0 1px #ff5500;
   margin: 0;
 }
 
@@ -5314,7 +5314,7 @@ input#postal_code + button.Submit {
 
 .LiveSearchResults a:hover,
 .LiveSearchResults .Active > a {
-  background-color: #fef7f2;
+  background-color: #fff7f2;
   display: block;
   padding: 5px 15px;
 }
@@ -5386,7 +5386,7 @@ input#postal_code + button.Submit {
 }
 
 .Badge {
-  background-color: #ee5500;
+  background-color: #ff5500;
   border-radius: 2px;
   color: #fefefe;
   display: block;
@@ -5440,7 +5440,7 @@ input#postal_code + button.Submit {
   -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  background-color: #fafafa;
+  background-color: #fffdfa;
   border: 1px solid #dadada;
   border-width: 1px 0;
   font-size: 16px;
@@ -5514,7 +5514,7 @@ input#postal_code + button.Submit {
 }
 
 .InlineNavigation li.Current > a {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .InlineNavigation a[href="/account/"]:before {
@@ -5605,7 +5605,7 @@ input#postal_code + button.Submit {
 }
 
 .SimpleNavigation .Current > a {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .DropNavigation a, .MainNavigation a {
@@ -5722,7 +5722,7 @@ input#postal_code + button.Submit {
 }
 
 .MainNavigation li li a {
-  background-color: #fafafa;
+  background-color: #fffdfa;
   border: 1px solid #dadada;
   border-width: 1px 0 0;
 }
@@ -5732,7 +5732,7 @@ input#postal_code + button.Submit {
 }
 
 .MainNavigation .Current > a {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .MainNavigation .HasSubCategories > a:after {
@@ -5802,7 +5802,7 @@ input#postal_code + button.Submit {
 }
 
 .SideNavigation .Current > a {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .DrawerNavigation {
@@ -5856,7 +5856,7 @@ input#postal_code + button.Submit {
 }
 
 .DrawerNavigation .Current > a {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .DrawerNavigation .HasSubCategories > ul {
@@ -6011,7 +6011,7 @@ input#postal_code + button.Submit {
 }
 
 .Pagination .CurrentPage {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .Pagination .PreviousPageLink > a,
@@ -6060,15 +6060,15 @@ input#postal_code + button.Submit {
 }
 
 .ProductImage:hover, #ProductThumbnails .ProductThumbnail:hover {
-  -moz-box-shadow: 0 1px 6px #ee5500;
-  -ms-box-shadow: 0 1px 6px #ee5500;
-  -webkit-box-shadow: 0 1px 6px #ee5500;
-  box-shadow: 0 1px 6px #ee5500;
-  border-color: #ee5500;
+  -moz-box-shadow: 0 1px 6px #ff5500;
+  -ms-box-shadow: 0 1px 6px #ff5500;
+  -webkit-box-shadow: 0 1px 6px #ff5500;
+  box-shadow: 0 1px 6px #ff5500;
+  border-color: #ff5500;
 }
 
 .ProductDiscountPrice {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .ProductComparePrice {
@@ -6164,11 +6164,11 @@ input#postal_code + button.Submit {
 }
 
 #ProductThumbnails .mz-thumb-selected {
-  -moz-box-shadow: 0 1px 6px #ee5500;
-  -ms-box-shadow: 0 1px 6px #ee5500;
-  -webkit-box-shadow: 0 1px 6px #ee5500;
-  box-shadow: 0 1px 6px #ee5500;
-  border-color: #ee5500;
+  -moz-box-shadow: 0 1px 6px #ff5500;
+  -ms-box-shadow: 0 1px 6px #ff5500;
+  -webkit-box-shadow: 0 1px 6px #ff5500;
+  box-shadow: 0 1px 6px #ff5500;
+  border-color: #ff5500;
 }
 
 @media screen and (max-width: 1024px) {
@@ -6232,7 +6232,7 @@ input#postal_code + button.Submit {
 }
 
 .FullSearchSuggestions a {
-  background-color: #ee5500;
+  background-color: #ff5500;
   border-radius: 2px;
   color: #fefefe;
   display: block;
@@ -6241,7 +6241,7 @@ input#postal_code + button.Submit {
 
 .FullSearchSuggestions a:hover,
 .FullSearchSuggestions .Active a {
-  background-color: #ff7122;
+  background-color: #ff7733;
   color: #fefefe;
 }
 
@@ -6360,14 +6360,14 @@ input#postal_code + button.Submit {
 }
 
 .SiteHeader {
-  background-color: #fafafa;
+  background-color: #fffdfa;
   color: #5a5a5a;
 }
 .SiteHeader a {
   color: #5a5a5a;
 }
 .SiteHeader a:hover {
-  color: #ee5500;
+  color: #ff5500;
 }
 
 .SiteBody {
