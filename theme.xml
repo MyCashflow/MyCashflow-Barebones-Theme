@@ -29,7 +29,7 @@
 	</Settings>
 	<ThemeSettings>
 		<SettingGroup label="colors" description="colors_description">
-			<Setting type="select" name="color_theme" label="color_theme" default="candy-red">
+			<Setting type="select" name="color_theme" label="color_theme" default="jungle-green">
 				<Option value="candy-red" label="Candy Red" />
 				<Option value="coral-orange" label="Coral Orange" />
 				<Option value="jungle-green" label="Jungle Green" />
