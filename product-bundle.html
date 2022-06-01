@@ -1,0 +1,95 @@
+{Helper(file: 'helpers/header')}
+{Helper(file: 'helpers/path')}
+<div class="SiteContent">
+	<div class="Container">
+		<div class="Grid ProductCard {ProductClass}">
+			<div class="Col Col-4-12 Col-Tablet-12-12">
+				{BundleImage}
+				{BundleImageCaption}
+				{BundleThumbnails}
+			</div>
+			<div class="Col Col-8-12 Col-Tablet-12-12">
+				<div class="ContentSection">
+					<h1>{PageTitle}</h1>
+					<p class="Text-Large ProductPrices ProductCardPrices">
+						{BundleComparePrice(
+							currencysymbol: 'true',
+							before: '
+								{BundlePrice(
+									currencysymbol: 'true',
+									before: '<span class="ProductDiscountPrice">{%Price}&nbsp;',
+									after: '</span>'
+								)}
+								<span class="ProductComparePrice">',
+							after: '</span>',
+							or: '
+								{BundlePrice(
+									currencysymbol: 'true',
+									before: '<span class="ProductCurrentPrice">{%Price}&nbsp;',
+									after: '</span>'
+								)}'
+						)}
+					</p>
+				</div>
+				<div class="ContentSection">
+					{BundleAvailability}
+					{BundleBuy(variations: 'radio')}
+				</div>
+				{AvailabilityNotificationForm(
+					before:'
+						<div class="ContentSection">
+							<h3>{%AvailabilityNotificationIntroTitle}</h3>
+							<p>{%AvailabilityNotificationIntroText}</p>',
+					after: '
+						</div>'
+				)}
+				<div class="ContentSection">
+					{ShareButtons}
+				</div>
+				{CrossSaleProducts(
+					limit: '12',
+					type: 'normal',
+					helper: 'helpers/list-product',
+					before: '
+						<div class="ContentSection">
+							<h3 class="ContentTitle">{%CrossSalesForProduct}</h3>
+							<div class="List ProductList">
+								<div class="GridList GridList-Narrow" data-slider="grid-list-narrow">',
+					after: '
+								</div>
+							</div>
+						</div>'
+				)}
+				{SimilarProducts(
+					limit: '12',
+					type: 'normal',
+					helper: 'helpers/list-product',
+					before: '
+						<div class="ContentSection">
+							<h3 class="ContentTitle">{%SimilarProducts}</h3>
+							<div class="List ProductList">
+								<div class="GridList GridList-Narrow" data-slider="grid-list-narrow">',
+					after: '
+								</div>
+							</div>
+						</div>'
+				)}
+				{CompatibleProducts(
+					limit: '12',
+					type: 'normal',
+					helper: 'helpers/list-product',
+					before: '
+						<div class="ContentSection">
+							<h3 class="ContentTitle">{%CompatibleProducts}</h3>
+							<div class="List ProductList">
+								<div class="GridList GridList-Narrow" data-slider="grid-list-narrow">',
+					after: '
+								</div>
+							</div>
+						</div>'
+				)}
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}
